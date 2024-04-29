@@ -5,7 +5,7 @@ export default function Login() {
                 <form action="/submit-your-login-form" method="POST">
 
 
-                    <h2> Login</h2>
+                    <h2> Login hui</h2>
 
                     <p class="input-group">
                         <label for="username">Username:</label>
