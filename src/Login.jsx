@@ -3,14 +3,13 @@ export default function Login() {
         <body>
             <div class="login-container">
                 <form action="/submit-your-login-form" method="POST">
-
                     <h3> <a href="#">Not An Admin</a> </h3>
 
                     <h2>Admin Login</h2>
 
                     <p class="input-group">
                         <label for="username">Username:</label>
-                        <input type="text" id="username" name="username" required placeholder="Please Enter Your Username" />
+                        <input  type="text" id="username" name="username" required placeholder="Please Enter Your Username" />
                     </p>
                     <p class="input-group">
                         <label for="password">Password:</label>
