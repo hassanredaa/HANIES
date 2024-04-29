@@ -8,7 +8,6 @@ function App() {
       <Login />
       <main>
         <section id='core-concepts'>
-          <h2>Projects</h2>
         </section>
       </main>
     </div>

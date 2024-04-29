@@ -4,9 +4,8 @@ export default function Login() {
             <div class="login-container">
                 <form action="/submit-your-login-form" method="POST">
 
-                    <h3> <a href="#">Not An Admin</a> </h3>
 
-                    <h2>Admin Login</h2>
+                    <h2> Login</h2>
 
                     <p class="input-group">
                         <label for="username">Username:</label>
@@ -18,6 +17,8 @@ export default function Login() {
                     </p>
                     <button type="submit">Log In</button>
                     <p class="signup-text">Don't have an account? <a href="#">Sign up</a></p>
+                    <p class="signup-text">Forgot your password? <a href="#">Change Password</a></p>
+
                 </form>
             </div>
 
