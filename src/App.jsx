@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Register from './Register.jsx';
 import ChangePassword from './ChangePassword.jsx';
+import Home from './Home.jsx';
 
 
 function App() {
@@ -11,8 +12,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+      <Route index element={<Home />} />
         <Route path="/register" element={<Register />} />
-        <Route index element={<Login />} />
+        <Route path='/login' element={<Login />} />
         <Route path="/changepassword" element={<ChangePassword />} />
       </Routes>
 
