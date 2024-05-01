@@ -59,7 +59,8 @@ button {
 }
 
 button:hover {
-    background-color: black;
+    background-color: grey;
+    /* Changed for visual feedback on hover */
 }
 
 .signup-text {
@@ -81,4 +82,56 @@ footer {
     padding: 10px;
     background-color: #333;
     color: white;
+}
+
+/* New styles for additional elements */
+.error-message {
+    color: red;
+    font-size: 0.8em;
+    /* Smaller text size for error messages */
+}
+
+.success-message {
+    color: green;
+    font-size: 0.8em;
+    /* Smaller text size for success messages */
+}
+
+/* Additional styles for different input types such as checkboxes or radio buttons */
+.input-group input[type="checkbox"],
+.input-group input[type="radio"] {
+    width: auto;
+    /* Override the width for these types of inputs */
+    margin-right: 10px;
+}
+
+/* Style adjustments for select dropdown */
+.input-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+
+    .login-container,
+    .register-container {
+        width: 95%;
+        margin: 20px auto;
+    }
+}
+
+
+.register-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #f9f9f9;
 }
