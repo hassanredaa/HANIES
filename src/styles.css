@@ -49,17 +49,50 @@ p {
 }
 
 button {
-    width: 100%;
-    padding: 10px;
+    padding: 12px 24px;
     background-color: black;
     color: white;
+    /* Default text color */
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 100%;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
+    z-index: 2;
+    /* Ensure text layer is above the pseudo-element */
+    transition: background-color 0.3s, color 0.3s;
+    /* Add color transition for smoother effect */
 }
 
 button:hover {
+    color: white;
+    /* Change text color to white on hover for visibility */
     background-color: black;
+    /* Background turns black on hover */
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: white;
+    /* White effect on hover */
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.75s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.4s;
+    opacity: 0;
+    z-index: 1;
+    /* Lower than the text layer, but still visible */
+}
+
+button:hover::before {
+    opacity: 0.5;
+    /* Adjust opacity to not fully obscure text */
+    transform: translate(-50%, -50%) scale(1.2);
 }
 
 .signup-text {
@@ -81,4 +114,98 @@ footer {
     padding: 10px;
     background-color: #333;
     color: white;
+}
+
+/* New styles for additional elements */
+.error-message {
+    color: red;
+    font-size: 0.8em;
+    /* Smaller text size for error messages */
+}
+
+.success-message {
+    color: green;
+    font-size: 0.8em;
+}
+
+/* Additional styles for different input types such as checkboxes or radio buttons */
+.input-group input[type="checkbox"],
+.input-group input[type="radio"] {
+    width: auto;
+    /* Override the width for these types of inputs */
+    margin-right: 10px;
+}
+
+/* Style adjustments for select dropdown */
+.input-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+
+    .login-container,
+    .register-container {
+        width: 95%;
+        margin: 20px auto;
+    }
+}
+
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.content-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+.register-container,
+.login-container {
+    background-color: #f2f2f2;
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.change-password-container {
+    background-color: #f2f2f2;
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
