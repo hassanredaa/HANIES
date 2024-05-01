@@ -1,6 +1,6 @@
 
-// import React from 'react';
-// import { Link } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Login() {
     return (
@@ -19,8 +19,8 @@ export default function Login() {
                         <input type="password" id="password" name="password" required placeholder="Please Enter Your Password" />
                     </p>
                     <button type="submit">Log In</button>
-                    <p className="signup-text">Don't have an account? <Link to="/Register">Sign up</Link></p>
-                    <p class="signup-text">Forgot your password? <a href="#">Change Password</a></p>
+                    <p class="signup-text">Don't have an account? <Link to="/register">Sign up</Link></p>
+                    <p class="signup-text">Forgot your password? <Link to="/changepassword">Change Password</Link></p>
 
                 </form>
             </div>

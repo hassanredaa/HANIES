@@ -94,7 +94,6 @@ footer {
 .success-message {
     color: green;
     font-size: 0.8em;
-    /* Smaller text size for success messages */
 }
 
 /* Additional styles for different input types such as checkboxes or radio buttons */
@@ -126,12 +125,55 @@ footer {
 }
 
 
-.register-container {
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.content-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+.register-container,
+.login-container {
     width: 100%;
     max-width: 400px;
-    margin: 0 auto;
     padding: 20px;
+    margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    background-color: #f9f9f9;
+    background-color: #f2f2f2;
+}
+
+.change-password-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    margin: 30px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #f2f2f2;
 }
