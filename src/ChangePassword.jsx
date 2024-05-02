@@ -53,7 +53,7 @@ function ChangePassword() {
                 </div>
             </div>
             <footer>
-                <p>Copyright © 2023 Aid Avenue</p>
+                <p>Copyright © 2023 Good Giving</p>
             </footer>
         </div>
     );

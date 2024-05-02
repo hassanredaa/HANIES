@@ -98,43 +98,51 @@ button:hover::before {
 
 .button-primary {
     padding: 8px 16px;
-    background: white;
-    color: #007BFF;
+    /* Adjust padding as needed to influence the overall shape */
+    background: black;
+    /* Button background color */
+    color: white;
+    /* Text color for contrast */
     font-size: 14px;
+    /* Font size for readability */
     font-weight: bold;
-    border-radius: 6px;
+    /* Font weight for text emphasis */
+    border-radius: 20px;
+    /* Increased border-radius to create an oval shape */
     cursor: pointer;
+    /* Cursor indication for interactivity */
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    /* Smooth transition effects */
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
     width: auto;
-    /* Ensures the button only takes up as much width as it needs */
+    /* Width automatically adjusts to content */
     display: inline-block;
-    /* Makes the button respect text-align of the container */
+    /* Display type to allow for text alignment */
     margin-top: 20px;
-    /* Optional: Adds space above the button if it's too close to preceding content */
+    /* Top margin to provide spacing from adjacent content */
+    padding-block: 1%;
+    /* Vertical padding */
+    padding-inline: 3%;
+    /* Horizontal padding for more width, influencing oval shape */
 }
 
-/* .button-primary:hover {
-    background: #ff1493;
+.button-primary:hover {
+    background: rgb(220, 220, 50);
     color: white;
-    box-shadow: 0 3px 6px rgba(255, 20, 147, 0.4);
-    border-color: #ff1493;
-} */
+    box-shadow: 0 3px 6px rgba(218, 165, 32, 0.4);
+    border-color: yellow;
+    /* Border color transitions to match the background on hover */
+}
 
 .container {
-    position: relative;
-    /* Necessary for the positioning of the absolutely positioned button */
-    height: 100vh;
-    /* Ensures the container spans the entire viewport height */
-    width: 100%;
-    /* Container width spans the entire viewport */
     display: flex;
     justify-content: flex-end;
-    /* Aligns the button to the right */
-    padding-top: 10px;
-    /* Adds a small padding to the top to avoid content touching the edge */
-    text-align: right;
-    /* Aligns inline or inline-block elements to the right */
+    align-items: center;
+    /* Adjust this line if you need top, bottom alignment */
+    height: 100vh;
+    width: 100%;
+    padding: 10px;
 }
 
 .signup-text {
@@ -253,25 +261,91 @@ footer {
 }
 
 .background-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+    position: relative;
+    min-height: 100vh;
+    /* Minimum height of viewport */
+    display: flex;
+    flex-direction: column;
+    /* Stacks children vertically */
+    justify-content: space-between;
+    /* Aligns children to each end */
 }
 
 #video-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
+    flex-grow: 1;
+    /* Allows the video to fill all available space */
     width: 100%;
-    height: 100vh;
     object-fit: cover;
+    /* Ensures video covers the area without distortion */
+    z-index: -1;
+    /* Places video behind the content */
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f0f0f0;
+    /* Subtle background color for visibility */
+}
+
+header {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    /* Aligns the logo absolutely to the left */
+    right: 10px;
+    /* Ensures spacing on the right for other elements */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    /* Ensures the header content is above the video */
+}
+
+img {
+    height: 80px;
+    /* Increased height for a larger logo */
+    width: auto;
+    /* Auto width to maintain aspect ratio based on height */
+}
+
+.button-primary {
+    padding: 10px 20px;
 }
 
 .content {
     /* Styles for your content */
     position: relative;
     z-index: 1;
+}
+
+
+.homepage {
+    position: relative;
+    /* This makes it a reference point for absolutely positioned children */
+    width: 100%;
+    /* Full width */
+    height: 100vh;
+    /* Full viewport height, adjust as needed */
+    /* Other styling as needed */
+}
+
+.top-right-image {
+    position: absolute;
+    /* Position the image absolutely within its relative parent */
+    top: 0;
+    /* Align top edge */
+    right: 0;
+    /* Align right edge */
+    width: 100px;
+    /* Set the image width, adjust as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f0f0f0;
+    /* Subtle background color for visibility */
 }
