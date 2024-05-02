@@ -341,7 +341,7 @@ footer {
 
 #about,
 #contact {
-    height: 100vh;
+    height: 100%;
     /* Make each section fill the screen vertically */
     display: flex;
     flex: 'column';
@@ -350,6 +350,8 @@ footer {
     text-Align: 'center';
 }
 
+
+
 #about {
     background: '#fff';
 }
@@ -357,6 +359,34 @@ footer {
 #contact {
     background: '#f0f0f0';
 }
+#about ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  #about li {
+    width: 10rem;
+    text-align: center;
+  }
+  
+  #about li img {
+    height: 4rem;
+    width: 6rem;
+    object-fit: cover;
+  }
+  
+  #about li h3 {
+    margin: 0.5rem 0;
+  }
+  
+  #about li p {
+    font-size: 0.9rem;
+  }
 
 @media (max-width: 600px) {
     .button-primary {
