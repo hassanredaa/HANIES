@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Register from './Register.jsx';
 import ChangePassword from './ChangePassword.jsx';
 import Home from './Home.jsx';
+import AdminDB from './AdminDB.jsx';
 
 
 function App() {
@@ -16,11 +17,9 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path='/login' element={<Login />} />
         <Route path="/changepassword" element={<ChangePassword />} />
+        <Route path="/admin" element={<AdminDB />} />
       </Routes>
-
     </BrowserRouter>
-
-
   );
 }
 
