@@ -98,48 +98,37 @@ button:hover::before {
 
 .button-primary {
     padding: 8px 16px;
-    /* Adjust padding as needed to influence the overall shape */
     background: transparent;
-    /* Button background color */
     color: black;
-    /* Text color for contrast */
     font-size: 14px;
-    /* Font size for readability */
     font-weight: light;
-    /* Font weight for text emphasis */
     border-radius: 20px;
-    /* Increased border-radius to create an oval shape */
     cursor: pointer;
-    /* Cursor indication for interactivity */
-    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-    /* Smooth transition effects */
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    /* Include transform in the transition */
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
     width: auto;
-    /* Width automatically adjusts to content */
     display: inline-block;
-    /* Display type to allow for text alignment */
     margin-top: 20px;
-    /* Top margin to provide spacing from adjacent content */
     padding-block: 1%;
-    /* Vertical padding */
     padding-inline: 3%;
-    /* Horizontal padding for more width, influencing oval shape */
+    margin-left: 20px;
+    margin-right: 20px;
+    position: relative;
+    text-decoration: none;
 }
 
 .button-primary:hover {
-    background: #ebff00;
-    color: black;
-    box-shadow: 0 3px 6px rgba(218, 165, 32, 0.4);
-    border-color: #ebff00;
-    /* Border color transitions to match the background on hover */
+    background: black;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
 }
 
 .container {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    /* Adjust this line if you need top, bottom alignment */
     height: 100vh;
     width: 100%;
     padding: 10px;
@@ -348,4 +337,87 @@ footer {
     padding: 10px 0;
     background-color: #f0f0f0;
     /* Subtle background color for visibility */
+}
+
+#about,
+#contact {
+    height: 100vh;
+    /* Make each section fill the screen vertically */
+    display: flex;
+    flex: 'column';
+    justify-Content: 'center';
+    align-Items: 'center';
+    text-Align: 'center';
+}
+
+#about {
+    background: '#fff';
+}
+
+#contact {
+    background: '#f0f0f0';
+}
+
+@media (max-width: 600px) {
+    .button-primary {
+        margin: 0 8px;
+    }
+}
+
+
+.content-sections section {
+    margin: 20px auto;
+    padding: 20px;
+    background: #f0f0f0;
+    /* Light grey background for each section */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    /* Ensures content doesn't stretch too wide */
+}
+
+.content-sections section h2 {
+    color: #0056b3;
+    /* Theme color for headings */
+}
+
+.content-sections section p {
+    color: #333;
+    /* Dark grey color for text for better readability */
+    line-height: 1.6;
+    /* Improves readability */
+}
+
+.button-primary {
+    padding: 8px 16px;
+    background: transparent;
+    color: black;
+    font-size: 14px;
+    font-weight: light;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: auto;
+    display: inline-block;
+    /* Ensure it behaves like a button */
+    margin-top: 20px;
+    text-align: center;
+    /* Center the text */
+    text-decoration: none;
+    /* Remove default link underlining */
+    border: none;
+    /* Remove borders */
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.button-primary:hover {
+    background: black;
+    color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+footer {
+    margin-top: 20px;
 }
