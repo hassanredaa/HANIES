@@ -12,6 +12,8 @@ export default function Home() {
             <video autoPlay muted loop id="video-bg" style={{ width: '100%', height: '100vh', objectFit: 'cover', zIndex: -1 }}>
                 <source src={video} type="video/mp4" />
             </video>
+
+        <h1>test</h1>
             <footer style={{ textAlign: 'center', padding: '20px 10px', backgroundColor: 'black' }}> {/* Styling for visibility and layout */}
                 <p>Copyright © 2023 Good Giving</p>
             </footer>
