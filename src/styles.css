@@ -99,13 +99,13 @@ button:hover::before {
 .button-primary {
     padding: 8px 16px;
     /* Adjust padding as needed to influence the overall shape */
-    background: black;
+    background: transparent;
     /* Button background color */
-    color: white;
+    color: black;
     /* Text color for contrast */
     font-size: 14px;
     /* Font size for readability */
-    font-weight: bold;
+    font-weight: light;
     /* Font weight for text emphasis */
     border-radius: 20px;
     /* Increased border-radius to create an oval shape */
@@ -128,10 +128,10 @@ button:hover::before {
 }
 
 .button-primary:hover {
-    background: rgb(220, 220, 50);
-    color: white;
+    background: #ebff00;
+    color: black;
     box-shadow: 0 3px 6px rgba(218, 165, 32, 0.4);
-    border-color: yellow;
+    border-color: #ebff00;
     /* Border color transitions to match the background on hover */
 }
 
