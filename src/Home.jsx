@@ -31,13 +31,57 @@ export default function Home() {
             </div>
             <div id="about" style={{ padding: '50px', backgroundColor: '#fff', color: '#333', textAlign: 'center' }}>
                 <ul>
-                {about.map((aboutitem) =>  <About key={aboutitem.title} {...aboutitem} />)}
+                    {about.map((aboutitem) => <About key={aboutitem.title} {...aboutitem} />)}
                 </ul>
-               
             </div>
-            <div id="contact" style={{ height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', backgroundColor: '#f0f0f0' }}>
-                <h1>Contact Us</h1>
-                <p>How to reach us...</p>
+            <div id="contact">
+                <div class="background">
+                    <div class="container">
+                        <div class="screen">
+                            <div class="screen-header">
+                                <div class="screen-header-left">
+                                    <div class="screen-header-button close"></div>
+                                    <div class="screen-header-button maximize"></div>
+                                    <div class="screen-header-button minimize"></div>
+                                </div>
+                                <div class="screen-header-right">
+                                    <div class="screen-header-ellipsis"></div>
+                                    <div class="screen-header-ellipsis"></div>
+                                    <div class="screen-header-ellipsis"></div>
+                                </div>
+                            </div>
+                            <div class="screen-body">
+                                <div class="screen-body-item left">
+                                    <div class="app-title">
+                                        <span>CONTACT</span>
+                                        <span>US</span>
+                                    </div>
+                                    <div class="app-contact">CONTACT INFO : +62 81 314 928 595</div>
+                                </div>
+                                <div class="screen-body-item">
+                                    <div class="app-form">
+                                        <div class="app-form-group">
+                                            <input class="app-form-control" placeholder="NAME" />
+                                        </div>
+                                        <div class="app-form-group">
+                                            <input class="app-form-control" placeholder="EMAIL" />
+                                        </div>
+                                        <div class="app-form-group">
+                                            <input class="app-form-control" placeholder="CONTACT NO" />
+                                        </div>
+                                        <div class="app-form-group message">
+                                            <input class="app-form-control" placeholder="MESSAGE" />
+                                        </div>
+                                        <div class="app-form-group buttons">
+                                            <button class="app-form-button">CANCEL</button>
+                                            <button class="app-form-button">SEND</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <footer style={{ textAlign: 'center', padding: '20px 10px', backgroundColor: 'black', color: 'white' }}>
                 <p>Copyright © 2023 Good Giving</p>
