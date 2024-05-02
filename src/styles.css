@@ -95,6 +95,48 @@ button:hover::before {
     transform: translate(-50%, -50%) scale(1.2);
 }
 
+
+.button-primary {
+    padding: 8px 16px;
+    background: white;
+    color: #007BFF;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: auto;
+    /* Ensures the button only takes up as much width as it needs */
+    display: inline-block;
+    /* Makes the button respect text-align of the container */
+    margin-top: 20px;
+    /* Optional: Adds space above the button if it's too close to preceding content */
+}
+
+/* .button-primary:hover {
+    background: #ff1493;
+    color: white;
+    box-shadow: 0 3px 6px rgba(255, 20, 147, 0.4);
+    border-color: #ff1493;
+} */
+
+.container {
+    position: relative;
+    /* Necessary for the positioning of the absolutely positioned button */
+    height: 100vh;
+    /* Ensures the container spans the entire viewport height */
+    width: 100%;
+    /* Container width spans the entire viewport */
+    display: flex;
+    justify-content: flex-end;
+    /* Aligns the button to the right */
+    padding-top: 10px;
+    /* Adds a small padding to the top to avoid content touching the edge */
+    text-align: right;
+    /* Aligns inline or inline-block elements to the right */
+}
+
 .signup-text {
     text-align: center;
     margin-top: 20px;
