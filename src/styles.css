@@ -49,17 +49,89 @@ p {
 }
 
 button {
-    width: 100%;
-    padding: 10px;
+    padding: 12px 24px;
     background-color: black;
     color: white;
+    /* Default text color */
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 100%;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
+    z-index: 2;
+    /* Ensure text layer is above the pseudo-element */
+    transition: background-color 0.3s, color 0.3s;
+    /* Add color transition for smoother effect */
 }
 
 button:hover {
+    color: white;
+    /* Change text color to white on hover for visibility */
     background-color: black;
+    /* Background turns black on hover */
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: white;
+    /* White effect on hover */
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.75s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.4s;
+    opacity: 0;
+    z-index: 1;
+    /* Lower than the text layer, but still visible */
+}
+
+button:hover::before {
+    opacity: 0.5;
+    /* Adjust opacity to not fully obscure text */
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+
+.button-primary {
+    padding: 8px 16px;
+    background: transparent;
+    color: black;
+    font-size: 14px;
+    font-weight: light;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    /* Include transform in the transition */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: auto;
+    display: inline-block;
+    margin-top: 20px;
+    padding-block: 1%;
+    padding-inline: 3%;
+    margin-left: 20px;
+    margin-right: 20px;
+    position: relative;
+    text-decoration: none;
+}
+
+.button-primary:hover {
+    background: black;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
+}
+
+.container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    padding: 10px;
 }
 
 .signup-text {
@@ -81,4 +153,599 @@ footer {
     padding: 10px;
     background-color: #333;
     color: white;
+}
+
+/* New styles for additional elements */
+.error-message {
+    color: red;
+    font-size: 0.8em;
+    /* Smaller text size for error messages */
+}
+
+.success-message {
+    color: green;
+    font-size: 0.8em;
+}
+
+/* Additional styles for different input types such as checkboxes or radio buttons */
+.input-group input[type="checkbox"],
+.input-group input[type="radio"] {
+    width: auto;
+    /* Override the width for these types of inputs */
+    margin-right: 10px;
+}
+
+/* Style adjustments for select dropdown */
+.input-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+
+    .login-container,
+    .register-container {
+        width: 95%;
+        margin: 20px auto;
+    }
+}
+
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.content-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+.register-container,
+.login-container {
+    background-color: #f2f2f2;
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.change-password-container {
+    background-color: #f2f2f2;
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.background-video {
+    position: relative;
+    min-height: 100vh;
+    /* Minimum height of viewport */
+    display: flex;
+    flex-direction: column;
+    /* Stacks children vertically */
+    justify-content: space-between;
+    /* Aligns children to each end */
+}
+
+#video-bg {
+    flex-grow: 1;
+    /* Allows the video to fill all available space */
+    width: 100%;
+    object-fit: cover;
+    /* Ensures video covers the area without distortion */
+    z-index: -1;
+    /* Places video behind the content */
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f0f0f0;
+    /* Subtle background color for visibility */
+}
+
+header {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    /* Aligns the logo absolutely to the left */
+    right: 10px;
+    /* Ensures spacing on the right for other elements */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    /* Ensures the header content is above the video */
+}
+
+img {
+    height: 80px;
+    /* Increased height for a larger logo */
+    width: auto;
+    /* Auto width to maintain aspect ratio based on height */
+}
+
+.button-primary {
+    padding: 10px 20px;
+}
+
+.content {
+    /* Styles for your content */
+    position: relative;
+    z-index: 1;
+}
+
+
+.homepage {
+    position: relative;
+    /* This makes it a reference point for absolutely positioned children */
+    width: 100%;
+    /* Full width */
+    height: 100vh;
+    /* Full viewport height, adjust as needed */
+    /* Other styling as needed */
+}
+
+.top-right-image {
+    position: absolute;
+    /* Position the image absolutely within its relative parent */
+    top: 0;
+    /* Align top edge */
+    right: 0;
+    /* Align right edge */
+    width: 100px;
+    /* Set the image width, adjust as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f0f0f0;
+    /* Subtle background color for visibility */
+}
+
+#about,
+#contact {
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+        background: linear-gradient(to right, #ea1d6f 0%, #eb466b 100%);
+        font-size: 12px;
+    }
+
+    body,
+    button,
+    input {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        letter-spacing: 1.4px;
+    }
+
+    .background {
+        display: flex;
+        min-height: 100vh;
+    }
+
+    .container {
+        flex: 0 1 700px;
+        margin: auto;
+        padding: 10px;
+    }
+
+    .screen {
+        position: relative;
+        background: #3e3e3e;
+        border-radius: 15px;
+    }
+
+    .screen:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 20px;
+        right: 20px;
+        bottom: 0;
+        border-radius: 15px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+        z-index: -1;
+    }
+
+    .screen-header {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        background: #4d4d4f;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    .screen-header-left {
+        margin-right: auto;
+    }
+
+    .screen-header-button {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        margin-right: 3px;
+        border-radius: 8px;
+        background: white;
+    }
+
+    .screen-header-button.close {
+        background: #ed1c6f;
+    }
+
+    .screen-header-button.maximize {
+        background: #e8e925;
+    }
+
+    .screen-header-button.minimize {
+        background: #74c54f;
+    }
+
+    .screen-header-right {
+        display: flex;
+    }
+
+    .screen-header-ellipsis {
+        width: 3px;
+        height: 3px;
+        margin-left: 2px;
+        border-radius: 8px;
+        background: #999;
+    }
+
+    .screen-body {
+        display: flex;
+    }
+
+    .screen-body-item {
+        flex: 1;
+        padding: 50px;
+    }
+
+    .screen-body-item.left {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .app-title {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        color: #ea1d6f;
+        font-size: 26px;
+    }
+
+    .app-title:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 25px;
+        height: 4px;
+        background: #ea1d6f;
+    }
+
+    .app-contact {
+        margin-top: auto;
+        font-size: 8px;
+        color: #888;
+    }
+
+    .app-form-group {
+        margin-bottom: 15px;
+    }
+
+    .app-form-group.message {
+        margin-top: 40px;
+    }
+
+    .app-form-group.buttons {
+        margin-bottom: 0;
+        text-align: right;
+    }
+
+    .app-form-control {
+        width: 100%;
+        padding: 10px 0;
+        background: none;
+        border: none;
+        border-bottom: 1px solid #666;
+        color: #ddd;
+        font-size: 14px;
+        text-transform: uppercase;
+        outline: none;
+        transition: border-color .2s;
+    }
+
+    .app-form-control::placeholder {
+        color: #666;
+    }
+
+    .app-form-control:focus {
+        border-bottom-color: #ddd;
+    }
+
+    .app-form-button {
+        background: none;
+        border: none;
+        color: #ea1d6f;
+        font-size: 14px;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .app-form-button:hover {
+        color: #b9134f;
+    }
+
+    .credits {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        color: #ffa4bd;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+    }
+
+    .credits-link {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .dribbble {
+        width: 20px;
+        height: 20px;
+        margin: 0 5px;
+    }
+
+    @media screen and (max-width: 520px) {
+        .screen-body {
+            flex-direction: column;
+        }
+
+        .screen-body-item.left {
+            margin-bottom: 30px;
+        }
+
+        .app-title {
+            flex-direction: row;
+        }
+
+        .app-title span {
+            margin-right: 12px;
+        }
+
+        .app-title:after {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .screen-body {
+            padding: 40px;
+        }
+
+        .screen-body-item {
+            padding: 0;
+        }
+    }
+
+}
+
+
+
+#about {
+    background: '#fff';
+}
+
+#contact {
+    background: '#f0f0f0';
+}
+
+#about ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#about li {
+    width: 10rem;
+    text-align: center;
+}
+
+#about li img {
+    height: 4rem;
+    width: 6rem;
+    object-fit: cover;
+}
+
+#about li h3 {
+    margin: 0.5rem 0;
+}
+
+#about li p {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .button-primary {
+        margin: 0 8px;
+    }
+}
+
+
+.content-sections section {
+    margin: 20px auto;
+    padding: 20px;
+    background: #f0f0f0;
+    /* Light grey background for each section */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    /* Ensures content doesn't stretch too wide */
+}
+
+.content-sections section h2 {
+    color: #0056b3;
+    /* Theme color for headings */
+}
+
+.content-sections section p {
+    color: #333;
+    /* Dark grey color for text for better readability */
+    line-height: 1.6;
+    /* Improves readability */
+}
+
+.button-primary {
+    padding: 8px 16px;
+    background: transparent;
+    color: black;
+    font-size: 14px;
+    font-weight: light;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: auto;
+    display: inline-block;
+    /* Ensure it behaves like a button */
+    margin-top: 20px;
+    text-align: center;
+    /* Center the text */
+    text-decoration: none;
+    /* Remove default link underlining */
+    border: none;
+    /* Remove borders */
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.button-primary:hover {
+    background: black;
+    color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+footer {
+    margin-top: 20px;
+}
+
+.admin-dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    padding-left: 1px;
+    padding-right: 1px;
+    /* border-radius: 20px; */
+    border-top-right-radius: 20px;
+}
+
+.sidebar h3 {
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 0;
+}
+
+.sidebar ul li ul {
+    padding-left: 20px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.sidebar-button {
+    background: none;
+    color: white;
+    border: none;
+    padding: 50px;
+    font: inherit;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+.sidebar-button:hover {
+    text-decoration: underline;
 }
