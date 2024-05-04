@@ -5,6 +5,10 @@ import video from '../assets/Untitled Video (3).mp4';
 import { about } from './data.js';
 import About from './About.jsx';
 import imageee from '../assets/istockphoto-1436319269-1024x1024.jpg'
+import { useRef } from "react";
+import { motion, useScroll } from "framer-motion";
+import Text from './Text.tsx';
+
 
 export default function Home() {
     return (
@@ -34,6 +38,7 @@ export default function Home() {
                     {about.map((aboutitem) => <About key={aboutitem.title} {...aboutitem} />)}
                 </ul>
             </div>
+            <Text />
             <div id="contact">
                 <div class="background">
                     <div class="container">
