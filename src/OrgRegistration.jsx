@@ -1,6 +1,6 @@
 import React from 'react';
 
-function OrgRegistration() {
+export default function OrgRegistration() {
     return (
         <div className="login-container">
             <h2>Registration</h2>
@@ -29,7 +29,7 @@ function OrgRegistration() {
                 <button type="submit">Submit Request</button>
             </form>
         </div>
-    );
+    )
 
     function submitForm(event) {
         event.preventDefault();
@@ -38,4 +38,3 @@ function OrgRegistration() {
     }
 }
 
-export default Login;
