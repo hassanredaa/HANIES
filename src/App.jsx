@@ -18,7 +18,6 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path="/changepassword" element={<ChangePassword />} />
         <Route path="/admin" element={<AdminDB />} />
-
       </Routes>
     </BrowserRouter>
   );

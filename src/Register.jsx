@@ -104,7 +104,7 @@ export default function Register() {
                 </div>
             </div>
             <footer>  {/* Footer that should always be at the bottom */}
-                <p>Copyright © 2023 Good Giving</p>
+                <p>Copyright ©️ 2023 Good Giving</p>
             </footer>
         </div>
     );
