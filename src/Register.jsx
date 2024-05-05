@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function Register() {
+    const [selectedRole, setSelectedRole] = useState('');
+    const [showDocumentUpload, setShowDocumentUpload] = useState(false);
+
+    const handleRoleChange = (event) => {
+        const role = event.target.value;
+        setSelectedRole(role);
+        setShowDocumentUpload(role === 'doctor' || role === 'teacher');
+    };
+
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log("Form submitted");
     };
 
     return (
-        <div className="app-container">  {/* Full page container */}
-            <div className="content-area">  {/* Content container to hold form */}
+        <div className="app-container">
+            <div className="content-area">
                 <div className="register-container">
                     <h2>Register</h2>
                     <form onSubmit={handleSubmit}>
@@ -31,7 +40,6 @@ export default function Register() {
                                 <label htmlFor="female">Female</label>
                                 <input type="radio" id="female" name="gender" value="female" />
                             </div>
-                            
                         </div>
 
                         <div className="input-group">
@@ -62,11 +70,9 @@ export default function Register() {
                             <input type="gov" id="gov" name="gov" required placeholder="Choose your governorate" />
                         </div>
                         
-                        
-                        
                         <div className="input-group">
                             <label htmlFor="role">I am a:</label>
-                            <select id="role" name="role" required>
+                            <select id="role" name="role" value={selectedRole} onChange={handleRoleChange} required>
                                 <option value="">Select your role</option>
                                 <option value="donor">Donor</option>
                                 <option value="teacher">Teacher</option>
@@ -74,12 +80,19 @@ export default function Register() {
                                 <option value="organization">Organization</option>
                             </select>
                         </div>
-                        
+
+                        {showDocumentUpload && (
+                            <div className="input-group">
+                                <label htmlFor="documents">Upload Documents:</label>
+                                <input type="file" id="documents" name="documents" accept=".pdf,.doc,.docx" />
+                            </div>
+                        )}
+
                         <button type="submit">Register</button>
                     </form>
                 </div>
             </div>
-            <footer>  {/* Footer that should always be at the bottom */}
+            <footer>
                 <p>Copyright © 2023 Good Giving</p>
             </footer>
         </div>
