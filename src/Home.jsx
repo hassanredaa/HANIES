@@ -30,16 +30,20 @@ export default function Home() {
             <video autoPlay muted loop id="video-bg" style={{ width: '100%', height: '100vh', objectFit: 'cover', zIndex: -1 }}>
                 <source src={video} type="video/mp4" />
             </video>
-            <div>
-                <img src={imageee}></img>
+            <div style={{marginTop: '50px'}}>
+                {/* <img src={imageee}></img> */}
+                <Text />
+
             </div>
             <div id="about" style={{ padding: '50px', backgroundColor: '#fff', color: '#333', textAlign: 'center' }}>
                 <ul>
                     {about.map((aboutitem) => <About key={aboutitem.title} {...aboutitem} />)}
                 </ul>
             </div>
-            <Text />
+
             <div id="contact">
+            <Text />
+
                 <div class="background">
                     <div class="container">
                         <div class="screen">
