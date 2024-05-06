@@ -11,25 +11,29 @@ export default function OrganizationHome() {
        window.open('http://localhost:5173/AboutOrg');
         console.log("Navigate to AboutOrg.jsx");
     };
+    const goToSched = () => {
+        console.log("navigate to schedule.jsx");
+    };
 
     return (
-        <div className="organization-home">
-            <div className="menu">
+        <div className="h2">
+            <h2>Organization</h2>
+            <div className="dropdown">
                 <button onClick={toggleMenu}>Menu</button>
                 {menuOpen && (
-                    <div className="dropdown-menu">
+                    <div className="button-Orgprimary">
                         <ul>
                             <li>
-                                <button onClick={goToAbout}>About</button>
+                                <button className='button-Orgprimary' onClick={goToAbout}>About</button>
                             </li>
-                            {/* Add more menu items here */}
+                           
+                            <li>
+                            <button className='button-Orgprimary' onClick={goToSched}>schedule timeslot</button>
+                            </li>
+                           
                         </ul>
                     </div>
                 )}
-            </div>
-            <div className="content">
-                <h1>Organization HomePage</h1>
-                {/* Other content of your OrganizationHome component */}
             </div>
         </div>
     );
