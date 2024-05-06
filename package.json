@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@motionone/utils": "^10.17.0",
+    "@react-google-maps/api": "^2.19.3",
     "chart.js": "^4.4.2",
     "framer-motion": "^11.1.7",
     "react": "^18.0.0",

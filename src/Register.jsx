@@ -96,7 +96,7 @@ export default function Register() {
                                 </div>
 
 
-                                {/* Add more organization-related fields here */}
+                                
                             </>
                         )}
                         <button type="submit">Register</button>
