@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function OrganizationHome() {
     const [menuOpen, setMenuOpen] = useState(false);
+    let navigate = useNavigate(); 
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
 
     const goToAbout = () => {
-       window.open('http://localhost:5173/AboutOrg');
+        navigate('/AboutOrg');
         console.log("Navigate to AboutOrg.jsx");
     };
     const goToSched = () => {
@@ -26,11 +28,11 @@ export default function OrganizationHome() {
                             <li>
                                 <button className='button-Orgprimary' onClick={goToAbout}>About</button>
                             </li>
-                           
+
                             <li>
-                            <button className='button-Orgprimary' onClick={goToSched}>schedule timeslot</button>
+                                <button className='button-Orgprimary' onClick={goToSched}>schedule timeslot</button>
                             </li>
-                           
+
                         </ul>
                     </div>
                 )}
