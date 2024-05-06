@@ -13,6 +13,7 @@ export default function Register() {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log("Form submitted");
+        window.location.href = '/donorhome';
     };
 
     return (
@@ -67,7 +68,7 @@ export default function Register() {
                         </div>
                         <div className="input-group">
                             <label htmlFor="gov">Governorate:</label>
-                            <input type="gov" id="gov" name="gov" required placeholder="Choose your governorate" />
+                            <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
                         </div>
                         
                         <div className="input-group">
