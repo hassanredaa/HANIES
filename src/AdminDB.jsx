@@ -57,17 +57,21 @@ export default function AdminDB() {
                 </ul>
             </div>
             <div className="content">
-                <h1>Welcome to the Admin Dashboard</h1>
-                <p>Select an option from the sidebar to get started.</p>
-                <Bar
-                    data={{
-                        labels: ["Amira", "Hassan"],
-                        datasets: [{
-                            label: "takyeem",
-                            data: [10, 30],
-                        }]
-                    }}
-                />
+                <div className="text-content">
+                    <h1>Welcome to the Admin Dashboard</h1>
+                    {/* <p>Select an option from the sidebar to get started.</p> */}
+                </div>
+                <div className="chart-container">
+                    <Bar
+                        data={{
+                            labels: ["Amira", "Hassan"],
+                            datasets: [{
+                                label: "takyeem",
+                                data: [10, 30],
+                            }]
+                        }}
+                    />
+                </div>
             </div>
         </div>
     );
