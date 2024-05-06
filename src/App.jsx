@@ -6,7 +6,8 @@ import Register from './Register.jsx';
 import ChangePassword from './ChangePassword.jsx';
 import Home from './Home.jsx';
 import AdminDB from './AdminDB.jsx';
-import OrgRegistration from './OrgRegistration.jsx';
+import OrganizationHome from './OrganizationHome.jsx';
+import AboutOrg from './AboutOrg.jsx';
 
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path="/changepassword" element={<ChangePassword />} />
         <Route path="/admin" element={<AdminDB />} />
+        <Route path="/OrganizationHome" element={<OrganizationHome />} />
+        <Route path="/AboutOrg" element={<AboutOrg />} />
       </Routes>
     </BrowserRouter>
   );
