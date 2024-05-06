@@ -6,8 +6,7 @@ import Register from './Register.jsx';
 import ChangePassword from './ChangePassword.jsx';
 import Home from './Home.jsx';
 import AdminDB from './AdminDB.jsx';
-import OrganizationHome from './OrganizationHome.jsx';
-import AboutOrg from './AboutOrg.jsx';
+import OrgRegistration from './OrgRegistration.jsx';
 
 
 function App() {
