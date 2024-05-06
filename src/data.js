@@ -43,7 +43,7 @@ export const organizations = [
     }
 ]
 
-const submissionsData = [
+export const submissionsData = [
     { id: 1, name: 'Organization A', status: 'Pending' },
     { id: 2, name: 'Organization B', status: 'Approved' },
     { id: 3, name: 'Organization C', status: 'Rejected' },
