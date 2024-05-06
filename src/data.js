@@ -42,3 +42,9 @@ export const organizations = [
         email: "charity2@goodgiving.com"
     }
 ]
+
+export const submissionsData = [
+    { id: 1, name: 'Organization A', status: 'Pending' },
+    { id: 2, name: 'Organization B', status: 'Approved' },
+    { id: 3, name: 'Organization C', status: 'Rejected' },
+];
