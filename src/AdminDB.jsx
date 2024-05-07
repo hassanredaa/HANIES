@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Chart as ChartJS } from 'chart.js/auto';
 import { Bar } from 'react-chartjs-2';
+import ggImage from '../assets/ggw.png';
+import goodImage from '../assets/good.png';
+import avImage from '../assets/img_avatar.png';
+
+
+
 
 
 export default function AdminDB() {
@@ -18,7 +24,21 @@ export default function AdminDB() {
     return (
         <div className="admin-dashboard">
             <div className="sidebar">
-                <ul>
+                <div style={{ display: 'flex' }}>
+                    <div style={{ flex: '33.33%', padding: '5px', marginLeft: '20px' }}>
+                        <img src={ggImage} />
+                    </div>
+                    <div style={{ flex: '33.33%', padding: '5px', marginRight: '200px' }}>
+                        <img src={goodImage} />
+                    </div>
+                </div>
+                <div>
+                    <img src={avImage} style={{ marginLeft: '5px', marginTop: '50px', borderRadius: '50%', width: '100px', height: '100px' }} />
+                </div>
+                <h1 style={{textAlign:'center' , padding: '5px'}}>name</h1>
+                <p style={{textAlign: 'center'}}>Admin</p>
+
+                <ul style={{ paddingTop: '20px'}}>
                     <li>
                         <button className="sidebar-button" onClick={toggleReview}>
                             Review Submissions
@@ -50,15 +70,16 @@ export default function AdminDB() {
                             <ul>
                                 <li><Link to="/views/organizations">View Organizations List</Link></li>
                                 <li><Link to="/views/donors">View Donors List</Link></li>
-                                <li><Link to="/views/registered">View Registered Organizations</Link></li>
+                                <li></li>
                             </ul>
                         )}
                     </li>
                 </ul>
+                <Link to="/" style={{marginTop: '170px'}}>Log Out</Link>
             </div>
             <div className="content">
                 <div className="text-content">
-                    <h1>Welcome to the Admin Dashboard</h1>
+                    <h1 style={{ textAlign: 'left' }}>Dashboard</h1>
                     {/* <p>Select an option from the sidebar to get started.</p> */}
                 </div>
                 <div className="chart-container">
