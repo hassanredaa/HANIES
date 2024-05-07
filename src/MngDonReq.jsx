@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { submissionsData } from './data.js'
+import { submissionsDonData } from './data.js';
 
-function MngOrgReq() {
-
-    const [submissions, setSubmissions] = useState(submissionsData);
+function MngDonReq() {
+    const [submissions, setSubmissions] = useState(submissionsDonData);
 
     const handleApprove = (id) => {
         const updatedSubmissions = submissions.map(sub => {
@@ -26,14 +25,11 @@ function MngOrgReq() {
         setSubmissions(updatedSubmissions);
     };
 
-
-
     return (
         <div className="review-org-sub">
             <header>
-                <h1>Manage Organizations' Requests</h1>
+                <h1>Manage Donors' Requests</h1>
                 <Link to="/admin">Back to Admin Dashboard</Link>
-
             </header>
             <table style={{ marginTop: '110px' }}>
                 <thead>
@@ -45,7 +41,7 @@ function MngOrgReq() {
                     </tr>
                 </thead>
                 <tbody>
-                    {submissionsData.map(submission => (
+                    {submissions.map(submission => (
                         <tr key={submission.id}>
                             <td>{submission.id}</td>
                             <td>{submission.name}</td>
@@ -54,7 +50,6 @@ function MngOrgReq() {
                                 <button className="edit">Edit</button>
                                 <button className="approve" onClick={() => handleApprove(submission.id)}>Approve</button>
                                 <button className="delete" onClick={() => handleReject(submission.id)}>Reject</button>
-
                             </td>
                         </tr>
                     ))}
@@ -64,4 +59,4 @@ function MngOrgReq() {
     );
 }
 
-export default MngOrgReq;
+export default MngDonReq;

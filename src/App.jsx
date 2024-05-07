@@ -11,6 +11,8 @@ import AboutOrg from './AboutOrg.jsx';
 import ReviewOrgSub from './ReviewOrgSub';
 import ReviewDonSub from './ReviewDonSub';
 import MngOrgReq from './MngOrgReq.jsx';
+import MngDonReq from './MngDonReq.jsx';
+
 
 
 
@@ -31,6 +33,9 @@ function App() {
         <Route path="/submissions/organizations" element={<ReviewOrgSub />} />
         <Route path="/submissions/donors" element={<ReviewDonSub />} />
         <Route path="/requests/organizations" element={<MngOrgReq />} />
+        <Route path="/requests/donors" element={<MngDonReq />} />
+
+
 
 
       </Routes>

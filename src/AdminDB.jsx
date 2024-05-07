@@ -35,10 +35,10 @@ export default function AdminDB() {
                 <div>
                     <img src={avImage} style={{ marginLeft: '5px', marginTop: '50px', borderRadius: '50%', width: '100px', height: '100px' }} />
                 </div>
-                <h1 style={{textAlign:'center' , padding: '5px'}}>name</h1>
-                <p style={{textAlign: 'center'}}>Admin</p>
+                <h1 style={{ textAlign: 'center', padding: '5px' }}>name</h1>
+                <p style={{ textAlign: 'center' }}>Admin</p>
 
-                <ul style={{ paddingTop: '20px'}}>
+                <ul style={{ paddingTop: '20px' }}>
                     <li>
                         <button className="sidebar-button" onClick={toggleReview}>
                             Review Submissions
@@ -75,7 +75,7 @@ export default function AdminDB() {
                         )}
                     </li>
                 </ul>
-                <Link to="/" style={{marginTop: '170px'}}>Log Out</Link>
+                <Link to="/" style={{ marginTop: '170px' }}>Log Out</Link>
             </div>
             <div className="content">
                 <div className="text-content">
