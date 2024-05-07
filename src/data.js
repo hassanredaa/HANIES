@@ -17,6 +17,16 @@ export const about = [
     }
 ]
 
+var test = 'This is a test'
+
+export function get(){
+    return test
+}
+
+export function set(x) {
+    test = x
+}
+
 export const users = [
     {
         name: "Amira",
