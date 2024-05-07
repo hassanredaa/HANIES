@@ -5,11 +5,11 @@ import { submissionsDonData } from './data.js'
 function ReviewDonSub() {
     return (
         <div className="review-org-sub">
-            <header>
+            <header style={{padding: '10px'}}>
                 <h1>Review Donor Submissions</h1>
                 <Link to="/admin">Back to Admin Dashboard</Link>
             </header>
-            <table>
+            <table style={{marginTop: '110px'}}>
                 <thead>
                     <tr>
                         <th>ID</th>

@@ -9,7 +9,7 @@ function ReviewOrgSub() {
                 <h1>Review Organization Submissions</h1>
                 <Link to="/admin">Back to Admin Dashboard</Link>
             </header>
-            <table>
+            <table style={{marginTop: '110px'}}>
                 <thead>
                     <tr>
                         <th>ID</th>

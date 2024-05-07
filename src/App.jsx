@@ -28,7 +28,7 @@ function App() {
         <Route path="/OrganizationHome" element={<OrganizationHome />} />
         <Route path="/AboutOrg" element={<AboutOrg />} />
         <Route path="/submissions/organizations" element={<ReviewOrgSub />} />
-        <Route path="/submissions/donations" element={<ReviewDonSub />} />
+        <Route path="/submissions/donors" element={<ReviewDonSub />} />
 
       </Routes>
     </BrowserRouter>
