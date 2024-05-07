@@ -48,3 +48,12 @@ export const submissionsData = [
     { id: 2, name: 'Organization B', status: 'Approved' },
     { id: 3, name: 'Organization C', status: 'Rejected' },
 ];
+
+
+export const submissionsDonData = [
+    { id: 1, name: 'John Doe', status: 'Pending' },
+    { id: 2, name: 'Jane Smith', status: 'Reviewed' },
+    { id: 3, name: 'Alice Johnson', status: 'Approved' },
+    { id: 4, name: 'Bob Brown', status: 'Denied' }
+];
+
