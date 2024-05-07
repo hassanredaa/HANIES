@@ -3,6 +3,33 @@ import { Link } from 'react-router-dom';
 import { submissionsData } from './data.js'
 
 function ReviewOrgSub() {
+
+    const [submissions, setSubmissions] = useState(submissionsData);
+
+    // Function to approve a submission
+    const handleApprove = (id) => {
+        const updatedSubmissions = submissions.map(sub => {
+            if (sub.id === id) {
+                return { ...sub, status: "Approved" };
+            }
+            return sub;
+        });
+        setSubmissions(updatedSubmissions);
+    };
+
+    // Function to reject a submission
+    const handleReject = (id) => {
+        const updatedSubmissions = submissions.map(sub => {
+            if (sub.id === id) {
+                return { ...sub, status: "Rejected" };
+            }
+            return sub;
+        });
+        setSubmissions(updatedSubmissions);
+    };
+
+
+
     return (
         <div className="review-org-sub">
             <header>
@@ -26,8 +53,9 @@ function ReviewOrgSub() {
                             <td>{submission.name}</td>
                             <td>{submission.status}</td>
                             <td>
-                                <button className="view">View Data</button>
-                                <button className="download">Download Data</button>
+                                <button className="edit">Edit</button>
+                                <button className="approve" onClick={() => handleApprove(submission.id)}>Approve</button>
+                                <button className="delete" onClick={() => handleReject(submission.id)}>Reject</button>
 
                             </td>
                         </tr>

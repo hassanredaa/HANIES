@@ -942,7 +942,6 @@ footer {
     margin-bottom: 20px;
 }
 
-/* Styles for the Table */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -954,7 +953,6 @@ th,
 td {
     text-align: left;
     padding: 8px;
-    /* Reduced padding for better fit and consistency */
     border-bottom: 1px solid #e0e0e0;
 }
 
@@ -997,6 +995,14 @@ button.approve {
 
 button.delete {
     background-color: #dc3545;
+}
+
+button.view {
+    background-color: #d425ab;
+}
+
+button.download {
+    background-color: #f58abe;
 }
 
 @media (max-width: 768px) {
