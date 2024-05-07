@@ -77,7 +77,7 @@ export default function AdminDB() {
                 </ul>
                 <Link to="/" style={{ marginTop: '170px' }}>Log Out</Link>
             </div>
-            <div className="content">
+            <div className="contentt">
                 <div className="text-content">
                     <h1 style={{ textAlign: 'left' }}>Dashboard</h1>
                     {/* <p>Select an option from the sidebar to get started.</p> */}
