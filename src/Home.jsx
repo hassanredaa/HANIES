@@ -93,7 +93,6 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <MyLocationMap apiKey="AIzaSyA_vSoagXuu9u85uYYtrCt8tSeC3zaRzpc" />
             <footer style={{ textAlign: 'center', padding: '20px 10px', backgroundColor: 'black', color: 'white' }}>
                 <p>Copyright © 2023 Good Giving</p>
             </footer>

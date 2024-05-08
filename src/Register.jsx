@@ -27,9 +27,11 @@ export default function Register() {
 
     const handleUserArray = (event) => {
         event.preventDefault(); // Prevent default form submission behavior
-    
+        const formData = new FormData(event.target);
+        const newUser = {};
+
         // Get form data
-        const name = event.target.name.value;
+        const name = event.target.first-name.value;
         const password = event.target.password.value;
         const email = event.target.email.value;
     
