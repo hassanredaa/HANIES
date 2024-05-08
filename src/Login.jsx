@@ -9,7 +9,7 @@ export default function Login() {
     const handleSubmit = () => {
         console.log(users)
 
-        addUser('h', 'h', 'h')
+        // addUser('h', 'h', 'h')
         console.log(users)
       };
     

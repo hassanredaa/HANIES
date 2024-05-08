@@ -28,7 +28,6 @@ export default function AdminDB() {
 
     return (
         <div className="admin-dashboard">
-            <button onClick={handleSubmit}>test</button>
             <div className="sidebar">
                 <div style={{ display: 'flex' }}>
                     <div style={{ flex: '33.33%', padding: '5px', marginLeft: '20px' }}>
