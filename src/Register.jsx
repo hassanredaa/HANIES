@@ -173,8 +173,8 @@ export default function Register() {
                     </form>
                 </div>
             </div>
-            <footer>  {/* Footer that should always be at the bottom */}
-                <p>Copyright ©️ 2023 Good Giving</p>
+            <footer style={{ textAlign: 'center', padding: '20px 10px', backgroundColor: 'black', color: 'white' }}>
+                <p>Copyright © 2023 Good Giving</p>
             </footer>
         </div>
     );
