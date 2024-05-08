@@ -1,8 +1,20 @@
-import React from 'react';
+import React , {useContext} from 'react';
 import { Link } from 'react-router-dom';
+import { DataContext } from './data.jsx';
+
 
 export default function Login() {
+    const { users, addUser } = useContext(DataContext);
+
+    const handleSubmit = () => {
+        console.log(users)
+
+        addUser('h', 'h', 'h')
+        console.log(users)
+      };
+    
     return (
+        
         <div className="app-container"> {/* Single outermost container */}
 
             <div className="login-container">
@@ -23,6 +35,8 @@ export default function Login() {
                     <p className="signup-text">Forgot your password? <Link to="/changepassword">Change Password</Link></p>
 
                 </form>
+                <Link to="/admin" onClick={handleSubmit}>Test array </Link>
+
             </div>
 
             <footer>
