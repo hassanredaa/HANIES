@@ -94,6 +94,11 @@ button:hover::before {
     /* Adjust opacity to not fully obscure text */
     transform: translate(-50%, -50%) scale(1.2);
 }
+.subject-checkboxes div {
+    display: inline-block;
+    margin-right: 20px; /* Adjust as needed */
+}
+
 
 
 .button-primary {
