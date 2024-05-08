@@ -1,12 +1,21 @@
 import React, { useState } from 'react';
 
 export default function Register() {
+    const [selectedRole, setSelectedRole] = useState('');
+    const [showDocumentUpload, setShowDocumentUpload] = useState(false);
+
+    const handleRoleChange = (event) => {
+        const role = event.target.value;
+        setSelectedRole(role);
+        setShowDocumentUpload(role === 'doctor' || role === 'teacher');
+    };
     const [userRole, setUserRole] = useState('');
     const [organizationFieldsVisible, setOrganizationFieldsVisible] = useState(false);
 
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log("Form submitted");
+        window.location.href = '/donorhome';
     };
 
     const handleRoleChange = (event) => {
@@ -19,26 +28,64 @@ export default function Register() {
     };
 
     return (
-        <div className="app-container">  {/* Full page container */}
-            <div className="content-area">  {/* Content container to hold form */}
+        <div className="app-container">
+            <div className="content-area">
                 <div className="register-container">
                     <h2>Register</h2>
                     <form onSubmit={handleSubmit}>
                         <div className="input-group">
-                            <label htmlFor="username">Username:</label>
-                            <input type="text" id="username" name="username" required placeholder="Enter your username" />
+                            <label htmlFor="first-name">First Name:</label>
+                            <input type="text" id="first-name" name="first-name" required placeholder="Enter your first name" />
                         </div>
+                        <div className="input-group">
+                            <label htmlFor="last-name">Last Name:</label>
+                            <input type="text" id="last-name" name="last-name" required placeholder="Enter your last name" />
+                        </div>
+
+                        <div className="input-group">
+                            <label>Gender:</label>
+                            <div>
+                                <label htmlFor="male">Male</label>
+                                <input type="radio" id="male" name="gender" value="male" />
+                            </div>
+                            <div>
+                                <label htmlFor="female">Female</label>
+                                <input type="radio" id="female" name="gender" value="female" />
+                            </div>
+                        </div>
+
                         <div className="input-group">
                             <label htmlFor="email">Email:</label>
                             <input type="email" id="email" name="email" required placeholder="Enter your email" />
+                        </div>
+
+                        <div className="input-group">
+                            <label htmlFor="contact num">Contact Number:</label>
+                            <input type="contact num" id="contact num" name="contact num" required placeholder="Enter your Mobile Number" />
                         </div>
                         <div className="input-group">
                             <label htmlFor="password">Password:</label>
                             <input type="password" id="password" name="password" required placeholder="Create a password" />
                         </div>
+
+                        <div className="input-group">
+                            <label htmlFor="address">Address:</label>
+                            <input type="address" id="address" name="address" required placeholder="Enter your address" />
+                        </div>
+                        
+                        <div className="input-group">
+                            <label htmlFor="area">Area:</label>
+                            <input type="area" id="area" name="area" required placeholder="Enter your area" />
+                        </div>
+                        <div className="input-group">
+                            <label htmlFor="gov">Governorate:</label>
+                            <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
+                        </div>
+                        
                         <div className="input-group">
                             <label htmlFor="role">I am a:</label>
-                            <select id="role" name="role" required onChange={handleRoleChange}>
+                            <select id="role" name="role" value={selectedRole} onChange={handleRoleChange} required>
+//                             <select id="role" name="role" required onChange={handleRoleChange}>
                                 <option value="">Select your role</option>
                                 <option value="donor">Donor</option>
                                 <option value="teacher">Teacher</option>
@@ -46,6 +93,15 @@ export default function Register() {
                                 <option value="organization">Organization</option>
                             </select>
                         </div>
+
+                        {showDocumentUpload && (
+                            <div className="input-group">
+                                <label htmlFor="documents">Upload Documents:</label>
+                                <input type="file" id="documents" name="documents" accept=".pdf,.doc,.docx" />
+                            </div>
+                        )}
+
+
                         {organizationFieldsVisible && (
                             <>
                                 <div className="input-group">
