@@ -6,6 +6,12 @@ export default function Register() {
 
     const handleRoleChange = (event) => {
         const role = event.target.value;
+        if (role === 'organization') {
+            setOrganizationFieldsVisible(true);
+        } else {
+            setOrganizationFieldsVisible(false);
+        }
+
         setSelectedRole(role);
         setShowDocumentUpload(role === 'doctor' || role === 'teacher');
     };
@@ -18,14 +24,16 @@ export default function Register() {
         window.location.href = '/donorhome';
     };
 
-    const handleRoleChange = (event) => {
-        setUserRole(event.target.value);
-        if (event.target.value === 'organization') {
-            setOrganizationFieldsVisible(true);
-        } else {
-            setOrganizationFieldsVisible(false);
-        }
-    };
+    // const handleRoleChange = (event) => {
+    //     setUserRole(event.target.value);
+    //     if (event.target.value === 'organization') {
+    //         setOrganizationFieldsVisible(true);
+    //     } else {
+    //         setOrganizationFieldsVisible(false);
+    //     }
+    //     setShowDocumentUpload(role === 'doctor' || role === 'teacher');
+
+    // };
 
     return (
         <div className="app-container">
@@ -72,7 +80,7 @@ export default function Register() {
                             <label htmlFor="address">Address:</label>
                             <input type="address" id="address" name="address" required placeholder="Enter your address" />
                         </div>
-                        
+
                         <div className="input-group">
                             <label htmlFor="area">Area:</label>
                             <input type="area" id="area" name="area" required placeholder="Enter your area" />
@@ -81,10 +89,10 @@ export default function Register() {
                             <label htmlFor="gov">Governorate:</label>
                             <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
                         </div>
-                        
+
                         <div className="input-group">
                             <label htmlFor="role">I am a:</label>
-                            <select id="role" name="role" value={selectedRole} onChange={handleRoleChange} required>
+                            <select id="role" name="role" value={selectedRole} onChange={handleRoleChange} required />
 //                             <select id="role" name="role" required onChange={handleRoleChange}>
                                 <option value="">Select your role</option>
                                 <option value="donor">Donor</option>
@@ -108,19 +116,19 @@ export default function Register() {
                                     <label htmlFor="organizationName">Organization Name:</label>
                                     <input type="text" id="organizationName" name="organizationName" required placeholder="Enter your organization name" />
                                 </div>
-                                
+
                                 <div className="input-group">
                                     <label htmlFor="First Name">First Name:</label>
-                                    <input type="text" id="First Name" name="first Name" required placeholder="Enter your first name"/>
+                                    <input type="text" id="First Name" name="first Name" required placeholder="Enter your first name" />
                                 </div>
                                 <div className="input-group">
                                     <label htmlFor="Last Name">First Name:</label>
-                                    <input type="text" id="Last Name" name="Last Name" required placeholder="Enter your Last name"/>
+                                    <input type="text" id="Last Name" name="Last Name" required placeholder="Enter your Last name" />
                                 </div>
                                 <div className="input-group">
                                     <label htmlFor="Gender">Gender:</label>
                                     <select id="Gender" name="Gender" required>
-                                    <option value="">Select Gender</option>
+                                        <option value="">Select Gender</option>
                                         <option value="Male">Male</option>
                                         <option value="Female">Female</option>
                                         <option value="Prefer not to say">Prefer not to say</option>
@@ -128,7 +136,7 @@ export default function Register() {
                                 </div>
                                 <div className="input-group">
                                     <label htmlFor="Mobile Number">Mobile Number:</label>
-                                    <input type="tel" id="Mobile Number" name="Mobile Number" required placeholder="Enter your Mobile Number"/>
+                                    <input type="tel" id="Mobile Number" name="Mobile Number" required placeholder="Enter your Mobile Number" />
                                 </div>
                                 <div className="input-group">
                                     <label htmlFor="organizationType">Organization Type:</label>
@@ -140,19 +148,19 @@ export default function Register() {
                                 </div>
                                 <div className="input-group">
                                     <label htmlFor="Organization Address">Organization Address:</label>
-                                    <input type="Organization Address" id="Organization Address" name="Organization Address" required placeholder="Enter your Organization Address"/>
+                                    <input type="Organization Address" id="Organization Address" name="Organization Address" required placeholder="Enter your Organization Address" />
                                 </div>
                                 <div className="input-group">
                                     <label htmlFor="Area">Area:</label>
-                                    <input type="text" id="Area" name="Area" required placeholder="Enter your Area"/>
+                                    <input type="text" id="Area" name="Area" required placeholder="Enter your Area" />
                                 </div>
                                 <div className="input-group">
                                     <label htmlFor="Governorate">Area:</label>
-                                    <input type="text" id="Governorate" name="Governorate" required placeholder="Enter your Governorate"/>
+                                    <input type="text" id="Governorate" name="Governorate" required placeholder="Enter your Governorate" />
                                 </div>
 
 
-                                
+
                             </>
                         )}
                         <button type="submit">Register</button>
