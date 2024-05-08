@@ -94,8 +94,43 @@ button:hover::before {
     /* Adjust opacity to not fully obscure text */
     transform: translate(-50%, -50%) scale(1.2);
 }
-
-
+.subject-checkboxes div {
+    display: inline-block;
+    margin-right: 20px; /* Adjust as needed */
+}
+.right-list {
+    position: absolute;
+    top: 0;
+    right: 0; /* Align to the right side */
+    width: 200px; /* adjust width as needed */
+    height: 100vh; /* fill the entire viewport height */
+  }
+  
+  .black-list {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: black;
+    padding: 10px;
+    height: 100%; /* fill the entire parent container's height */
+  }
+  
+  .right-list:hover .black-list {
+    display: block;
+  }
+  
+  .right-list-trigger {
+    background-color: transparent;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .right-list-trigger:hover + .black-list {
+    display: block;
+  }
+  
+  
 .button-primary {
     padding: 8px 16px;
     background: transparent;

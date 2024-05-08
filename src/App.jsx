@@ -12,6 +12,10 @@ import ReviewOrgSub from './ReviewOrgSub';
 import ReviewDonSub from './ReviewDonSub';
 import MngOrgReq from './MngOrgReq.jsx';
 import MngDonReq from './MngDonReq.jsx';
+import DoctorPage from './DoctorPage.jsx';
+import TeacherPage from './TeacherPage.jsx';
+import DonorHome from './donorhome.jsx';
+
 
 
 
@@ -35,6 +39,9 @@ function App() {
         <Route path="/submissions/donors" element={<ReviewDonSub />} />
         <Route path="/requests/organizations" element={<MngOrgReq />} />
         <Route path="/requests/donors" element={<MngDonReq />} />
+        <Route path="/DonorHome" element={<DonorHome />} />
+        <Route path="/DoctorPage" element={<DoctorPage />} />
+        <Route path="/TeacherPage" element={<TeacherPage />} />
 
 
       </Routes>

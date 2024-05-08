@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Register() {
     const [selectedRole, setSelectedRole] = useState('');
@@ -21,7 +22,13 @@ export default function Register() {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log("Form submitted");
-        window.location.href = '/donorhome';
+        if(selectedRole =='doctor'){
+            window.location.href = '/DoctorPage';
+        }else if (selectedRole == 'teacher'){
+            window.location.href = '/TeacherPage';
+        }else{
+            window.location.href = '/DonorHome';
+        }   
     };
 
     // const handleRoleChange = (event) => {
@@ -92,8 +99,7 @@ export default function Register() {
 
                         <div className="input-group">
                             <label htmlFor="role">I am a:</label>
-                            <select id="role" name="role" value={selectedRole} onChange={handleRoleChange} required />
-//                             <select id="role" name="role" required onChange={handleRoleChange}>
+                             <select id="role" name="role" required onChange={handleRoleChange}>
                                 <option value="">Select your role</option>
                                 <option value="donor">Donor</option>
                                 <option value="teacher">Teacher</option>
@@ -167,8 +173,8 @@ export default function Register() {
                     </form>
                 </div>
             </div>
-            <footer>  {/* Footer that should always be at the bottom */}
-                <p>Copyright ©️ 2023 Good Giving</p>
+            <footer style={{ textAlign: 'center', padding: '20px 10px', backgroundColor: 'black', color: 'white' }}>
+                <p>Copyright © 2023 Good Giving</p>
             </footer>
         </div>
     );
