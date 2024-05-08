@@ -5,19 +5,30 @@ export const DataContext = createContext();
 export const DataProvider = ({ children }) => {
   const [users, setUsers] = useState([
     {
-      name: "Amira",
+      first: "Amira",
+      last:"Sameh",
+      gender:"Female",
+      email: "amira@goodgiving.com",
+      number: "01000000000",
       password: "test123",
-      email: "amira@goodgiving.com"
+      type: 'Doctor',
+      doc: null
+
     },
     {
       name: "Hassan",
+      last:"Reda",
+      gender:"Male",
+      email: "hassan@goodgiving.com",
+      number: "01000000000",
       password: "test123",
-      email: "hassan@goodgiving.com"
+      type: "Teacher",
+      doc: null
     }
   ]);
 
   const addUser = (name, password, email) => {
-    setUsers(prevUsers => [...prevUsers, { name, password, email }]);
+    setUsers(prevUsers => [...prevUsers, { name, last, gender,email,number,password,type,doc }]);
   };
 
   return (

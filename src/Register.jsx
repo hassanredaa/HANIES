@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
 import { Link } from 'react-router-dom';
 import MyLocationMap from './Location.jsx'; // Adjust the path based on your file structure
 import { api } from './api.js';
+import { DataContext } from './data.jsx';
 
 
 export default function Register() {
+    const { users, addUser } = useContext(DataContext);
+
     const [selectedRole, setSelectedRole] = useState('');
     const [showDocumentUpload, setShowDocumentUpload] = useState(false);
 
@@ -22,7 +25,20 @@ export default function Register() {
     const [userRole, setUserRole] = useState('');
     const [organizationFieldsVisible, setOrganizationFieldsVisible] = useState(false);
 
-
+    const handleUserArray = (event) => {
+        event.preventDefault(); // Prevent default form submission behavior
+    
+        // Get form data
+        const name = event.target.name.value;
+        const password = event.target.password.value;
+        const email = event.target.email.value;
+    
+        // Call the addUser function to add the user
+        addUser(name, last, gender,email,number,password,type,doc);
+    
+        // Clear the form fields
+        event.target.reset();
+      };
 
 
     const handleSubmit = (event) => {
@@ -62,7 +78,7 @@ export default function Register() {
             <div className="content-area">
                 <div className="register-container">
                     <h2>Register</h2>
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit} onClick={handleUserArray}>
                         <div className="input-group">
                             <label htmlFor="first-name">First Name:</label>
                             <input type="text" id="first-name" name="first-name" required placeholder="Enter your first name" />
@@ -113,7 +129,7 @@ export default function Register() {
                         </div>
 
 
-                        <div>            <MyLocationMap apiKey={api} />
+                        <div><MyLocationMap apiKey={api} />
                         </div>
 
                         <div className="input-group">
