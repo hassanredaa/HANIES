@@ -2,13 +2,12 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function TeacherPage() {
-    const [subjects, setSubjects] = useState([]);
-    const [proBonoClasses, setProBonoClasses] = useState(0);
-    const [proBonoStudents, setProBonoStudents] = useState(0);
+    const [proBonoClasses, setProBonoClasses] = useState(1);
+    const [proBonoStudents, setProBonoStudents] = useState(1);
+    const [selectedSubject, setSelectedSubject] = useState('');
 
     const handleSubjectChange = (event) => {
-        const { value } = event.target;
-        setSubjects(prevSubjects => prevSubjects.includes(value) ? prevSubjects.filter(subj => subj !== value) : [...prevSubjects, value]);
+        setSelectedSubject(event.target.value);
     };
 
     const handleProBonoClassesChange = (event) => {
@@ -21,7 +20,14 @@ export default function TeacherPage() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // Here you can handle form submission, such as sending data to backend or performing any other action
+        if (proBonoClasses < 1) {
+            alert("Pro-bono classes must be greater than or equal to 1");
+            return; // Prevent further execution if validation fails
+        }
+        if (proBonoStudents < 1) {
+            alert("Pro-bono students must be greater than or equal to 1");
+            return; // Prevent further execution if validation fails
+        }
         console.log("Form submitted");
         window.location.href = '/DonorHome';
     };
@@ -32,33 +38,22 @@ export default function TeacherPage() {
             <form onSubmit={handleSubmit}>
                 <div className="input-group">
                     <label>Select Subjects:</label>
-                    <div className="subject-checkboxes">
-                        <div>
-                            <input type="checkbox" id="math" name="math" value="math" onChange={handleSubjectChange} />
-                            <label htmlFor="math">Math</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="science" name="science" value="science" onChange={handleSubjectChange} />
-                            <label htmlFor="science">Science</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="english" name="english" value="english" onChange={handleSubjectChange} />
-                            <label htmlFor="english">English</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="history" name="history" value="history" onChange={handleSubjectChange} />
-                            <label htmlFor="history">History</label>
-                        </div>
-                        {/* Add more subjects as needed */}
-                    </div>
+                    <select id="subjects" name="subjects" value={selectedSubject} onChange={handleSubjectChange} required placeholder ="Select a subject" >
+                    <option value="">Select a subject</option>
+                    <option value="math">Math</option>
+                    <option value="science">Science</option>
+                    <option value="english">English</option>
+                    <option value="history">History</option>
+                    {/* Add more subjects as needed */}
+                    </select>
                 </div>
                 <div className="input-group">
                     <label htmlFor="proBonoClasses">Pro-bono Classes:</label>
-                    <input type="number" id="proBonoClasses" name="proBonoClasses" value={proBonoClasses} onChange={handleProBonoClassesChange} placeholder="Enter number of pro-bono classes" />
+                    <input type="number" id="proBonoClasses" name="proBonoClasses" value={proBonoClasses} onChange={handleProBonoClassesChange} required placeholder="Enter number of pro-bono classes" />
                 </div>
                 <div className="input-group">
                     <label htmlFor="proBonoStudents">Pro-bono Students:</label>
-                    <input type="number" id="proBonoStudents" name="proBonoStudents" value={proBonoStudents} onChange={handleProBonoStudentsChange} placeholder="Enter number of pro-bono students" />
+                    <input type="number" id="proBonoStudents" name="proBonoStudents" value={proBonoStudents} onChange={handleProBonoStudentsChange} required placeholder="Enter number of pro-bono students" />
                 </div>
                 <button type="submit">Submit</button>
             </form>

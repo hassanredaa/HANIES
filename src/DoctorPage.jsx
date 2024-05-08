@@ -9,7 +9,7 @@ export default function DoctorPage() {
         googleMarker: null // You can customize this based on how you handle Google Maps integration
     });
     const [specialty, setSpecialty] = useState('');
-    const [proBonoCases, setProBonoCases] = useState(0);
+    const [proBonoCases, setProBonoCases] = useState(1);
 
     const handleLocationChange = (event) => {
         const { name, value } = event.target;
@@ -29,7 +29,10 @@ export default function DoctorPage() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // Here you can handle form submission, such as sending data to backend or performing any other action
+        if (proBonoCases < 1) {
+            alert("Pro-bono cases must be greater than or equal to 1");
+            return; // Prevent further execution if validation fails
+        }
         console.log("Form submitted");
          window.location.href = '/DonorHome';
     };
@@ -40,24 +43,24 @@ export default function DoctorPage() {
             <form onSubmit={handleSubmit}>
                 <div className="input-group">
                     <label htmlFor="address">Address:</label>
-                    <input type="text" id="address" name="address" value={clinicLocation.address} onChange={handleLocationChange} placeholder="Enter clinic address" />
+                    <input type="text" id="address" name="address" value={clinicLocation.address} onChange={handleLocationChange} required placeholder="Please Enter Your clinic address" />
                 </div>
                 <div className="input-group">
                     <label htmlFor="area">Area:</label>
-                    <input type="text" id="area" name="area" value={clinicLocation.area} onChange={handleLocationChange} placeholder="Enter area" />
+                    <input type="text" id="area" name="area" value={clinicLocation.area} onChange={handleLocationChange} required placeholder="Please Enter Your area" />
                 </div>
                 <div className="input-group">
                     <label htmlFor="governorate">Governorate:</label>
-                    <input type="text" id="governorate" name="governorate" value={clinicLocation.governorate} onChange={handleLocationChange} placeholder="Enter governorate" />
+                    <input type="text" id="governorate" name="governorate" value={clinicLocation.governorate} onChange={handleLocationChange} required placeholder="Please Enter Your governorate" />
                 </div>
                 {/* Add Google Maps integration here if needed */}
                 <div className="input-group">
                     <label htmlFor="specialty">Specialty:</label>
-                    <input type="text" id="specialty" name="specialty" value={specialty} onChange={handleSpecialtyChange} placeholder="Enter doctor's specialty" />
+                    <input type="text" id="specialty" name="specialty" value={specialty} onChange={handleSpecialtyChange} required placeholder="Please Enter Your specialty" />
                 </div>
                 <div className="input-group">
                     <label htmlFor="proBonoCases">Pro-bono Cases:</label>
-                    <input type="number" id="proBonoCases" name="proBonoCases" value={proBonoCases} onChange={handleProBonoCasesChange} placeholder="Enter number of pro-bono cases" />
+                    <input type="number" id="proBonoCases" name="proBonoCases" value={proBonoCases} onChange={handleProBonoCasesChange} required placeholder="Enter number of pro-bono cases" />
                 </div>
                 <button type="submit">Submit</button>
             </form>
