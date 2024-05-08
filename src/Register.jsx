@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import MyLocationMap from './Location.jsx'; // Adjust the path based on your file structure
+import { api } from './api.js';
 
 
 export default function Register() {
@@ -112,7 +113,7 @@ export default function Register() {
                         </div>
 
 
-                        <div>            <MyLocationMap apiKey="AIzaSyA_vSoagXuu9u85uYYtrCt8tSeC3zaRzpc" />
+                        <div>            <MyLocationMap apiKey={api} />
                         </div>
 
                         <div className="input-group">
