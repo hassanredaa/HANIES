@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import MyLocationMap from './Location.jsx'; // Adjust the path based on your file structure
+
 
 export default function Register() {
     const [selectedRole, setSelectedRole] = useState('');
@@ -19,16 +21,19 @@ export default function Register() {
     const [userRole, setUserRole] = useState('');
     const [organizationFieldsVisible, setOrganizationFieldsVisible] = useState(false);
 
+
+
+
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log("Form submitted");
-        if(selectedRole =='doctor'){
+        if (selectedRole == 'doctor') {
             window.location.href = '/DoctorPage';
-        }else if (selectedRole == 'teacher'){
+        } else if (selectedRole == 'teacher') {
             window.location.href = '/TeacherPage';
-        }else{
+        } else {
             window.location.href = '/DonorHome';
-        }   
+        }
     };
 
     // const handleRoleChange = (event) => {
@@ -41,6 +46,15 @@ export default function Register() {
     //     setShowDocumentUpload(role === 'doctor' || role === 'teacher');
 
     // };
+
+
+
+
+
+
+
+
+
 
     return (
         <div className="app-container">
@@ -97,9 +111,13 @@ export default function Register() {
                             <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
                         </div>
 
+
+                        <div>            <MyLocationMap apiKey="AIzaSyA_vSoagXuu9u85uYYtrCt8tSeC3zaRzpc" />
+                        </div>
+
                         <div className="input-group">
                             <label htmlFor="role">I am a:</label>
-                             <select id="role" name="role" required onChange={handleRoleChange}>
+                            <select id="role" name="role" required onChange={handleRoleChange}>
                                 <option value="">Select your role</option>
                                 <option value="donor">Donor</option>
                                 <option value="teacher">Teacher</option>
