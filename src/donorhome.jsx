@@ -5,17 +5,20 @@ import goodImage from '../assets/good.png';
 import avImage from '../assets/img_avatar.png';
 
 export default function DonorHome() {
-    // State to manage the toggles
-    const [viewOpen, setViewOpen] = useState(false);
-   
+  // State to manage the toggles
+  const [viewOpen, setViewOpen] = useState(false);
 
-    // Toggle functions
-    const toggleView = () => setViewOpen(!viewOpen);
-   
+
+  // Toggle functions
+  const toggleView = () => setViewOpen(!viewOpen);
+
 
   return (
     <div className="Donor-dashboard">
       <div className="wrapper">
+
+        <h1 style={{ textAlign: 'left' }}>Welcome to Good Giving!</h1>
+        <h2 style={{ textAlign: 'left' }}>This is a place where you can make a difference.</h2>
         <div className="sidebar">
           <div style={{ display: 'flex' }}>
             <div style={{ flex: '33.33%', padding: '5px', marginLeft: '20px' }}>
@@ -36,7 +39,7 @@ export default function DonorHome() {
               <div className="p-3">
                 <input type="text" id="search-input" placeholder="Menu Search..." className="form-control" />
               </div>
-             
+
             </li>
             <li>
               <button className="sidebar-button" onClick={toggleView} >
@@ -44,7 +47,7 @@ export default function DonorHome() {
               </button>
               {viewOpen && (
                 <ul>
-                  <li><Link to="/views/organizations">View items</Link></li>
+                  <li><Link to="/Requests">View Requests</Link></li>
                   <li></li>
                 </ul>
               )}
@@ -53,12 +56,7 @@ export default function DonorHome() {
           <Link to="/" style={{ marginTop: '170px' }}>Log Out</Link>
         </div>
 
-        <div className="content">
-          <div className="text-content">
-            <h1 style={{ textAlign: 'left' }}>Welcome to Good Giving!</h1>
-            <h2 style={{textAlign: 'left'}}>This is a place where you can make a difference.</h2>  
-          </div>
-        </div>
+
       </div>
 
       <footer style={{ textAlign: 'center', padding: '20px 10px', backgroundColor: 'black', color: 'white' }}>
