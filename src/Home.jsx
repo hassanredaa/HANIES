@@ -8,6 +8,7 @@ import imageee from '../assets/istockphoto-1436319269-1024x1024.jpg'
 import { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import Text from './Text.tsx';
+import MyLocationMap from './Location.jsx'; // Adjust the path based on your file structure
 
 
 export default function Home() {
@@ -30,7 +31,7 @@ export default function Home() {
             <video autoPlay muted loop id="video-bg" style={{ width: '100%', height: '100vh', objectFit: 'cover', zIndex: -1 }}>
                 <source src={video} type="video/mp4" />
             </video>
-            <div style={{marginTop: '50px'}}>
+            <div style={{ marginTop: '50px' }}>
                 {/* <img src={imageee}></img> */}
                 <Text />
 
@@ -42,7 +43,7 @@ export default function Home() {
             </div>
 
             <div id="contact">
-            <Text />
+                <Text />
 
                 <div class="background">
                     <div class="container">

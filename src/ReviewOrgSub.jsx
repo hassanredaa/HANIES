@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import {submissionsData} from './data.js'
-
-
-
+import { submissionsData } from './data.js'
 
 function ReviewOrgSub() {
     return (
@@ -11,8 +8,9 @@ function ReviewOrgSub() {
             <header>
                 <h1>Review Organization Submissions</h1>
                 <Link to="/admin">Back to Admin Dashboard</Link>
+
             </header>
-            <table>
+            <table style={{ marginTop: '110px' }}>
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -28,10 +26,9 @@ function ReviewOrgSub() {
                             <td>{submission.name}</td>
                             <td>{submission.status}</td>
                             <td>
-                                {/* Placeholder for actions like edit, approve, or delete */}
-                                <button>Edit</button>
-                                <button>Approve</button>
-                                <button>Delete</button>
+                                <button className="view">View Data</button>
+                                <button className="download">Download Data</button>
+
                             </td>
                         </tr>
                     ))}

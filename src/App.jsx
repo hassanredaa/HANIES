@@ -9,7 +9,16 @@ import AdminDB from './AdminDB.jsx';
 import OrganizationHome from './OrganizationHome.jsx';
 import AboutOrg from './AboutOrg.jsx';
 import ReviewOrgSub from './ReviewOrgSub';
-// import ReviewOrgSub from './ReviewDonSub';
+import ReviewDonSub from './ReviewDonSub';
+import MngOrgReq from './MngOrgReq.jsx';
+import MngDonReq from './MngDonReq.jsx';
+import DoctorPage from './DoctorPage.jsx';
+import TeacherPage from './TeacherPage.jsx';
+import DonorHome from './DonorHome.jsx';
+import Requests from './Requests.jsx';
+
+
+
 
 
 
@@ -27,10 +36,14 @@ function App() {
         <Route path="/admin" element={<AdminDB />} />
         <Route path="/OrganizationHome" element={<OrganizationHome />} />
         <Route path="/AboutOrg" element={<AboutOrg />} />
-
         <Route path="/submissions/organizations" element={<ReviewOrgSub />} />
-        {/* <Route path="/submissions/donations" element={<ReviewDonSub />} /> */}
-
+        <Route path="/submissions/donors" element={<ReviewDonSub />} />
+        <Route path="/requests/organizations" element={<MngOrgReq />} />
+        <Route path="/requests/donors" element={<MngDonReq />} />
+        <Route path="/DonorHome" element={<DonorHome />} />
+        <Route path="/DoctorPage" element={<DoctorPage />} />
+        <Route path="/TeacherPage" element={<TeacherPage />} />
+        <Route path="/Requests" element={<Requests />} />
       </Routes>
     </BrowserRouter>
   );

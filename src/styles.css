@@ -94,8 +94,43 @@ button:hover::before {
     /* Adjust opacity to not fully obscure text */
     transform: translate(-50%, -50%) scale(1.2);
 }
-
-
+.subject-checkboxes div {
+    display: inline-block;
+    margin-right: 20px; /* Adjust as needed */
+}
+.right-list {
+    position: absolute;
+    top: 0;
+    right: 0; /* Align to the right side */
+    width: 200px; /* adjust width as needed */
+    height: 100vh; /* fill the entire viewport height */
+  }
+  
+  .black-list {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: black;
+    padding: 10px;
+    height: 100%; /* fill the entire parent container's height */
+  }
+  
+  .right-list:hover .black-list {
+    display: block;
+  }
+  
+  .right-list-trigger {
+    background-color: transparent;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .right-list-trigger:hover + .black-list {
+    display: block;
+  }
+  
+  
 .button-primary {
     padding: 8px 16px;
     background: transparent;
@@ -692,15 +727,50 @@ footer {
     min-height: 100vh;
 }
 
+.Donor-dashboard {
+    display: flex;
+    min-height: 100vh;
+}
 .sidebar {
     width: 250px;
-    background-color: black;
+    background-color: #333;
     color: white;
     padding: 20px;
-    padding-left: 1px;
-    padding-right: 1px;
-    /* border-radius: 20px; */
-    border-top-right-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-button,
+.sidebar a {
+    background: transparent;
+    color: white;
+    display: block;
+    width: calc(100% - 40px);
+    padding: 10px 20px;
+    margin: 5px 0;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.sidebar-button:hover,
+.sidebar a:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+.sidebar ul ul a {
+    font-size: 0.9em;
+    padding-left: 30px;
+}
+
+.sidebar ul ul a,
+.sidebar-button {
+    line-height: 1.5;
+    vertical-align: middle;
 }
 
 .sidebar h3 {
@@ -741,18 +811,13 @@ footer {
     padding: 10px 20px;
     border-radius: 20px;
     width: auto;
-    /* Adjust width as needed */
     display: block;
-    /* Ensures it fills the container */
     text-align: center;
     border: none;
     transition: all 0.3s ease;
     cursor: pointer;
     text-decoration: none;
     align-self: center;
-    /* Center in flex container if parent is flex */
-
-    /* Enhance hover effect */
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -802,32 +867,39 @@ footer {
 .parallax span {
     display: block;
     margin-right: 30px;
-  }
+}
 
-  .button-Orgprimary {
-    padding: 8px 16px;
+.button-Orgprimary {
+    padding: 12px 24px;
     background: transparent;
     color: black;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: light;
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0);
+    width: auto;
+    display: inline-block;
     width: auto;
     display: inline-block;
     margin-top: 20px;
-    padding-block: 1%;
-    padding-inline: 3%;
+    text-align: center;
+    text-decoration: none;
+    border: none;
     margin-left: 20px;
     margin-right: 20px;
+    margin-top: 20px;
+    padding-block: 1%;
+    padding-inline: 3%;
     position: relative;
     text-decoration: none;
+    text-shadow: none;
 }
 
 .button-Orgprimary:hover {
     background: white;
-    color: black;
+    color: rgb(255, 255, 255);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
     border-radius: 50px;
     transform: translateY(-5px);
@@ -842,7 +914,7 @@ footer {
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: none; /* Remove the shadow */
     width: auto;
     display: inline-block;
     margin-top: 20px;
@@ -854,10 +926,9 @@ footer {
     text-decoration: none;
 }
 
+
 .button-Orgprimary:hover .dropdown {
     display: block;
-}
-=======
 }
 
 .contentt {
@@ -902,9 +973,89 @@ footer {
 }
 
 .review-org-sub th {
-    background-color: #eee;
+    background-color: #bcb6b6;
 }
 
 .review-org-sub button {
     margin-right: 5px;
+}
+
+.review-org-sub {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.review-org-sub header {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+button {
+    width: 100%;
+    height: 100%;
+    padding: 4px 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #eee;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    line-height: normal;
+}
+
+button:hover {
+    opacity: 0.9;
+    box-shadow: 0px 1px 3px #666;
+}
+
+button.edit {
+    background-color: #ffc107;
+}
+
+button.approve {
+    background-color: #28a745;
+}
+
+button.delete {
+    background-color: #dc3545;
+}
+
+button.view {
+    background-color: #d425ab;
+}
+
+button.download {
+    background-color: #f58abe;
+}
+
+@media (max-width: 768px) {
+
+    th,
+    td {
+        padding: 4px;
+    }
 }
