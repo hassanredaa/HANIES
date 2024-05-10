@@ -44,8 +44,6 @@ function App() {
         <Route path="/DoctorPage" element={<DoctorPage />} />
         <Route path="/TeacherPage" element={<TeacherPage />} />
         <Route path="/Requests" element={<Requests />} />
-
-
       </Routes>
     </BrowserRouter>
   );

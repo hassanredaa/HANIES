@@ -1,3 +1,4 @@
+
 export const about = [
     {
         title: "About Us",
@@ -17,30 +18,41 @@ export const about = [
     }
 ]
 
-var test = 'This is a test'
+// export var test = 'This is a test'
 
-export function get(){
-    return test
-}
+// export function get(){
+//     return test
+// }
 
-export function set(x) {
-    test = x
-}
+// export function set(x) {
+//     test = x
+// }
 
-export const users = [
-    {
-        name: "Amira",
-        password: "test123",
-        email: "amira@goodgiving.com"
-    },
-    {
-        name: "Hassan",
-        password: "test123",
-        email: "hassan@goodgiving.com"
-    }
-]
+// export function addUser (name,password,email) {
+//     users.push({name,password,email})
+//     console.log(users)
+// }
 
-export const organizations = [
+// export function getUser () {
+//     console.log(users)
+// }
+
+// var users = [
+//     {
+//         name: "Amira",
+//         password: "test123",
+//         email: "amira@goodgiving.com"
+//     },
+//     {
+//         name: "Hassan",
+//         password: "test123",
+//         email: "hassan@goodgiving.com"
+//     }
+// ]
+
+
+
+export var organizations = [
     {
         name: "Charity1",
         password: "test123",
@@ -53,14 +65,14 @@ export const organizations = [
     }
 ]
 
-export const submissionsData = [
+export var submissionsData = [
     { id: 1, name: 'Organization A', status: 'Pending' },
     { id: 2, name: 'Organization B', status: 'Approved' },
     { id: 3, name: 'Organization C', status: 'Rejected' },
 ];
 
 
-export const submissionsDonData = [
+export var submissionsDonData = [
     { id: 1, name: 'John Doe', status: 'Pending' },
     { id: 2, name: 'Jane Smith', status: 'Reviewed' },
     { id: 3, name: 'Alice Johnson', status: 'Approved' },

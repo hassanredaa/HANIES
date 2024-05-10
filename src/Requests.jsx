@@ -9,6 +9,7 @@ function FilterButton({ onClick, text }) {
 export default function Requests() {
     const [filter, setFilter] = useState('');
     const [searchTerm, setSearchTerm] = useState('');
+    const [selectedDonation, setSelectedDonation] = useState(null);
     const [donations, setDonations] = useState([
         { id: 1, name: ' Donation 1', category: 'clothes', age: 'adult', gender: 'male', season: 'winter', quantity: 10 },
         { id: 2, name: ' Donation 2', category: 'toys', age: 'child', gender: 'unisex', season: 'any', quantity: 5 },
@@ -23,6 +24,10 @@ export default function Requests() {
 
     const handleSearch = (event) => {
         setSearchTerm(event.target.value);
+    };
+
+    const handleDonationClick = (donation) => {
+        setSelectedDonation(donation);
     };
 
     const filteredDonations = donations.filter(donation => {
@@ -46,16 +51,26 @@ export default function Requests() {
                 <FilterButton onClick={() => handleFilter('food')} text="Food" />
                 <FilterButton onClick={() => handleFilter('')} text="All" />
             </div>
-            
+
+            {selectedDonation && (
+                <div>
+                    {/* Display selected donation details */}
+                    <h2>Selected Donation Details</h2>
+                    <p>Name: {selectedDonation.name}</p>
+                    <p>Category: {selectedDonation.category}</p>
+                    <p>Age: {selectedDonation.age}</p>
+                    <p>Gender: {selectedDonation.gender}</p>
+                    <p>Season: {selectedDonation.season}</p>
+                    <p>Quantity: {selectedDonation.quantity}</p>
+                </div>
+            )}
+
             <div>
                 {/* Display filtered donations */}
                 <ul>
                     {filteredDonations.map(donation => (
-                        <li key={donation.id}>
+                        <li key={donation.id} onClick={() => handleDonationClick(donation)}>
                             <strong>{donation.name}</strong> - Category: {donation.category}, Quantity: {donation.quantity}
-                            {donation.category !== 'food' && 
-                                `, Age: ${donation.age}, Gender: ${donation.gender}, Season: ${donation.season} `
-                            }
                         </li>
                     ))}
                 </ul>

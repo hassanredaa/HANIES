@@ -727,6 +727,10 @@ footer {
     min-height: 100vh;
 }
 
+.Donor-dashboard {
+    display: flex;
+    min-height: 100vh;
+}
 .sidebar {
     width: 250px;
     background-color: #333;
@@ -866,29 +870,36 @@ footer {
 }
 
 .button-Orgprimary {
-    padding: 8px 16px;
+    padding: 12px 24px;
     background: transparent;
     color: black;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: light;
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0);
+    width: auto;
+    display: inline-block;
     width: auto;
     display: inline-block;
     margin-top: 20px;
-    padding-block: 1%;
-    padding-inline: 3%;
+    text-align: center;
+    text-decoration: none;
+    border: none;
     margin-left: 20px;
     margin-right: 20px;
+    margin-top: 20px;
+    padding-block: 1%;
+    padding-inline: 3%;
     position: relative;
     text-decoration: none;
+    text-shadow: none;
 }
 
 .button-Orgprimary:hover {
     background: white;
-    color: black;
+    color: rgb(255, 255, 255);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
     border-radius: 50px;
     transform: translateY(-5px);
@@ -903,7 +914,7 @@ footer {
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: none; /* Remove the shadow */
     width: auto;
     display: inline-block;
     margin-top: 20px;
@@ -914,6 +925,7 @@ footer {
     position: relative;
     text-decoration: none;
 }
+
 
 .button-Orgprimary:hover .dropdown {
     display: block;

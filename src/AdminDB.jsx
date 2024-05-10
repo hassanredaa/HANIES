@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Chart as ChartJS } from 'chart.js/auto';
 import { Bar } from 'react-chartjs-2';
@@ -6,10 +6,16 @@ import ggImage from '../assets/ggw.png';
 import goodImage from '../assets/good.png';
 import avImage from '../assets/img_avatar.png';
 import * as data from './data.js';
+import { DataContext } from './data.jsx';
 
-data.set('hfh')
+
 export default function AdminDB() {
 
+    const { users, addUser } = useContext(DataContext);
+
+    const handleSubmit = () => {
+        console.log(users)
+    };
     // State to manage the toggles
     const [viewOpen, setViewOpen] = useState(false);
     const [manageOpen, setManageOpen] = useState(false);
@@ -22,7 +28,6 @@ export default function AdminDB() {
 
     return (
         <div className="admin-dashboard">
-            
             <div className="sidebar">
                 <div style={{ display: 'flex' }}>
                     <div style={{ flex: '33.33%', padding: '5px', marginLeft: '20px' }}>
@@ -71,14 +76,15 @@ export default function AdminDB() {
                                 <li><Link to="/views/organizations">View Organizations List</Link></li>
                                 <li><Link to="/views/donors">View Donors List</Link></li>
                                 <li></li>
+
                             </ul>
                         )}
                     </li>
                 </ul>
                 <Link to="/" style={{ marginTop: '170px' }}>Log Out</Link>
             </div>
-            
-            <h1>{data.get() }</h1>
+
+            <h1>{data.test}</h1>
             <div className="contentt">
                 <div className="text-content">
                     <h1 style={{ textAlign: 'left' }}>Dashboard</h1>
