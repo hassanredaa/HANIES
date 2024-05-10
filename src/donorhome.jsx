@@ -15,10 +15,7 @@ export default function DonorHome() {
 
   return (
     <div className="Donor-dashboard">
-      <div className="wrapper">
 
-        <h1 style={{ textAlign: 'left' }}>Welcome to Good Giving!</h1>
-        <h2 style={{ textAlign: 'left' }}>This is a place where you can make a difference.</h2>
         <div className="sidebar">
           <div style={{ display: 'flex' }}>
             <div style={{ flex: '33.33%', padding: '5px', marginLeft: '20px' }}>
@@ -56,12 +53,14 @@ export default function DonorHome() {
           <Link to="/" style={{ marginTop: '170px' }}>Log Out</Link>
         </div>
 
+        <h1 style={{ textAlign: 'left' }}>Welcome to Good Giving!</h1>
+        <h2 style={{ textAlign: 'left' }}>This is a place where you can make a difference.</h2>
 
+              
       </div>
+      
 
-      <footer style={{ textAlign: 'center', padding: '20px 10px', backgroundColor: 'black', color: 'white' }}>
-        <p>Copyright © 2023 Good Giving</p>
-      </footer>
-    </div>
+      
+    
   );
 }

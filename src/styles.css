@@ -727,6 +727,10 @@ footer {
     min-height: 100vh;
 }
 
+.Donor-dashboard {
+    display: flex;
+    min-height: 100vh;
+}
 .sidebar {
     width: 250px;
     background-color: #333;
