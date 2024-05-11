@@ -123,8 +123,7 @@ export default function Register() {
                         </div>
 
 
-                        <div><MyLocationMap apiKey={api} />
-                        </div>
+                        
 
                         <div className="input-group">
                             <label htmlFor="role">I am a:</label>
@@ -178,6 +177,8 @@ export default function Register() {
                             <label htmlFor="gov">Governorate:</label>
                             <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
                         </div>
+                        <div><MyLocationMap apiKey={api} />
+                        </div>
 
                         <div className="input-group">
                                 <label htmlFor="documents">Upload Organization Certificate:</label>
@@ -209,6 +210,8 @@ export default function Register() {
                             <label htmlFor="gov">Governorate:</label>
                             <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
                         </div>
+                        <div><MyLocationMap apiKey={api} />
+                        </div>
 
                             </>
                             
@@ -234,6 +237,8 @@ export default function Register() {
                             <label htmlFor="gov">Governorate:</label>
                             <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
                         </div>
+                        <div><MyLocationMap apiKey={api} />
+                        </div>
 
                             </>
                             
@@ -258,6 +263,8 @@ export default function Register() {
                         <div className="input-group">
                             <label htmlFor="gov">Governorate:</label>
                             <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
+                        </div>
+                        <div><MyLocationMap apiKey={api} />
                         </div>
 
                             </>

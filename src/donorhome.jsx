@@ -33,12 +33,6 @@ export default function DonorHome() {
 
           <ul style={{ paddingTop: '20px' }}>
             <li>
-              <div className="p-3">
-                <input type="text" id="search-input" placeholder="Menu Search..." className="form-control" />
-              </div>
-
-            </li>
-            <li>
               <button className="sidebar-button" onClick={toggleView} >
                 View
               </button>
@@ -55,6 +49,8 @@ export default function DonorHome() {
 
         <h1 style={{ textAlign: 'left' }}>Welcome to Good Giving!</h1>
         <h2 style={{ textAlign: 'left' }}>This is a place where you can make a difference.</h2>
+
+        
 
               
       </div>
