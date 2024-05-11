@@ -5,6 +5,7 @@ import { api } from './api.js';
 import { DataContext } from './data.jsx';
 
 
+
 export default function Register() {
     const { users, addUser } = useContext(DataContext);
 
@@ -14,9 +15,25 @@ export default function Register() {
     const handleRoleChange = (event) => {
         const role = event.target.value;
         if (role === 'organization') {
+            setDonorFieldsVisible(false);
             setOrganizationFieldsVisible(true);
-        } else {
+            setDoctorFieldsVisible(false);
+            setTeacherFieldsVisible(false);
+        } else if(role === 'Donor'){
+            setDonorFieldsVisible(true);
             setOrganizationFieldsVisible(false);
+            setDoctorFieldsVisible(false);
+            setTeacherFieldsVisible(false);
+        }else if(role === 'Teacher'){
+            setDonorFieldsVisible(false);
+            setOrganizationFieldsVisible(false);
+            setDoctorFieldsVisible(false);
+            setTeacherFieldsVisible(true);
+        }else{
+            setDonorFieldsVisible(false);
+            setOrganizationFieldsVisible(false);
+            setDoctorFieldsVisible(true);
+            setTeacherFieldsVisible(false);
         }
 
         setSelectedRole(role);
@@ -24,6 +41,9 @@ export default function Register() {
     };
     const [userRole, setUserRole] = useState('');
     const [organizationFieldsVisible, setOrganizationFieldsVisible] = useState(false);
+    const [DonorFieldsVisible, setDonorFieldsVisible] = useState(false);
+    const [DoctorFieldsVisible, setDoctorFieldsVisible] = useState(false);
+    const [TeacherFieldsVisible, setTeacherFieldsVisible] = useState(false);
 
     const handleUserArray = (event) => {
         event.preventDefault(); // Prevent default form submission behavior
@@ -55,16 +75,7 @@ export default function Register() {
         }
     };
 
-    // const handleRoleChange = (event) => {
-    //     setUserRole(event.target.value);
-    //     if (event.target.value === 'organization') {
-    //         setOrganizationFieldsVisible(true);
-    //     } else {
-    //         setOrganizationFieldsVisible(false);
-    //     }
-    //     setShowDocumentUpload(role === 'doctor' || role === 'teacher');
-
-    // };
+    
 
 
 
@@ -108,26 +119,8 @@ export default function Register() {
                         </div>
 
                         <div className="input-group">
-                            <label htmlFor="contact num">Contact Number:</label>
-                            <input type="contact num" id="contact num" name="contact num" required placeholder="Enter your Mobile Number" />
-                        </div>
-                        <div className="input-group">
                             <label htmlFor="password">Password:</label>
                             <input type="password" id="password" name="password" required placeholder="Create a password" />
-                        </div>
-
-                        <div className="input-group">
-                            <label htmlFor="address">Address:</label>
-                            <input type="address" id="address" name="address" required placeholder="Enter your address" />
-                        </div>
-
-                        <div className="input-group">
-                            <label htmlFor="area">Area:</label>
-                            <input type="area" id="area" name="area" required placeholder="Enter your area" />
-                        </div>
-                        <div className="input-group">
-                            <label htmlFor="gov">Governorate:</label>
-                            <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
                         </div>
 
 
@@ -169,6 +162,42 @@ export default function Register() {
                                     </select>
                                 </div>
                                 <div className="input-group">
+                            <label htmlFor="contact num">Contact Number:</label>
+                            <input type="contact num" id="contact num" name="contact num" required placeholder="Enter your Mobile Number" />
+                        </div>
+                       
+
+                        <div className="input-group">
+                            <label htmlFor="address">Address:</label>
+                            <input type="address" id="address" name="address" required placeholder="Enter your address" />
+                        </div>
+
+                        <div className="input-group">
+                            <label htmlFor="area">Area:</label>
+                            <input type="area" id="area" name="area" required placeholder="Enter your area" />
+                        </div>
+                        <div className="input-group">
+                            <label htmlFor="gov">Governorate:</label>
+                            <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
+                        </div>
+
+                        <div className="input-group">
+                                <label htmlFor="documents">Upload Organization Certificate:</label>
+                                <input type="file" id="documents" name="documents" accept=".pdf,.doc,.docx" />
+                        </div>
+
+                                
+                            </>
+                        )}
+
+                        {DoctorFieldsVisible &&(
+                            <>
+                             <div className="input-group">
+                            <label htmlFor="contact num">Contact Number:</label>
+                            <input type="contact num" id="contact num" name="contact num" required placeholder="Enter your Mobile Number" />
+                        </div>
+                       
+
                                     <label htmlFor="Organization Address">Organization Address:</label>
                                     <input type="Organization Address" id="Organization Address" name="Organization Address" required placeholder="Enter your Organization Address" />
                                 </div>
@@ -177,9 +206,72 @@ export default function Register() {
                                 <input type="file" id="documents" name="documents" accept=".pdf,.doc,.docx" />
                             </div>
 
+                        <div className="input-group">
+                            <label htmlFor="address">Address:</label>
+                            <input type="address" id="address" name="address" required placeholder="Enter your address" />
+                        </div>
 
+                        <div className="input-group">
+                            <label htmlFor="area">Area:</label>
+                            <input type="area" id="area" name="area" required placeholder="Enter your area" />
+                        </div>
+                        <div className="input-group">
+                            <label htmlFor="gov">Governorate:</label>
+                            <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
+                        </div>
 
                             </>
+                            
+                        )}
+                        {TeacherFieldsVisible &&(
+                            <>
+                             <div className="input-group">
+                            <label htmlFor="contact num">Contact Number:</label>
+                            <input type="contact num" id="contact num" name="contact num" required placeholder="Enter your Mobile Number" />
+                        </div>
+                       
+
+                        <div className="input-group">
+                            <label htmlFor="address">Address:</label>
+                            <input type="address" id="address" name="address" required placeholder="Enter your address" />
+                        </div>
+
+                        <div className="input-group">
+                            <label htmlFor="area">Area:</label>
+                            <input type="area" id="area" name="area" required placeholder="Enter your area" />
+                        </div>
+                        <div className="input-group">
+                            <label htmlFor="gov">Governorate:</label>
+                            <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
+                        </div>
+
+                            </>
+                            
+                        )}
+                        {DonorFieldsVisible &&(
+                            <>
+                             <div className="input-group">
+                            <label htmlFor="contact num">Contact Number:</label>
+                            <input type="contact num" id="contact num" name="contact num" required placeholder="Enter your Mobile Number" />
+                        </div>
+                       
+
+                        <div className="input-group">
+                            <label htmlFor="address">Address:</label>
+                            <input type="address" id="address" name="address" required placeholder="Enter your address" />
+                        </div>
+
+                        <div className="input-group">
+                            <label htmlFor="area">Area:</label>
+                            <input type="area" id="area" name="area" required placeholder="Enter your area" />
+                        </div>
+                        <div className="input-group">
+                            <label htmlFor="gov">Governorate:</label>
+                            <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
+                        </div>
+
+                            </>
+                            
                         )}
                         <button className="button-primary" type="submit">Register</button>
                     </form>
