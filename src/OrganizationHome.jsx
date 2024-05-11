@@ -54,6 +54,9 @@ export default function OrganizationHome() {
                 {/* Changed Link path */}
                 <Link to="/logout" style={{ marginTop: '170px' }}>Log Out</Link>
             </div>
+            <footer style={{ textAlign: 'center', padding: '20px 10px', backgroundColor: 'black', color: 'white' }}>
+                <p>Copyright © 2023 Good Giving</p>
+            </footer>
         </div>
     );
 }
