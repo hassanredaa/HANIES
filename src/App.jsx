@@ -16,6 +16,7 @@ import DoctorPage from './DoctorPage.jsx';
 import TeacherPage from './TeacherPage.jsx';
 import DonorHome from './DonorHome.jsx';
 import Requests from './Requests.jsx';
+import SchedOrg from './SchedOrg.jsx';
 
 
 
@@ -44,6 +45,7 @@ function App() {
         <Route path="/DoctorPage" element={<DoctorPage />} />
         <Route path="/TeacherPage" element={<TeacherPage />} />
         <Route path="/Requests" element={<Requests />} />
+        <Route path="/SchedOrg" element={<SchedOrg />} />
       </Routes>
     </BrowserRouter>
   );

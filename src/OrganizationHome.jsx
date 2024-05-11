@@ -18,7 +18,7 @@ export default function OrganizationHome() {
 
     return (
         <div className="h2">
-            <h2>Organization</h2>
+            <h2>Organization Dashboard</h2>
             <div className="sidebar">
                 <div style={{ display: 'flex' }}>
                     <div style={{ flex: '33.33%', padding: '5px', marginLeft: '20px' }}>
@@ -42,6 +42,12 @@ export default function OrganizationHome() {
                         {/* Use Link component with correct class name */}
                         <Link to="/AboutOrg" className="button-primary">
                             About Us
+                        </Link>
+                    </li>
+                    <li>
+                        {/* Use Link component with correct class name */}
+                        <Link to="/SchedOrg" className="button-primary">
+                            Schedules
                         </Link>
                     </li>
                 </ul>
