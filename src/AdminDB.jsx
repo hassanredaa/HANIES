@@ -1,21 +1,17 @@
 import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Chart as ChartJS } from 'chart.js/auto';
-import { Bar } from 'react-chartjs-2';
+import { Bar, Line } from 'react-chartjs-2';
 import ggImage from '../assets/ggw.png';
 import goodImage from '../assets/good.png';
 import avImage from '../assets/img_avatar.png';
 import * as data from './data.js';
-import { DataContext } from './data.jsx';
+import stats from '../assets/stats.png'
 
 
 export default function AdminDB() {
 
-    const { users, addUser } = useContext(DataContext);
-
-    const handleSubmit = () => {
-        console.log(users)
-    };
+    
     // State to manage the toggles
     const [viewOpen, setViewOpen] = useState(false);
     const [manageOpen, setManageOpen] = useState(false);
@@ -84,14 +80,12 @@ export default function AdminDB() {
                 <Link to="/" style={{ marginTop: '170px' }}>Log Out</Link>
             </div>
 
-            <h1>{data.test}</h1>
             <div className="contentt">
                 <div className="text-content">
                     <h1 style={{ textAlign: 'left' }}>Dashboard</h1>
-                    {/* <p>Select an option from the sidebar to get started.</p> */}
-                </div>
-                <div className="chart-container">
-                    <Bar
+                    <img src={stats} style={{height: '500px'}} />
+                    <div className="chart-container">
+                    <Line
                         data={{
                             labels: ["Amira", "Hassan"],
                             datasets: [{
@@ -100,6 +94,9 @@ export default function AdminDB() {
                             }]
                         }}
                     />
+                </div>
+
+                    {/* <p>Select an option from the sidebar to get started.</p> */}
                 </div>
             </div>
         </div>
