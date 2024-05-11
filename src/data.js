@@ -18,37 +18,112 @@ export const about = [
     }
 ]
 
-// export var test = 'This is a test'
+export var test = 'This is a test'
 
-// export function get(){
-//     return test
-// }
+export function get(){
+    return test
+}
 
-// export function set(x) {
-//     test = x
-// }
+export function set(x) {
+    test = x
+}
 
-// export function addUser (name,password,email) {
-//     users.push({name,password,email})
-//     console.log(users)
-// }
+export function addUser (name,password,email) {
+    users.push({name,password,email})
+    console.log(users)
+}
 
-// export function getUser () {
-//     console.log(users)
-// }
+export function getUser () {
+    console.log(users)
+}
 
-// var users = [
-//     {
-//         name: "Amira",
-//         password: "test123",
-//         email: "amira@goodgiving.com"
-//     },
-//     {
-//         name: "Hassan",
-//         password: "test123",
-//         email: "hassan@goodgiving.com"
-//     }
-// ]
+export var users = [
+    {
+        name: "Amira",
+        password: "test123",
+        email: "amira@goodgiving.com"
+    },
+    {
+        name: "Hassan",
+        password: "test123",
+        email: "hassan@goodgiving.com"
+    }
+]
+
+export var doctec = [
+    {
+        name: 'Hussein',
+        gender: 'Male',
+        type: 'Doctor',
+        email: 'hussein@example.com',
+        phone: '0100000000000',
+        address: 'New Cairo'
+    },
+    {
+        name: 'Aisha',
+        gender: 'Female',
+        type: 'Doctor',
+        email: 'aisha@example.com',
+        phone: '0101111111111',
+        address: 'Maadi'
+    },
+    {
+        name: 'John',
+        gender: 'Male',
+        type: 'Teacher',
+        email: 'john@example.com',
+        phone: '0102222222222',
+        address: 'Downtown'
+    },
+    {
+        name: 'Sarah',
+        gender: 'Female',
+        type: 'Teacher',
+        email: 'sarah@example.com',
+        phone: '0103333333333',
+        address: 'Giza'
+    }
+];
+
+export var orgs=[
+    {
+        name: 'Sarah',
+        organizationName: 'Masr Kheir',
+        organizationType: 'Profit',
+        gender: 'Female',
+        email: 'sarah@example.com',
+        phone: '0103333333333',
+        address: 'Giza'
+    },
+    {
+        name: 'Ahmed',
+        organizationName: 'Red Crescent Society',
+        organizationType: 'Non-Profit',
+        gender: 'Male',
+        email: 'ahmed@example.com',
+        phone: '0104444444444',
+        address: 'Dokki'
+    },
+    {
+        name: 'Lina',
+        organizationName: 'Hope Foundation',
+        organizationType: 'Non-Profit',
+        gender: 'Female',
+        email: 'lina@example.com',
+        phone: '0105555555555',
+        address: 'Maadi'
+    },
+    {
+        name: 'Omar',
+        organizationName: 'Global Health Initiative',
+        organizationType: 'Non-Profit',
+        gender: 'Male',
+        email: 'omar@example.com',
+        phone: '0106666666666',
+        address: 'Zamalek'
+    }
+    // Add more entries as needed
+];
 
 
 
