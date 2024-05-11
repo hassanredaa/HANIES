@@ -94,43 +94,50 @@ button:hover::before {
     /* Adjust opacity to not fully obscure text */
     transform: translate(-50%, -50%) scale(1.2);
 }
+
 .subject-checkboxes div {
     display: inline-block;
-    margin-right: 20px; /* Adjust as needed */
+    margin-right: 20px;
+    /* Adjust as needed */
 }
+
 .right-list {
     position: absolute;
     top: 0;
-    right: 0; /* Align to the right side */
-    width: 200px; /* adjust width as needed */
-    height: 100vh; /* fill the entire viewport height */
-  }
-  
-  .black-list {
+    right: 0;
+    /* Align to the right side */
+    width: 200px;
+    /* adjust width as needed */
+    height: 100vh;
+    /* fill the entire viewport height */
+}
+
+.black-list {
     display: none;
     position: absolute;
     top: 0;
     right: 0;
     background-color: black;
     padding: 10px;
-    height: 100%; /* fill the entire parent container's height */
-  }
-  
-  .right-list:hover .black-list {
+    height: 100%;
+    /* fill the entire parent container's height */
+}
+
+.right-list:hover .black-list {
     display: block;
-  }
-  
-  .right-list-trigger {
+}
+
+.right-list-trigger {
     background-color: transparent;
     padding: 10px;
     cursor: pointer;
-  }
-  
-  .right-list-trigger:hover + .black-list {
+}
+
+.right-list-trigger:hover+.black-list {
     display: block;
-  }
-  
-  
+}
+
+
 .button-primary {
     padding: 8px 16px;
     background: transparent;
@@ -718,6 +725,38 @@ footer {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
 }
 
+
+.button-primary2 {
+    padding: 8px 16px;
+    background: black;
+    color: white;
+    font-size: 14px;
+    font-weight: light;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: auto;
+    display: inline-block;
+    /* Ensure it behaves like a button */
+    margin-top: 20px;
+    text-align: center;
+    /* Center the text */
+    text-decoration: none;
+    /* Remove default link underlining */
+    border: none;
+    /* Remove borders */
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.button-primary2:hover {
+    background: rgba(169, 169, 169, 0.5);
+    /* Grey with some transparency */
+    color: black;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
 footer {
     margin-top: 20px;
 }
@@ -731,6 +770,7 @@ footer {
     display: flex;
     min-height: 100vh;
 }
+
 .sidebar {
     width: 250px;
     background-color: #333;
@@ -915,7 +955,8 @@ footer {
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
-    box-shadow: none; /* Remove the shadow */
+    box-shadow: none;
+    /* Remove the shadow */
     width: auto;
     display: inline-block;
     margin-top: 20px;

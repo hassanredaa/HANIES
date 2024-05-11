@@ -1,8 +1,10 @@
-import React, { useState,useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import MyLocationMap from './Location.jsx'; // Adjust the path based on your file structure
 import { api } from './api.js';
 import { DataContext } from './data.jsx';
+import bgImage from '../assets/bg3.jpg';
+
 
 
 export default function Register() {
@@ -18,17 +20,17 @@ export default function Register() {
             setOrganizationFieldsVisible(true);
             setDoctorFieldsVisible(false);
             setTeacherFieldsVisible(false);
-        } else if(role === 'Donor'){
+        } else if (role === 'Donor') {
             setDonorFieldsVisible(true);
             setOrganizationFieldsVisible(false);
             setDoctorFieldsVisible(false);
             setTeacherFieldsVisible(false);
-        }else if(role === 'Teacher'){
+        } else if (role === 'Teacher') {
             setDonorFieldsVisible(false);
             setOrganizationFieldsVisible(false);
             setDoctorFieldsVisible(false);
             setTeacherFieldsVisible(true);
-        }else{
+        } else {
             setDonorFieldsVisible(false);
             setOrganizationFieldsVisible(false);
             setDoctorFieldsVisible(true);
@@ -50,16 +52,16 @@ export default function Register() {
         const newUser = {};
 
         // Get form data
-        const name = event.target.first-name.value;
+        const name = event.target.first - name.value;
         const password = event.target.password.value;
         const email = event.target.email.value;
-    
+
         // Call the addUser function to add the user
-        addUser(name, last, gender,email,number,password,type,doc);
-    
+        addUser(name, last, gender, email, number, password, type, doc);
+
         // Clear the form fields
         event.target.reset();
-      };
+    };
 
 
     const handleSubmit = (event) => {
@@ -74,21 +76,22 @@ export default function Register() {
         }
     };
 
-    
-
-
-
-
-
-
 
 
 
 
     return (
-        <div className="app-container">
+        <div className="app-container" style={{ backgroundImage: `url(${bgImage})` }}>
+            <div style={{ textAlign: 'right', marginBottom: '20px' }}>
+                <Link to="/" className="button-primary2">Home</Link>
+                {/* Link to the about us section */}
+                <Link to="/#about" className="button-primary2">About Us</Link>
+                {/* Link to the contact us section */}
+                <Link to="/#contact" className="button-primary2">Contact Us</Link>
+            </div>
             <div className="content-area">
-                <div className="register-container">
+                <div className="register-container" style={{ opacity: '0.6' }}>
+
                     <h2>Register</h2>
                     <form onSubmit={handleSubmit} onClick={handleUserArray}>
                         <div className="input-group">
@@ -160,113 +163,114 @@ export default function Register() {
                                     </select>
                                 </div>
                                 <div className="input-group">
-                            <label htmlFor="contact num">Contact Number:</label>
-                            <input type="contact num" id="contact num" name="contact num" required placeholder="Enter your Mobile Number" />
-                        </div>
-                       
+                                    <label htmlFor="contact num">Contact Number:</label>
+                                    <input type="contact num" id="contact num" name="contact num" required placeholder="Enter your Mobile Number" />
+                                </div>
 
-                        <div className="input-group">
-                            <label htmlFor="address">Address:</label>
-                            <input type="address" id="address" name="address" required placeholder="Enter your address" />
-                        </div>
 
-                        <div className="input-group">
-                            <label htmlFor="area">Area:</label>
-                            <input type="area" id="area" name="area" required placeholder="Enter your area" />
-                        </div>
-                        <div className="input-group">
-                            <label htmlFor="gov">Governorate:</label>
-                            <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
-                        </div>
+                                <div className="input-group">
+                                    <label htmlFor="address">Address:</label>
+                                    <input type="address" id="address" name="address" required placeholder="Enter your address" />
+                                </div>
 
-                        <div className="input-group">
-                                <label htmlFor="documents">Upload Organization Certificate:</label>
-                                <input type="file" id="documents" name="documents" accept=".pdf,.doc,.docx" />
-                        </div>
+                                <div className="input-group">
+                                    <label htmlFor="area">Area:</label>
+                                    <input type="area" id="area" name="area" required placeholder="Enter your area" />
+                                </div>
+                                <div className="input-group">
+                                    <label htmlFor="gov">Governorate:</label>
+                                    <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
+                                </div>
 
-                                
+                                <div className="input-group">
+                                    <label htmlFor="documents">Upload Organization Certificate:</label>
+                                    <input type="file" id="documents" name="documents" accept=".pdf,.doc,.docx" />
+                                </div>
+
+
                             </>
                         )}
 
-                        {DoctorFieldsVisible &&(
+                        {DoctorFieldsVisible && (
                             <>
-                             <div className="input-group">
-                            <label htmlFor="contact num">Contact Number:</label>
-                            <input type="contact num" id="contact num" name="contact num" required placeholder="Enter your Mobile Number" />
-                        </div>
-                       
+                                <div className="input-group">
+                                    <label htmlFor="contact num">Contact Number:</label>
+                                    <input type="contact num" id="contact num" name="contact num" required placeholder="Enter your Mobile Number" />
+                                </div>
 
-                        <div className="input-group">
-                            <label htmlFor="address">Address:</label>
-                            <input type="address" id="address" name="address" required placeholder="Enter your address" />
-                        </div>
 
-                        <div className="input-group">
-                            <label htmlFor="area">Area:</label>
-                            <input type="area" id="area" name="area" required placeholder="Enter your area" />
-                        </div>
-                        <div className="input-group">
-                            <label htmlFor="gov">Governorate:</label>
-                            <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
-                        </div>
+                                <div className="input-group">
+                                    <label htmlFor="address">Address:</label>
+                                    <input type="address" id="address" name="address" required placeholder="Enter your address" />
+                                </div>
+
+                                <div className="input-group">
+                                    <label htmlFor="area">Area:</label>
+                                    <input type="area" id="area" name="area" required placeholder="Enter your area" />
+                                </div>
+                                <div className="input-group">
+                                    <label htmlFor="gov">Governorate:</label>
+                                    <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
+                                </div>
 
                             </>
-                            
+
                         )}
-                        {TeacherFieldsVisible &&(
+                        {TeacherFieldsVisible && (
                             <>
-                             <div className="input-group">
-                            <label htmlFor="contact num">Contact Number:</label>
-                            <input type="contact num" id="contact num" name="contact num" required placeholder="Enter your Mobile Number" />
-                        </div>
-                       
+                                <div className="input-group">
+                                    <label htmlFor="contact num">Contact Number:</label>
+                                    <input type="contact num" id="contact num" name="contact num" required placeholder="Enter your Mobile Number" />
+                                </div>
 
-                        <div className="input-group">
-                            <label htmlFor="address">Address:</label>
-                            <input type="address" id="address" name="address" required placeholder="Enter your address" />
-                        </div>
 
-                        <div className="input-group">
-                            <label htmlFor="area">Area:</label>
-                            <input type="area" id="area" name="area" required placeholder="Enter your area" />
-                        </div>
-                        <div className="input-group">
-                            <label htmlFor="gov">Governorate:</label>
-                            <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
-                        </div>
+                                <div className="input-group">
+                                    <label htmlFor="address">Address:</label>
+                                    <input type="address" id="address" name="address" required placeholder="Enter your address" />
+                                </div>
+
+                                <div className="input-group">
+                                    <label htmlFor="area">Area:</label>
+                                    <input type="area" id="area" name="area" required placeholder="Enter your area" />
+                                </div>
+                                <div className="input-group">
+                                    <label htmlFor="gov">Governorate:</label>
+                                    <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
+                                </div>
 
                             </>
-                            
+
                         )}
-                        {DonorFieldsVisible &&(
+                        {DonorFieldsVisible && (
                             <>
-                             <div className="input-group">
-                            <label htmlFor="contact num">Contact Number:</label>
-                            <input type="contact num" id="contact num" name="contact num" required placeholder="Enter your Mobile Number" />
-                        </div>
-                       
+                                <div className="input-group">
+                                    <label htmlFor="contact num">Contact Number:</label>
+                                    <input type="contact num" id="contact num" name="contact num" required placeholder="Enter your Mobile Number" />
+                                </div>
 
-                        <div className="input-group">
-                            <label htmlFor="address">Address:</label>
-                            <input type="address" id="address" name="address" required placeholder="Enter your address" />
-                        </div>
 
-                        <div className="input-group">
-                            <label htmlFor="area">Area:</label>
-                            <input type="area" id="area" name="area" required placeholder="Enter your area" />
-                        </div>
-                        <div className="input-group">
-                            <label htmlFor="gov">Governorate:</label>
-                            <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
-                        </div>
+                                <div className="input-group">
+                                    <label htmlFor="address">Address:</label>
+                                    <input type="address" id="address" name="address" required placeholder="Enter your address" />
+                                </div>
+
+                                <div className="input-group">
+                                    <label htmlFor="area">Area:</label>
+                                    <input type="area" id="area" name="area" required placeholder="Enter your area" />
+                                </div>
+                                <div className="input-group">
+                                    <label htmlFor="gov">Governorate:</label>
+                                    <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
+                                </div>
 
                             </>
-                            
+
                         )}
-                        <button type="submit">Register</button>
+                        <button className='button-primary2' type="submit">Register</button>
                     </form>
                 </div>
             </div>
+
             <footer style={{ textAlign: 'center', padding: '20px 10px', backgroundColor: 'black', color: 'white' }}>
                 <p>Copyright © 2023 Good Giving</p>
             </footer>
