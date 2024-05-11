@@ -161,27 +161,6 @@ export default function Register() {
                                 </div>
 
                                 <div className="input-group">
-                                    <label htmlFor="First Name">First Name:</label>
-                                    <input type="text" id="First Name" name="first Name" required placeholder="Enter your first name" />
-                                </div>
-                                <div className="input-group">
-                                    <label htmlFor="Last Name">First Name:</label>
-                                    <input type="text" id="Last Name" name="Last Name" required placeholder="Enter your Last name" />
-                                </div>
-                                <div className="input-group">
-                                    <label htmlFor="Gender">Gender:</label>
-                                    <select id="Gender" name="Gender" required>
-                                        <option value="">Select Gender</option>
-                                        <option value="Male">Male</option>
-                                        <option value="Female">Female</option>
-                                        <option value="Prefer not to say">Prefer not to say</option>
-                                    </select>
-                                </div>
-                                <div className="input-group">
-                                    <label htmlFor="Mobile Number">Mobile Number:</label>
-                                    <input type="tel" id="Mobile Number" name="Mobile Number" required placeholder="Enter your Mobile Number" />
-                                </div>
-                                <div className="input-group">
                                     <label htmlFor="organizationType">Organization Type:</label>
                                     <select id="organizationType" name="organizationType" required>
                                         <option value="">Select Organization Type</option>
@@ -194,19 +173,15 @@ export default function Register() {
                                     <input type="Organization Address" id="Organization Address" name="Organization Address" required placeholder="Enter your Organization Address" />
                                 </div>
                                 <div className="input-group">
-                                    <label htmlFor="Area">Area:</label>
-                                    <input type="text" id="Area" name="Area" required placeholder="Enter your Area" />
-                                </div>
-                                <div className="input-group">
-                                    <label htmlFor="Governorate">Area:</label>
-                                    <input type="text" id="Governorate" name="Governorate" required placeholder="Enter your Governorate" />
-                                </div>
+                                <label htmlFor="documents">Upload Documents:</label>
+                                <input type="file" id="documents" name="documents" accept=".pdf,.doc,.docx" />
+                            </div>
 
 
 
                             </>
                         )}
-                        <button type="submit">Register</button>
+                        <button className="button-primary" type="submit">Register</button>
                     </form>
                 </div>
             </div>
