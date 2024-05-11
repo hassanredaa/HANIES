@@ -738,6 +738,7 @@ footer {
     padding: 20px;
     display: flex;
     flex-direction: column;
+
 }
 
 .sidebar-button,
@@ -948,6 +949,7 @@ footer {
 .chart-container {
     width: 40%;
     max-width: 600px;
+    flex: auto;
 }
 
 .review-org-sub header {
