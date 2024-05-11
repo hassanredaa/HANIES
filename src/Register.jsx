@@ -14,9 +14,25 @@ export default function Register() {
     const handleRoleChange = (event) => {
         const role = event.target.value;
         if (role === 'organization') {
+            setDonorFieldsVisible(false);
             setOrganizationFieldsVisible(true);
-        } else {
+            setDoctorFieldsVisible(false);
+            setTeacherFieldsVisible(false);
+        } else if(role === 'Donor'){
+            setDonorFieldsVisible(true);
             setOrganizationFieldsVisible(false);
+            setDoctorFieldsVisible(false);
+            setTeacherFieldsVisible(false);
+        }else if(role === 'Teacher'){
+            setDonorFieldsVisible(false);
+            setOrganizationFieldsVisible(false);
+            setDoctorFieldsVisible(false);
+            setTeacherFieldsVisible(true);
+        }else{
+            setDonorFieldsVisible(false);
+            setOrganizationFieldsVisible(false);
+            setDoctorFieldsVisible(true);
+            setTeacherFieldsVisible(false);
         }
 
         setSelectedRole(role);
@@ -24,6 +40,9 @@ export default function Register() {
     };
     const [userRole, setUserRole] = useState('');
     const [organizationFieldsVisible, setOrganizationFieldsVisible] = useState(false);
+    const [DonorFieldsVisible, setDonorFieldsVisible] = useState(false);
+    const [DoctorFieldsVisible, setDoctorFieldsVisible] = useState(false);
+    const [TeacherFieldsVisible, setTeacherFieldsVisible] = useState(false);
 
     const handleUserArray = (event) => {
         event.preventDefault(); // Prevent default form submission behavior
@@ -55,16 +74,7 @@ export default function Register() {
         }
     };
 
-    // const handleRoleChange = (event) => {
-    //     setUserRole(event.target.value);
-    //     if (event.target.value === 'organization') {
-    //         setOrganizationFieldsVisible(true);
-    //     } else {
-    //         setOrganizationFieldsVisible(false);
-    //     }
-    //     setShowDocumentUpload(role === 'doctor' || role === 'teacher');
-
-    // };
+    
 
 
 
@@ -108,26 +118,8 @@ export default function Register() {
                         </div>
 
                         <div className="input-group">
-                            <label htmlFor="contact num">Contact Number:</label>
-                            <input type="contact num" id="contact num" name="contact num" required placeholder="Enter your Mobile Number" />
-                        </div>
-                        <div className="input-group">
                             <label htmlFor="password">Password:</label>
                             <input type="password" id="password" name="password" required placeholder="Create a password" />
-                        </div>
-
-                        <div className="input-group">
-                            <label htmlFor="address">Address:</label>
-                            <input type="address" id="address" name="address" required placeholder="Enter your address" />
-                        </div>
-
-                        <div className="input-group">
-                            <label htmlFor="area">Area:</label>
-                            <input type="area" id="area" name="area" required placeholder="Enter your area" />
-                        </div>
-                        <div className="input-group">
-                            <label htmlFor="gov">Governorate:</label>
-                            <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
                         </div>
 
 
@@ -159,28 +151,6 @@ export default function Register() {
                                     <label htmlFor="organizationName">Organization Name:</label>
                                     <input type="text" id="organizationName" name="organizationName" required placeholder="Enter your organization name" />
                                 </div>
-
-                                <div className="input-group">
-                                    <label htmlFor="First Name">First Name:</label>
-                                    <input type="text" id="First Name" name="first Name" required placeholder="Enter your first name" />
-                                </div>
-                                <div className="input-group">
-                                    <label htmlFor="Last Name">First Name:</label>
-                                    <input type="text" id="Last Name" name="Last Name" required placeholder="Enter your Last name" />
-                                </div>
-                                <div className="input-group">
-                                    <label htmlFor="Gender">Gender:</label>
-                                    <select id="Gender" name="Gender" required>
-                                        <option value="">Select Gender</option>
-                                        <option value="Male">Male</option>
-                                        <option value="Female">Female</option>
-                                        <option value="Prefer not to say">Prefer not to say</option>
-                                    </select>
-                                </div>
-                                <div className="input-group">
-                                    <label htmlFor="Mobile Number">Mobile Number:</label>
-                                    <input type="tel" id="Mobile Number" name="Mobile Number" required placeholder="Enter your Mobile Number" />
-                                </div>
                                 <div className="input-group">
                                     <label htmlFor="organizationType">Organization Type:</label>
                                     <select id="organizationType" name="organizationType" required>
@@ -190,21 +160,108 @@ export default function Register() {
                                     </select>
                                 </div>
                                 <div className="input-group">
-                                    <label htmlFor="Organization Address">Organization Address:</label>
-                                    <input type="Organization Address" id="Organization Address" name="Organization Address" required placeholder="Enter your Organization Address" />
-                                </div>
-                                <div className="input-group">
-                                    <label htmlFor="Area">Area:</label>
-                                    <input type="text" id="Area" name="Area" required placeholder="Enter your Area" />
-                                </div>
-                                <div className="input-group">
-                                    <label htmlFor="Governorate">Area:</label>
-                                    <input type="text" id="Governorate" name="Governorate" required placeholder="Enter your Governorate" />
-                                </div>
+                            <label htmlFor="contact num">Contact Number:</label>
+                            <input type="contact num" id="contact num" name="contact num" required placeholder="Enter your Mobile Number" />
+                        </div>
+                       
 
+                        <div className="input-group">
+                            <label htmlFor="address">Address:</label>
+                            <input type="address" id="address" name="address" required placeholder="Enter your address" />
+                        </div>
 
+                        <div className="input-group">
+                            <label htmlFor="area">Area:</label>
+                            <input type="area" id="area" name="area" required placeholder="Enter your area" />
+                        </div>
+                        <div className="input-group">
+                            <label htmlFor="gov">Governorate:</label>
+                            <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
+                        </div>
+
+                        <div className="input-group">
+                                <label htmlFor="documents">Upload Organization Certificate:</label>
+                                <input type="file" id="documents" name="documents" accept=".pdf,.doc,.docx" />
+                        </div>
+
+                                
+                            </>
+                        )}
+
+                        {DoctorFieldsVisible &&(
+                            <>
+                             <div className="input-group">
+                            <label htmlFor="contact num">Contact Number:</label>
+                            <input type="contact num" id="contact num" name="contact num" required placeholder="Enter your Mobile Number" />
+                        </div>
+                       
+
+                        <div className="input-group">
+                            <label htmlFor="address">Address:</label>
+                            <input type="address" id="address" name="address" required placeholder="Enter your address" />
+                        </div>
+
+                        <div className="input-group">
+                            <label htmlFor="area">Area:</label>
+                            <input type="area" id="area" name="area" required placeholder="Enter your area" />
+                        </div>
+                        <div className="input-group">
+                            <label htmlFor="gov">Governorate:</label>
+                            <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
+                        </div>
 
                             </>
+                            
+                        )}
+                        {TeacherFieldsVisible &&(
+                            <>
+                             <div className="input-group">
+                            <label htmlFor="contact num">Contact Number:</label>
+                            <input type="contact num" id="contact num" name="contact num" required placeholder="Enter your Mobile Number" />
+                        </div>
+                       
+
+                        <div className="input-group">
+                            <label htmlFor="address">Address:</label>
+                            <input type="address" id="address" name="address" required placeholder="Enter your address" />
+                        </div>
+
+                        <div className="input-group">
+                            <label htmlFor="area">Area:</label>
+                            <input type="area" id="area" name="area" required placeholder="Enter your area" />
+                        </div>
+                        <div className="input-group">
+                            <label htmlFor="gov">Governorate:</label>
+                            <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
+                        </div>
+
+                            </>
+                            
+                        )}
+                        {DonorFieldsVisible &&(
+                            <>
+                             <div className="input-group">
+                            <label htmlFor="contact num">Contact Number:</label>
+                            <input type="contact num" id="contact num" name="contact num" required placeholder="Enter your Mobile Number" />
+                        </div>
+                       
+
+                        <div className="input-group">
+                            <label htmlFor="address">Address:</label>
+                            <input type="address" id="address" name="address" required placeholder="Enter your address" />
+                        </div>
+
+                        <div className="input-group">
+                            <label htmlFor="area">Area:</label>
+                            <input type="area" id="area" name="area" required placeholder="Enter your area" />
+                        </div>
+                        <div className="input-group">
+                            <label htmlFor="gov">Governorate:</label>
+                            <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
+                        </div>
+
+                            </>
+                            
                         )}
                         <button type="submit">Register</button>
                     </form>
