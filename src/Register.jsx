@@ -5,7 +5,6 @@ import { api } from './api.js';
 import { DataContext } from './data.jsx';
 
 
-
 export default function Register() {
     const { users, addUser } = useContext(DataContext);
 
@@ -152,7 +151,6 @@ export default function Register() {
                                     <label htmlFor="organizationName">Organization Name:</label>
                                     <input type="text" id="organizationName" name="organizationName" required placeholder="Enter your organization name" />
                                 </div>
-
                                 <div className="input-group">
                                     <label htmlFor="organizationType">Organization Type:</label>
                                     <select id="organizationType" name="organizationType" required>
@@ -197,14 +195,6 @@ export default function Register() {
                             <input type="contact num" id="contact num" name="contact num" required placeholder="Enter your Mobile Number" />
                         </div>
                        
-
-                                    <label htmlFor="Organization Address">Organization Address:</label>
-                                    <input type="Organization Address" id="Organization Address" name="Organization Address" required placeholder="Enter your Organization Address" />
-                                </div>
-                                <div className="input-group">
-                                <label htmlFor="documents">Upload Documents:</label>
-                                <input type="file" id="documents" name="documents" accept=".pdf,.doc,.docx" />
-                            </div>
 
                         <div className="input-group">
                             <label htmlFor="address">Address:</label>
@@ -273,7 +263,7 @@ export default function Register() {
                             </>
                             
                         )}
-                        <button className="button-primary" type="submit">Register</button>
+                        <button type="submit">Register</button>
                     </form>
                 </div>
             </div>
