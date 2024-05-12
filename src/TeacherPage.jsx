@@ -1,5 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import MyLocationMap from './Location.jsx'; // Adjust the path based on your file structure
+import { api } from './api.js';
+import { DataContext } from './data.jsx';
+import bgImage from '../assets/bg3.jpg';
+import gg from '../assets/ggw.png'
 
 export default function TeacherPage() {
     const [proBonoClasses, setProBonoClasses] = useState(1);
@@ -25,9 +30,11 @@ export default function TeacherPage() {
     };
 
     return (
-        <div className="teacher-page">
+        <div className="app-container" style={{ backgroundImage: `url(${bgImage})` }}>
             <h2>Subject and Class Selection for Teaching</h2>
             <form onSubmit={handleSubmit}>
+            <div className="register-container">
+                <div className="input-group">
                 <div className="input-group">
                     <label>Select Subjects:</label>
                     <select id="subjects" name="subjects" value={selectedSubject} onChange={handleSubjectChange} required placeholder ="Select a subject" >
@@ -47,11 +54,11 @@ export default function TeacherPage() {
                     <label htmlFor="proBonoStudents">Pro-bono Students:</label>
                     <input type="number" id="proBonoStudents" name="proBonoStudents" value={proBonoStudents} onChange={handleProBonoStudentsChange} required placeholder="Enter number of pro-bono students" min="1" />
                 </div>
-                <button type="submit">Submit</button>
+                <button  className='button-primary2' type="submit">Submit</button>
+                </div>
+                </div>
             </form>
-            <footer style={{ textAlign: 'center', padding: '20px 10px', backgroundColor: 'black', color: 'white' }}>
-                <p>Copyright © 2023 Good Giving</p>
-            </footer>
+           
         </div>
     );
 }

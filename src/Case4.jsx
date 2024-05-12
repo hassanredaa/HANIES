@@ -48,7 +48,7 @@ export default function Case1() {
             <p>Medical Speciality: orthodontics </p>
             <p>Case Description: patient has fallen on his jaw </p>
             
-            <button className='button3' onClick={handleDonateClick}>Donate</button>
+            <button className='button3' onClick={handleDonateClick}>Accept Case</button>
           </div>
         </main>
         <div className='app-container'>

@@ -91,7 +91,7 @@ const MedicalCases = () => {
             <div className="medical-cases-container">
                 {filteredCases.map(caseItem => (
                     <div key={caseItem.id} className="product-tile">
-                        <img src={`https://example.com/${caseItem.id}`} alt="Product Image" className="product-image" />
+                        
                         <div className="product-info">
                             <h2 className="product-title">{caseItem.name}</h2>
                             <p>Medical Specialty: {caseItem.medical_speciality}</p>

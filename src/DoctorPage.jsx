@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import MyLocationMap from './Location.jsx'; // Adjust the path based on your file structure
 import { api } from './api.js';
+import { DataContext } from './data.jsx';
+import bgImage from '../assets/bg3.jpg';
+import gg from '../assets/ggw.png'
 
 export default function DoctorPage() {
     const [clinicLocation, setClinicLocation] = useState({
@@ -36,9 +39,11 @@ export default function DoctorPage() {
     };
 
     return (
-        <div className="doctor-page">
+        <div  className="app-container" style={{ backgroundImage: `url(${bgImage})` }}>
             <h2>Clinic Location Specification</h2>
             <form onSubmit={handleSubmit}>
+            <div className="content-area">
+                <div className="register-container">
                 <div className="input-group">
                     <label htmlFor="address">Address:</label>
                     <input type="text" id="address" name="address" value={clinicLocation.address} onChange={handleLocationChange} required placeholder="Please Enter Your clinic address" />
@@ -61,11 +66,11 @@ export default function DoctorPage() {
                     <label htmlFor="proBonoCases">Pro-bono Cases:</label>
                     <input type="number" id="proBonoCases" name="proBonoCases" value={proBonoCases} onChange={handleProBonoCasesChange} required placeholder="Enter number of pro-bono cases" min="1" />
                 </div>
-                <button type="submit">Submit</button>
+                <button className='button-primary2' type="submit">Submit</button>
+                </div>
+                </div>
             </form>
-            <footer style={{ textAlign: 'center', padding: '20px 10px', backgroundColor: 'black', color: 'white' }}>
-                <p>Copyright © 2023 Good Giving</p>
-            </footer>
+            
         </div>
     );
 }
