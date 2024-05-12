@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { submissionsDonData } from './data.js';
+import { doctec } from './data.js';
 import ggImage from '../assets/gg.png';
 
 function ReviewDonSub() {
@@ -24,22 +24,27 @@ function ReviewDonSub() {
                 <table className="fl-table">
                     <thead>
                         <tr>
-                            <th>ID</th>
                             <th>Name</th>
-                            <th>Status</th>
+                            <th>Gender</th>
+                            <th>Type</th>
+                            <th>Email</th>
+                            <th>Phone Number</th>
+                            <th>Address</th>
                             <th>Actions</th>
+
                         </tr>
                     </thead>
                     <tbody>
-                        {submissionsDonData.map(submission => (
+                        {doctec.map(submission => (
                             <tr key={submission.id}>
-                                <td>{submission.id}</td>
                                 <td>{submission.name}</td>
-                                <td>{submission.status}</td>
-                                <td>
-                                    <div>
-                                        <button className="view">View Data</button>
-                                    </div>
+                                <td>{submission.gender}</td>
+                                <td>{submission.type}</td>
+                                <td>{submission.email}</td>
+                                <td>{submission.phone}</td>
+                                <td>{submission.address}</td>
+                                <td style={{ minWidth: '200px' }}>
+
                                     <div className="download">
                                         {/* <button
                                             style={{ marginTop: '6px' }}
@@ -48,8 +53,21 @@ function ReviewDonSub() {
                                         >
                                             Download Data
                                         </button> */}
-                                        <a className="download" href='../assets/DF.docx' download="DF.docx"> Download </a>
-                                    </div>
+                                        <a style={{
+                                            display: 'inline-block',
+                                            padding: '6.5px 20px',
+                                            marginTop: '10px',
+                                            backgroundColor: '#4FC3A1',
+                                            color: 'white',
+                                            textDecoration: 'none',
+                                            borderRadius: '5px',
+                                            border: 'none',
+                                            cursor: 'pointer',
+                                            textAlign: 'center',
+                                            width: '90%',
+                                            height: 'auto',
+                                            lineHeight: 'inherit',
+                                        }} href='../assets/DF.docx' download="DF.docx"> Download </a>                                    </div>
                                 </td>
                             </tr>
                         ))}
