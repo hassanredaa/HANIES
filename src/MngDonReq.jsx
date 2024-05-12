@@ -29,32 +29,39 @@ function MngDonReq() {
         <div className="review-org-sub">
             <header>
                 <h1>Manage Donors' Requests</h1>
-                <Link to="/admin">Back to Admin Dashboard</Link>
+                <Link className='button-primary2' to="/admin">Admin Dashboard</Link>
             </header>
-            <table style={{ marginTop: '110px' }}>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Status</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {submissions.map(submission => (
-                        <tr key={submission.id}>
-                            <td>{submission.id}</td>
-                            <td>{submission.name}</td>
-                            <td>{submission.status}</td>
-                            <td>
-                                <button className="edit">Edit</button>
-                                <button className="approve" onClick={() => handleApprove(submission.id)}>Approve</button>
-                                <button className="delete" onClick={() => handleReject(submission.id)}>Reject</button>
-                            </td>
+
+            <div className="table-wrapper" style={{ paddingTop: '100px' }}>
+                <table className="fl-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Status</th>
+                            <th>Actions</th>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        {submissions.map(submission => (
+                            <tr key={submission.id}>
+                                <td>{submission.id}</td>
+                                <td>{submission.name}</td>
+                                <td>{submission.status}</td>
+                                <td>
+                                    <div>
+                                        <button className="view" onClick={() => handleApprove(submission.id)}>Approve</button>
+
+                                    </div>
+                                    <div>
+                                        <button className="download" style={{ marginTop: '6px' }} onClick={() => handleReject(submission.id)}>Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table></div>
+
         </div>
     );
 }

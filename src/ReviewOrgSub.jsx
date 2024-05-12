@@ -7,7 +7,7 @@ function ReviewOrgSub() {
         <div className="review-org-sub">
             <header>
                 <h1>Review Organization Submissions</h1>
-                <Link to="/admin">Back to Admin Dashboard</Link>
+                <Link className='button-primary2' to="/admin">Back to Admin Dashboard</Link>
 
             </header>
             <div className="table-wrapper" style={{ paddingTop: '100px' }}>

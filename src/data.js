@@ -155,10 +155,14 @@ export var submissionsData = [
 
 
 export var submissionsDonData = [
-  { id: 1, name: 'John Doe', status: 'Pending' },
-  { id: 2, name: 'Jane Smith', status: 'Reviewed' },
-  { id: 3, name: 'Alice Johnson', status: 'Approved' },
-  { id: 4, name: 'Bob Brown', status: 'Denied' }
+  { id: 1, name: 'Laila Youssef', status: 'Pending' },
+  { id: 2, name: 'Hussien Ahmed ', status: 'Reviewed' },
+  { id: 3, name: ' Ahmed Hassan', status: 'Approved' },
+  { id: 4, name: 'Anthony Sameh', status: 'Denied' },
+  { id: 4, name: 'Amira Sameh', status: 'Denied' },
+  { id: 4, name: 'Youssef Nabil', status: 'Approved' },
+
+
 ];
 
 export const donations = [

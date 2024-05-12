@@ -25,21 +25,21 @@ export default function AdminDB() {
     return (
         <div className="admin-dashboard">
             <div className="sidebar">
-                <div style={{ display: 'flex' }}>
-                    <div style={{ flex: '33.33%', padding: '5px', marginLeft: '20px' }}>
+                <div >
+                    <div style={{ marginRight: '300px' }}>
                         <img src={ggImage} />
                     </div>
-                    <div style={{ flex: '33.33%', padding: '5px', marginRight: '200px' }}>
+                    {/* <div style={{ flex: '33.33%', padding: '5px', marginRight: '200px' }}>
                         <img src={goodImage} />
-                    </div>
+                    </div> */}
                 </div>
                 <div>
-                    <img src={avImage} style={{ marginLeft: '5px', marginTop: '50px', borderRadius: '50%', width: '100px', height: '100px' }} />
+                    <img src={avImage} style={{ marginLeft: '5px', borderRadius: '50%', width: '100px', height: '100px' }} />
                 </div>
-                <h1 style={{ textAlign: 'center', padding: '5px' }}>name</h1>
+                <h1 style={{ textAlign: 'center' }}>name</h1>
                 <p style={{ textAlign: 'center' }}>Admin</p>
 
-                <ul style={{ paddingTop: '20px' }}>
+                <ul style={{ marginTop: '-5px' }}>
                     <li>
                         <Link className="sidebar-button" onClick={toggleReview}>
                             Review Submissions
@@ -82,14 +82,14 @@ export default function AdminDB() {
                         </Link>
                     </li>
                 </ul>
-                <Link to="/" style={{ marginTop: '170px' }}>Log Out</Link>
+                <Link to="/" style={{ marginTop: '15px' }}>Log Out</Link>
             </div>
 
-            <div className="contentt">
+            <div className="contentt" style={{}}>
                 <div className="text-content">
                     <h1 style={{ textAlign: 'left' }}>Dashboard</h1>
-                    <img src={stats} style={{ height: '500px' }} />
-                    <div className="chart-container">
+                    <img src={stats} style={{ height: '125px', paddingRight: '800px', marginTop: '20px' }} />
+                    <div className="chart-container" style={{ marginTop: '100px' }}>
                         <Line
                             data={{
                                 labels: ["Amira", "Hassan"],
