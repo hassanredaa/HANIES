@@ -21,7 +21,7 @@ export default function TeacherPage() {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log("Form submitted");
-        window.location.href = '/DonorHome';
+        window.location.href = '/Teacherhome';
     };
 
     return (

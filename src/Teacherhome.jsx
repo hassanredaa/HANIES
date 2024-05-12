@@ -4,10 +4,8 @@ import ggImage from '../assets/ggw.png';
 import goodImage from '../assets/good.png';
 import avImage from '../assets/img_avatar.png';
 
-export default function DonorHome() {
- 
-
-
+export default function Teacherhome() {
+  
   return (
     <div className="Donor-dashboard">
 
@@ -29,7 +27,7 @@ export default function DonorHome() {
           <ul style={{ paddingTop: '20px' }}>
            
               
-          <li><Link to="/Requests">View Requests</Link></li>
+          <li><Link to="/Posts">View Posts</Link></li>
                 
           </ul>
           <Link to="/" style={{ marginTop: '170px' }}>Log Out</Link>

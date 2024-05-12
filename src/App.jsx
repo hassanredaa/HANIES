@@ -21,6 +21,8 @@ import ViewDonors from './ViewDonors.jsx';
 import ViewOrgs from './ViewOrgs.jsx';
 import Request from './Request.jsx';
 import ProductPage from './products/Product1.jsx';
+import Teacherhome from './Teacherhome.jsx';
+import Posts from './Posts.jsx';
 
 
 
@@ -51,6 +53,8 @@ function App() {
         <Route path="/views/donors" element={<ViewDonors />} />
         <Route path="/views/organizations" element={<ViewOrgs />} />
         <Route path="/product" element={<ProductPage />} />
+        <Route path="/Teacherhome" element={<Teacherhome />} />
+        <Route path="/Posts" element={<Posts />} />
 
       </Routes>
     </BrowserRouter>

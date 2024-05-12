@@ -178,15 +178,17 @@ export const organizationRequests = {
         gender: "Male",
         season:"Winter",
         type:"Coat",
-        material:"Cotton",
+        material:"Fabric",
         quantity: 100,
         contact: "example@email.com",
-        source: "../assets/clothes.jpg"
+        source: "../assets/clothes.jpg",
+        donation: "products/MaleClothing"
+
       },
       {
         id: 2,
         category:"clothes",
-        description: "Men's shirts",
+        description: "Women's shirts",
         age: "Adult",
         gender: "Female",
         season:"Summer",
@@ -194,8 +196,8 @@ export const organizationRequests = {
         material:"Cotton",
         quantity: 50,
         contact: "example@email.com",
-        source: "../assets/clothes.jpg"
-
+        source: "../assets/clothes.jpg",
+        donation: "products/FemaleClothing"
       },
       // Add more clothing requests as needed
     ],
@@ -207,7 +209,9 @@ export const organizationRequests = {
         type: "canned foods",
         item_name:"foul medames",
         quantity: "100 cans",
-        contact: "example@email.com"
+        contact: "example@email.com",
+        donation: "products/FastFood"
+
       },
       {
         id: 2,
@@ -216,7 +220,9 @@ export const organizationRequests = {
         type: "fruits and vegetables",
         item_name: "Banana",
         quantity: "50 kg",
-        contact: "example@email.com"
+        contact: "example@email.com",
+        donation: "products/Homemade"
+
       },
       // Add more food requests as needed
     ],
@@ -229,7 +235,9 @@ export const organizationRequests = {
         gender: "Unisex",
         toy_category:"stuffed toys",
         quantity: 50,
-        contact: "example@email.com"
+        contact: "example@email.com",
+        donation: "products/Toys1"
+
       },
       {
         id: 2,
@@ -239,7 +247,9 @@ export const organizationRequests = {
         gender: "Unisex",
         toy_category:"board games",
         quantity: 30,
-        contact: "example@email.com"
+        contact: "example@email.com",
+        donation: "products/Toys2"
+
       },
       // Add more toy requests as needed
     ],
@@ -251,7 +261,8 @@ export const organizationRequests = {
         type: "Stationary",
         stationarytype: "notebooks",
         quantity: 200,
-        contact: "example@email.com"
+        contact: "example@email.com",
+        donation: "products/NoteBooks"
       },
       {
         id: 2,
@@ -264,7 +275,10 @@ export const organizationRequests = {
         edition:"2nd",
         summary:"magic",
         quantity: 500,
-        contact: "example@email.com"
+        contact: "example@email.com",
+        donation: "products/Pencils"
+
+
       },
       // Add more school supplies requests as needed
     ],
@@ -277,7 +291,9 @@ export const organizationRequests = {
         type:"medication" ,
         medication_use: "pain relief",
         quantity: 200,
-        contact: "example@email.com"
+        contact: "example@email.com",
+        donation: "products/Bandages" 
+
       },
       {
         id: 2,
@@ -286,7 +302,9 @@ export const organizationRequests = {
         type:"devices" ,
         device_type: "MRI",
         quantity: 100,
-        contact: "example@email.com"
+        contact: "example@email.com",
+        donation: "products/Wipes"
+
       },
       {
         id: 3,
@@ -295,7 +313,9 @@ export const organizationRequests = {
         type:"equipment" ,
         equipment_type: "scalpel",
         quantity: 100,
-        contact: "example@email.com"
+        contact: "example@email.com",
+        donation: "products/Markers"
+
       },
       // Add more medical supplies requests as needed
     ],
@@ -310,7 +330,9 @@ export const organizationRequests = {
          area:"heliopolis", 
          address: "4 el ghanam",
          quantity: 1,
-        contact: "example@email.com"
+        contact: "example@email.com",
+        donation: "products/Blood1"
+
       },
       {
         id: 2,
@@ -323,9 +345,11 @@ export const organizationRequests = {
          address: "4 el ghanam",
          quantity: 1,
         
-        contact: "example@email.com"
+        contact: "example@email.com",
+        donation: "products/Blood2"
+
       },
       // Add more blood donation requests as needed
     ]
-  };
+  };    
   
