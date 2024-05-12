@@ -35,15 +35,14 @@ export default function OrganizationHome() {
         <div>
             <div className="organization-home">
                 {/* Sidebar Section */}
-                <div className="sidebar">
+                <div className="sidebar" >
                     <div className="logo-container">
                         <img src={ggImage} alt="ggImage" />
                         <img src={goodImage} alt="goodImage" />
                     </div>
                     <div className="profile">
                         <img src={avImage} alt="img_avatar" className="avatar" />
-                        <h1>Name</h1>
-                        <p>Organization</p>
+                        <h1>Masr El Kheir</h1>
                     </div>
                     <ul className="navigation">
                         <li>
@@ -75,13 +74,13 @@ export default function OrganizationHome() {
                             </Link>
                         </li>
                     </ul>
-                    <Link to="/logout" className="logout">
+                    <Link to="/" className="logout">
                         Log Out
                     </Link>
                 </div>
 
                 {/* Posts Section */}
-                <div className="posts">
+                <div className="posts" >
                     <h2>Organization Dashboard</h2>
                     <h2>Recent Posts</h2>
                     <div className="post-container">
@@ -113,9 +112,7 @@ export default function OrganizationHome() {
                     </div>
                 </div>
             </div>
-            <footer style={{ textAlign: 'center', padding: '20px 10px', backgroundColor: 'black', color: 'white' }}>
-                <p>Copyright © 2023 Good Giving</p>
-            </footer>
+            
         </div>
     );
 }

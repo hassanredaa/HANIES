@@ -96,7 +96,7 @@ export default function Login() {
             Don't have an account? <Link to="/register">Sign up</Link>
           </p>
           <p className="signup-text">
-            Forgot your password? <Link to="/changepassword">Change Password</Link>
+            Change your password? <Link to="/changepassword">Change Password</Link>
           </p>
         </form>
       </div>

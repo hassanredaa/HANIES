@@ -39,7 +39,8 @@ export default function DoctorHome() {
           
             
               
-              
+          <Link to="/reqdoc" className="sidebar-button" style={{ marginTop: '15px' }}>Requests</Link>
+
           <Link to="/Cases" className="sidebar-button" style={{ marginTop: '15px' }}>View Cases</Link>
           <Link to="/UpdateAccDonor" className="sidebar-button" style={{ marginTop: '15px' }}>Update account</Link>
           <Link to="/" className="sidebar-button" style={{ marginTop: '15px' }}>Delete account</Link> 

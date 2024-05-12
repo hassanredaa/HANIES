@@ -37,8 +37,7 @@ export default function AdminDB() {
                 <div>
                     <img src={avImage} style={{ marginLeft: '5px', borderRadius: '50%', width: '100px', height: '100px' }} />
                 </div>
-                <h1 style={{ textAlign: 'center' }}>name</h1>
-                <p style={{ textAlign: 'center' }}>Admin</p>
+                <h1 style={{ textAlign: 'center' }}>Amira & Hassan</h1>
 
                 <ul style={{ marginTop: '-5px' }}>
                     <li>
