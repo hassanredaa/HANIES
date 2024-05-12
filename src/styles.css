@@ -7,6 +7,12 @@ form {
     text-align: center;
 }
 
+h1 {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 h3 {
     text-align: right;
     font-weight: normal;
@@ -1208,87 +1214,23 @@ button.download {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
-  
-  .request-tile button:hover {
+}
+
+.request-tile button:hover {
     background-color: #218838;
-  }
-
-  .view-orgs-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
 }
 
-.view-orgs-container header {
-  margin-bottom: 20px;
+.poetsen-one-regular {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.view-orgs-container h1 {
-  font-size: 24px;
-  margin-bottom: 10px;
+.noto-serif {
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
 }
-
-.view-orgs-container a {
-  color: #007bff;
-  text-decoration: none;
-  margin-left: 10px;
-}
-
-.view-orgs-container .search-container {
-  margin-bottom: 20px;
-}
-
-.view-orgs-container input[type="text"] {
-  padding: 8px 12px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 100%;
-}
-
-.view-orgs-container .filter-container {
-  margin-bottom: 20px;
-}
-
-.view-orgs-container select {
-  padding: 8px 12px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-right: 10px;
-}
-
-.view-orgs-container .orgs-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.view-orgs-container th, .view-orgs-container td {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-.view-orgs-container th {
-  background-color: #f2f2f2;
-  text-align: left;
-}
-
-.view-orgs-container tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-.view-orgs-container tbody tr:hover {
-  background-color: #ddd;
-}
-
-.view-orgs-container tbody td:last-child {
-  text-align: center;
-}
-
-.view-orgs-container tbody td:last-child a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-  
