@@ -375,7 +375,6 @@ export const organizationRequests = {
       contact: "example@email.com",
       donation: "/products/Blood2"
 
-
     },
     // Add more blood donation requests as needed
   ]
