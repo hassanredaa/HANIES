@@ -5,7 +5,12 @@ import goodImage from '../assets/good.png';
 import avImage from '../assets/img_avatar.png';
 
 export default function DonorHome() {
- 
+  // State to manage the toggles
+  const [viewOpen, setViewOpen] = useState(false);
+
+
+  // Toggle functions
+  const toggleView = () => setViewOpen(!viewOpen);
 
 
   return (
@@ -27,10 +32,18 @@ export default function DonorHome() {
           <p style={{ textAlign: 'center' }}>User</p>
 
           <ul style={{ paddingTop: '20px' }}>
-           
-              
-          <li><Link to="/Requests">View Requests</Link></li>
-                
+            <li>
+              <button className="sidebar-button" onClick={toggleView} >
+                View
+              </button>
+              {viewOpen && (
+                <ul>
+                  <li><Link to="/Requests">View Requests</Link></li>
+                  <li><Link to="/views/organizations">View Organizations List</Link></li>
+                 
+                </ul>
+              )}
+            </li>
           </ul>
           <Link to="/" style={{ marginTop: '170px' }}>Log Out</Link>
         </div>
