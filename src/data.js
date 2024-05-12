@@ -316,7 +316,7 @@ export const organizationRequests = {
       medication_use: "pain relief",
       quantity: 200,
       contact: "example@email.com",
-      donation: "products/Bandages" 
+      donation: "/products/Medical" 
 
     },
     {
@@ -325,9 +325,10 @@ export const organizationRequests = {
       description: "MRI Scanner",
       type:"devices" ,
       device_type: "MRI",
+      medication_use: "medical imaging procedure",
       quantity: 100,
       contact: "example@email.com",
-      donation: "products/Wipes"
+      donation: "/products/Device"
 
     },
     {
@@ -338,7 +339,7 @@ export const organizationRequests = {
       equipment_type: "scalpel",
       quantity: 100,
       contact: "example@email.com",
-      donation: "products/Markers"
+      donation: "/products/Equipment"
 
     },
     // Add more medical supplies requests as needed
@@ -347,6 +348,7 @@ export const organizationRequests = {
     {
       id: 1,
       category:"bloodDonations",
+      description: "Blood Type O",
       name_of_patient:"hanan el dreiny",
       type:"O",
        hospital:"el hayat",
@@ -355,12 +357,13 @@ export const organizationRequests = {
        address: "4 el ghanam",
        quantity: 1,
       contact: "example@email.com",
-      donation: "products/Blood1"
+      donation: "/products/Blood1"
 
     },
     {
       id: 2,
       category:"bloodDonations",
+      description: "Blood Type A-",
       name_of_patient:"Youssef Khalil",
       type: "A-",
       hospital:"el hayat",
@@ -370,7 +373,7 @@ export const organizationRequests = {
        quantity: 1,
       
       contact: "example@email.com",
-      donation: "products/Blood2"
+      donation: "/products/Blood2"
 
     },
     // Add more blood donation requests as needed

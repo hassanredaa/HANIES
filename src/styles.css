@@ -1348,6 +1348,89 @@ button.download {
     background-color: #218838;
   }
   
+
+
+  /* ShoppingPage.css */
+.shopping-page {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  .header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .mainm {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  .productm {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    width: 200px;
+  }
+  
+  .productm img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .productm h2 {
+    margin-top: 10px;
+  }
+  
+  .productm p {
+    color: #666;
+  }
+  
+  .button3 {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; 
+    font-size: 14px;
+    height: auto;
+
+
+  }
+  
+  .button3:hover {
+    background-color: #555;
+  }
+
+  .delivery-section {
+    margin-top: 20px;
+  }
+  
+  .dropdown4 {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .dropdown4:focus {
+    outline: none;
+    border-color: #333;
+  }
+  
+  /* Style for the selected option */
+  .dropdown4 option:checked {
+    background-color: #333;
+    color: #fff;
+  }
+  
+
   .post-container {
     background-color: #f2f2f2;
     width: 100%;
