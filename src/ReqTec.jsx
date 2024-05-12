@@ -141,7 +141,7 @@ const Request = () => {
        <header style={{ padding: '10px' }}>
                 <img src={ggImage} alt="gg logo" style={{}} />
                 <h1 style={{ marginLeft: '75px' }}>Requests</h1>
-                <Link className='button-primary2' to="/TeacherPage">Donor Dashboard</Link>
+                <Link className='button-primary2' to="/teacherhome">Teacher Dashboard</Link>
             </header>
       <div style={{paddingTop:'150px'}} >
         <button className='button-primary2' onClick={() => handleFilter('all')}>All</button>
