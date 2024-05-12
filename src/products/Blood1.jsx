@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { organizationRequests } from '../data.js';
 import clothes from '../../assets/clothes.jpg';
 import IncrementDecrementBtn from './IncrementDecrementBtn.jsx';
-// import { api } from './api.js';
+//import { api } from '.././api.js';
 
 // Adjust the path if needed
 //import IncrementDecrementBtn from './IncrementDecrementBtn.jsx';
@@ -47,7 +47,8 @@ export default function Blood1() {
             <p>Area: {organizationRequests.bloodDonations[0].area } </p>
             <p>Governorate: {organizationRequests.bloodDonations[0].governorate } </p>
             <p>Address: {organizationRequests.bloodDonations[0].address } </p>
-           {/* </div> <div><MyLocationMap apiKey={api} /> */}
+            {/* <div><MyLocationMap apiKey={api} />
+                        </div> */}
 
             <IncrementDecrementBtn minValue={1} maxValue={organizationRequests.clothes[0].quantity} />
             <button className='button3' onClick={handleDonateClick}>Donate</button>

@@ -40,7 +40,8 @@ import ViewOrgsDonor from './ViewOrgsDonor.jsx';
 import Device from './products/Device.jsx';
 import Equipment from './products/Equipment.jsx';
 import Blood1 from './products/Blood1.jsx';
-
+import Blood2 from './products/Blood2.jsx';
+import SchedOrg from './SchedOrg.jsx';
 
 
 
@@ -76,7 +77,8 @@ function App() {
         <Route path="/products/Device" element={<Device />} />
         <Route path="/products/Equipment" element={<Equipment />} />
         <Route path="/products/Blood1" element={<Blood1 />} />
-        {/*<Route path="/products/FastFood" element={<FastFood />} />
+        <Route path="/products/Blood2" element={<Blood2 />} />
+        {/*<oute path="/products/FastFood" element={<FastFood />} />
         <Route path="/products/Homemade" element={<HomeMade />} />
         <Route path="/products/Toys" element={<Toys1 />} />
         <Route path="/products/Toys" element={<Toys2 />} />
