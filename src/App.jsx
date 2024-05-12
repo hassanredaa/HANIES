@@ -21,6 +21,7 @@ import ViewDonors from './ViewDonors.jsx';
 import ViewOrgs from './ViewOrgs.jsx';
 import Request from './Request.jsx';
 import ProductPage from './products/Product1.jsx';
+import Delete from './Delete.jsx';
 
 
 
@@ -51,7 +52,7 @@ function App() {
         <Route path="/views/donors" element={<ViewDonors />} />
         <Route path="/views/organizations" element={<ViewOrgs />} />
         <Route path="/product" element={<ProductPage />} />
-
+        <Route path="/delete" element={<Delete />} />
       </Routes>
     </BrowserRouter>
   );

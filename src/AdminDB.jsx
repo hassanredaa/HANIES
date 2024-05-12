@@ -11,7 +11,7 @@ import stats from '../assets/stats.png'
 
 export default function AdminDB() {
 
-    
+
     // State to manage the toggles
     const [viewOpen, setViewOpen] = useState(false);
     const [manageOpen, setManageOpen] = useState(false);
@@ -41,9 +41,9 @@ export default function AdminDB() {
 
                 <ul style={{ paddingTop: '20px' }}>
                     <li>
-                        <button className="sidebar-button" onClick={toggleReview}>
+                        <Link className="sidebar-button" onClick={toggleReview}>
                             Review Submissions
-                        </button>
+                        </Link>
 
                         {reviewOpen && (
                             <ul>
@@ -53,9 +53,9 @@ export default function AdminDB() {
                         )}
                     </li>
                     <li>
-                        <button className="sidebar-button" onClick={toggleManage} >
+                        <Link className="sidebar-button" onClick={toggleManage} >
                             Manage Requests
-                        </button>
+                        </Link>
                         {manageOpen && (
                             <ul>
                                 <li><Link to="/requests/organizations">Manage Organization Requests</Link></li>
@@ -64,9 +64,9 @@ export default function AdminDB() {
                         )}
                     </li>
                     <li>
-                        <button className="sidebar-button" onClick={toggleView} >
+                        <Link className="sidebar-button" onClick={toggleView} >
                             View
-                        </button>
+                        </Link>
                         {viewOpen && (
                             <ul>
                                 <li><Link to="/views/organizations">View Organizations List</Link></li>
@@ -76,6 +76,11 @@ export default function AdminDB() {
                             </ul>
                         )}
                     </li>
+                    <li>
+                        <Link to="/delete" className="sidebar-button"  >
+                            Delete Account
+                        </Link>
+                    </li>
                 </ul>
                 <Link to="/" style={{ marginTop: '170px' }}>Log Out</Link>
             </div>
@@ -83,18 +88,18 @@ export default function AdminDB() {
             <div className="contentt">
                 <div className="text-content">
                     <h1 style={{ textAlign: 'left' }}>Dashboard</h1>
-                    <img src={stats} style={{height: '500px'}} />
+                    <img src={stats} style={{ height: '500px' }} />
                     <div className="chart-container">
-                    <Line
-                        data={{
-                            labels: ["Amira", "Hassan"],
-                            datasets: [{
-                                label: "takyeem",
-                                data: [10, 30],
-                            }]
-                        }}
-                    />
-                </div>
+                        <Line
+                            data={{
+                                labels: ["Amira", "Hassan"],
+                                datasets: [{
+                                    label: "takyeem",
+                                    data: [10, 30],
+                                }]
+                            }}
+                        />
+                    </div>
 
                     {/* <p>Select an option from the sidebar to get started.</p> */}
                 </div>
