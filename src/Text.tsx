@@ -82,8 +82,8 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 export default function Text() {
   return (
     <section>
-      <ParallaxText baseVelocity={-5}>Good Giving</ParallaxText>
-      <ParallaxText baseVelocity={5}>Good Giving</ParallaxText>
+      <ParallaxText baseVelocity={-3}>Good Giving</ParallaxText>
+      <ParallaxText baseVelocity={3}>Good Giving</ParallaxText>
     </section>
   );
 }
