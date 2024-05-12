@@ -37,14 +37,15 @@ export default function SchedOrg() {
         <div style={{ fontFamily: 'Arial, sans-serif', textAlign: 'center' }}>
             <h1>Schedule</h1>
             <table style={{ margin: '0 auto' }}>
-                <thead>
-                    <tr>
-                        <th>Day</th>
-                        <th>Morning</th>
-                        <th>Afternoon</th>
-                        <th>Evening</th>
-                    </tr>
-                </thead>
+            <thead>
+    <tr>
+        <th style={{ backgroundColor: 'black', color: 'white' }}>Day</th>
+        <th style={{ backgroundColor: 'black', color: 'white' }}>Morning</th>
+        <th style={{ backgroundColor: 'black', color: 'white' }}>Afternoon</th>
+        <th style={{ backgroundColor: 'black', color: 'white' }}>Evening</th>
+    </tr>
+</thead>
+
                 <tbody>
                     {schedule.map((entry, dayIndex) => (
                         <tr key={dayIndex}>
