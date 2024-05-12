@@ -27,6 +27,10 @@ import UpdateAccDonor from './UpdateAccDonor.jsx';
 import Notifications from './Notifications.jsx';
 import FullfilledPost from './FullfilledPost.jsx';
 import Logout from './Logout.jsx';
+import Delete from './Delete.jsx';
+
+
+
 
 
 
@@ -60,6 +64,7 @@ function App() {
         <Route path="/Notifications" element={<Notifications />} />
         <Route path="/FullfilledPost" element={<FullfilledPost />} />
         <Route path="/Logout" element={<Logout />} />
+        <Route path="/delete" element={<Delete />} />
       </Routes>
     </BrowserRouter>
   );

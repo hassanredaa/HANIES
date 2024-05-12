@@ -68,9 +68,8 @@ export default function Register() {
 
     return (
         <div className="app-container" style={{ backgroundImage: `url(${bgImage})` }}>
-            <div style={{ textAlign: 'right', marginBottom: '20px' }}>
-            <img src={gg} style={{paddingRight: '1000px'}}></img>
-
+            <div style={{ textAlign: 'right' }}>
+               <img src={gg} style={{paddingRight: '1000px'}}></img>
                 <Link to="/" className="button-primary2">Home</Link>
                 {/* Link to the about us section */}
                 <Link to="/#about" className="button-primary2">About Us</Link>
@@ -78,7 +77,7 @@ export default function Register() {
                 <Link to="/#contact" className="button-primary2">Contact Us</Link>
             </div>
             <div className="content-area">
-                <div className="register-container" style={{ opacity: '0.6' }}>
+                <div className="register-container">
 
                     <h2>Register</h2>
                     <form onSubmit={handleSubmit} >
