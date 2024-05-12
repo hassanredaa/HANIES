@@ -18,6 +18,11 @@ export default function DonorHome() {
   // Toggle functions
   const toggleView = () => setViewOpen(!viewOpen);
 
+  const alertTimeout = setTimeout(() => {
+    window.alert("Order Arrived");
+}, 10000);
+
+
 
   return (
     <div className="Donor-dashboard">
