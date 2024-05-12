@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import MyLocationMap from './Location.jsx'; // Adjust the path based on your file structure
+import { api } from './api.js';
 
 export default function DoctorPage() {
     const [clinicLocation, setClinicLocation] = useState({
         address: '',
         area: '',
         governorate: '',
-        googleMarker: null // You can customize this based on how you handle Google Maps integration
+
     });
     const [specialty, setSpecialty] = useState('');
     const [proBonoCases, setProBonoCases] = useState(1);
@@ -29,10 +31,6 @@ export default function DoctorPage() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (proBonoCases < 1) {
-            alert("Pro-bono cases must be greater than or equal to 1");
-            return; // Prevent further execution if validation fails
-        }
         console.log("Form submitted");
          window.location.href = '/DonorHome';
     };
@@ -53,14 +51,15 @@ export default function DoctorPage() {
                     <label htmlFor="governorate">Governorate:</label>
                     <input type="text" id="governorate" name="governorate" value={clinicLocation.governorate} onChange={handleLocationChange} required placeholder="Please Enter Your governorate" />
                 </div>
-                {/* Add Google Maps integration here if needed */}
+                <div><MyLocationMap apiKey={api} />
+                        </div>
                 <div className="input-group">
                     <label htmlFor="specialty">Specialty:</label>
                     <input type="text" id="specialty" name="specialty" value={specialty} onChange={handleSpecialtyChange} required placeholder="Please Enter Your specialty" />
                 </div>
                 <div className="input-group">
                     <label htmlFor="proBonoCases">Pro-bono Cases:</label>
-                    <input type="number" id="proBonoCases" name="proBonoCases" value={proBonoCases} onChange={handleProBonoCasesChange} required placeholder="Enter number of pro-bono cases" />
+                    <input type="number" id="proBonoCases" name="proBonoCases" value={proBonoCases} onChange={handleProBonoCasesChange} required placeholder="Enter number of pro-bono cases" min="1" />
                 </div>
                 <button type="submit">Submit</button>
             </form>

@@ -4,15 +4,8 @@ import ggImage from '../assets/ggw.png';
 import goodImage from '../assets/good.png';
 import avImage from '../assets/img_avatar.png';
 
-export default function DonorHome() {
-  // State to manage the toggles
-  const [viewOpen, setViewOpen] = useState(false);
-
-
-  // Toggle functions
-  const toggleView = () => setViewOpen(!viewOpen);
-
-
+export default function Teacherhome() {
+  
   return (
     <div className="Donor-dashboard">
 
@@ -32,18 +25,10 @@ export default function DonorHome() {
           <p style={{ textAlign: 'center' }}>User</p>
 
           <ul style={{ paddingTop: '20px' }}>
-            <li>
-              <button className="sidebar-button" onClick={toggleView} >
-                View
-              </button>
-              {viewOpen && (
-                <ul>
-                  <li><Link to="/Requests">View Requests</Link></li>
-                  <li><Link to="/views/organizations">View Organizations List</Link></li>
-                 
-                </ul>
-              )}
-            </li>
+           
+              
+          <li><Link to="/Posts">View Posts</Link></li>
+                
           </ul>
           <Link to="/" style={{ marginTop: '170px' }}>Log Out</Link>
         </div>
