@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ggImage from '../assets/gg.png';
+
 
 export default function Notifications() {
   const notifications = [
@@ -17,7 +19,13 @@ export default function Notifications() {
 
   return (
     <div style={{ fontFamily: 'Arial, sans-serif' }}>
-      <h1>Notifications</h1>
+      <header style={{ padding: '10px' }}>
+        <img src={ggImage} alt="gg logo" style={{}} />
+
+        {/* <h1 style={{ marginLeft: '75px' }}>Review Donor Submissions</h1> */}
+        <Link className='button-primary2' to="/organizationhome">Organization Dashboard</Link>
+      </header>
+      <h1 style={{paddingTop:'20px'}}>Notifications</h1>
       <ul style={{ listStyleType: 'none', padding: 0 }}>
         {notifications.map(notification => (
           <li key={notification.id} style={{ marginBottom: '10px', border: '1px solid #ccc', borderRadius: '5px', padding: '10px' }}>
