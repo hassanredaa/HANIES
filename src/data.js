@@ -20,7 +20,7 @@ export const about = [
 
 export var test = 'This is a test'
 
-export function get(){
+export function get() {
     return test
 }
 
@@ -28,12 +28,12 @@ export function set(x) {
     test = x
 }
 
-export function addUser (name,password,email) {
-    users.push({name,password,email})
+export function addUser(name, password, email) {
+    users.push({ name, password, email })
     console.log(users)
 }
 
-export function getUser () {
+export function getUser() {
     console.log(users)
 }
 
@@ -85,7 +85,7 @@ export var doctec = [
     }
 ];
 
-export var orgs=[
+export var orgs = [
     {
         name: 'Sarah',
         organizationName: 'Masr Kheir',
@@ -154,3 +154,142 @@ export var submissionsDonData = [
     { id: 4, name: 'Bob Brown', status: 'Denied' }
 ];
 
+export const donations = [
+    { id: 1, name: 'Donation 1', category: 'clothes', age: 'adult', gender: 'male', season: 'winter', quantity: 10, type: 'Shirt', material: 'Cotton', donation: 'donation1' },
+    { id: 2, name: 'Donation 2', category: 'toys', age: 'child', gender: 'unisex', toy_category: 'dolls', quantity: 5 },
+    { id: 3, name: 'Donation 3', category: 'food', type: 'canned foods', item_name: 'foul medames', quantity: 20 },
+    { id: 4, name: 'Donation 4', category: 'clothes', age: 'child', gender: 'female', season: 'summer', quantity: 15, type: 'Dress', material: 'Polyester' },
+    { id: 5, name: 'Donation 5', category: 'toys', age: 'any', gender: 'unisex', toy_category: 'cars', quantity: 8 },
+    { id: 6, name: 'Donation 6', category: 'school supplies', type: 'books', bookname: 'harry potter', author: 'jk rowling', language: 'english', edition: '2nd', summary: 'magic', quantity: 8 },
+    { id: 7, name: 'Donation 7', category: 'school supplies', type: 'stationary', stationarytype: 'pencil', quantity: 8 },
+    { id: 8, name: 'Donation 8', category: 'blood', name_of_patient: 'hanan el dreiny', type: 'O', hospital: 'el hayat', governorate: 'cairo', area: 'heliopolis', address: '4 el ghanam', quantity: 1 },
+    { id: 9, name: 'Donation 9', category: 'medical', type: 'medication', medication_use: 'cardiac', quantity: 15 },
+    { id: 10, name: 'Donation 10', category: 'medical', type: 'devices', device_type: 'MRI', quantity: 15 },
+    { id: 11, name: 'Donation 11', category: 'medical', type: 'equipment', equipment_type: 'scalpel', quantity: 15 },
+];
+
+export const organizationRequests = {
+    clothes: [
+      {
+        id: 1,
+        description: "Winter coats for children",
+        size: "Various sizes",
+        quantity: 100,
+        contact: "example@email.com",
+        source: "../assets/clothes.jpg"
+      },
+      {
+        id: 2,
+        description: "Men's shirts",
+        size: "Medium",
+        quantity: 50,
+        contact: "example@email.com",
+        source: "../assets/clothes.jpg"
+
+      },
+      // Add more clothing requests as needed
+    ],
+    food: [
+      {
+        id: 1,
+        description: "Canned goods",
+        type: "Vegetables",
+        quantity: "100 cans",
+        contact: "example@email.com"
+      },
+      {
+        id: 2,
+        description: "Rice",
+        type: "Basmati",
+        quantity: "50 kg",
+        contact: "example@email.com"
+      },
+      // Add more food requests as needed
+    ],
+    toys: [
+      {
+        id: 1,
+        description: "Stuffed animals",
+        ageRange: "3-5 years",
+        quantity: 50,
+        contact: "example@email.com"
+      },
+      {
+        id: 2,
+        description: "LEGO sets",
+        ageRange: "6-10 years",
+        quantity: 30,
+        contact: "example@email.com"
+      },
+      // Add more toy requests as needed
+    ],
+    schoolSupplies: [
+      {
+        id: 1,
+        description: "Notebooks",
+        type: "Spiral bound",
+        quantity: 200,
+        contact: "example@email.com"
+      },
+      {
+        id: 2,
+        description: "Pencils",
+        type: "HB",
+        quantity: 500,
+        contact: "example@email.com"
+      },
+      // Add more school supplies requests as needed
+    ],
+    stationary: [
+      {
+        id: 1,
+        description: "Pens",
+        type: "Ballpoint",
+        quantity: 100,
+        contact: "example@email.com"
+      },
+      {
+        id: 2,
+        description: "Markers",
+        type: "Permanent",
+        quantity: 50,
+        contact: "example@email.com"
+      },
+      // Add more stationary requests as needed
+    ],
+    medicalSupplies: [
+      {
+        id: 1,
+        description: "Bandages",
+        type: "Adhesive",
+        quantity: 200,
+        contact: "example@email.com"
+      },
+      {
+        id: 2,
+        description: "Antiseptic wipes",
+        type: "Alcohol-based",
+        quantity: 100,
+        contact: "example@email.com"
+      },
+      // Add more medical supplies requests as needed
+    ],
+    bloodDonations: [
+      {
+        id: 1,
+        bloodType: "O+",
+        quantity: "5 pints",
+        urgency: "Immediate",
+        contact: "example@email.com"
+      },
+      {
+        id: 2,
+        bloodType: "A-",
+        quantity: "3 pints",
+        urgency: "Urgent",
+        contact: "example@email.com"
+      },
+      // Add more blood donation requests as needed
+    ]
+  };
+  
