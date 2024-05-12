@@ -29,7 +29,7 @@ export default function DonorHome() {
             <img src={avImage} style={{ marginLeft: '5px', marginTop: '50px', borderRadius: '50%', width: '100px', height: '100px' }} />
           </div>
           <h1 style={{ textAlign: 'center', padding: '5px' }}>name</h1>
-          <p style={{ textAlign: 'center' }}>User</p>
+          <p style={{ textAlign: 'center' }}>Donor</p>
 
           <ul style={{ paddingTop: '20px' }}>
             <li>
@@ -39,12 +39,15 @@ export default function DonorHome() {
               {viewOpen && (
                 <ul>
                   <li><Link to="/Requests">View Requests</Link></li>
-                  <li><Link to="/views/organizations">View Organizations List</Link></li>
+                  <li><Link to="/ViewOrgsDonor">View Organizations List</Link></li>
                  
                 </ul>
               )}
             </li>
+            <Link to="/UpdateAccDonor" style={{ marginTop: '170px' }}>Update account</Link>
+            <Link to="/" style={{ marginTop: '170px' }}>Delete account</Link>
           </ul>
+
           <Link to="/" style={{ marginTop: '170px' }}>Log Out</Link>
         </div>
 

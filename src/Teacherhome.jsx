@@ -22,14 +22,14 @@ export default function Teacherhome() {
             <img src={avImage} style={{ marginLeft: '5px', marginTop: '50px', borderRadius: '50%', width: '100px', height: '100px' }} />
           </div>
           <h1 style={{ textAlign: 'center', padding: '5px' }}>name</h1>
-          <p style={{ textAlign: 'center' }}>User</p>
+          <p style={{ textAlign: 'center' }}>Teacher</p>
 
-          <ul style={{ paddingTop: '20px' }}>
-           
-              
-          <li><Link to="/Posts">View Posts</Link></li>
-                
-          </ul>
+          
+          <Link to="/Posts">View Posts</Link>
+    
+          
+          <Link to="/UpdateAccDonor" style={{ marginTop: '170px' }}>Update account</Link>
+            <Link to="/" style={{ marginTop: '170px' }}>Delete account</Link> 
           <Link to="/" style={{ marginTop: '170px' }}>Log Out</Link>
         </div>
 

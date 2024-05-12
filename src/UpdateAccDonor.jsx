@@ -38,12 +38,15 @@ export default function UpdateAccDonor() {
         event.preventDefault();
         console.log("Form submitted");
         if (selectedRole == 'doctor') {
-            window.location.href = '/DoctorPage';
+            window.location.href = '/DoctorHome';
         } else if (selectedRole == 'teacher') {
-            window.location.href = '/TeacherPage';
+            window.location.href = '/Teacherhome';
         } else {
             window.location.href = '/DonorHome';
         }
+    };
+    const handleRoleChange = (event) => {
+        setSelectedRole(event.target.value);
     };
 
 
@@ -98,13 +101,23 @@ export default function UpdateAccDonor() {
                                 </div>
                         <div><MyLocationMap apiKey={api} />
                         </div>
+                        <div className="input-group">
+                            <label htmlFor="role">Role:</label>
+                            <select id="role" name="role" value={selectedRole} onChange={handleRoleChange}>
+                                <option value="">Select Role</option>
+                                <option value="doctor">Doctor</option>
+                                <option value="teacher">Teacher</option>
+                                <option value="donor">Donor</option>
+                            </select>
+                       </div>
+                       
+
 
                        
-                       
+                        <button className="button-primary" onClick={handleSubmit} >
+                            Save
+                        </button>
 
-
-                       
-                        <Link to="/OrganizationHome" className='button-primary2' type="submit">Save</Link>
                     </form>
                 </div>
             </div>

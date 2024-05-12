@@ -30,6 +30,7 @@ import Notifications from './Notifications.jsx';
 import FullfilledPost from './FullfilledPost.jsx';
 import Logout from './Logout.jsx';
 import Delete from './Delete.jsx';
+import ViewOrgsDonor from './ViewOrgsDonor.jsx';
 
 
 
@@ -61,7 +62,7 @@ function App() {
         <Route path="/product" element={<ProductPage />} />
         <Route path="/Teacherhome" element={<Teacherhome />} />
         <Route path="/Posts" element={<Posts />} />
-
+        <Route path="/ViewOrgsDonor" element={<ViewOrgsDonor />} />
         <Route path="/DonationPost" element={<DonationPost />} />
         <Route path="/UpdatePost" element={<UpdatePost />} />
         <Route path="/UpdateAccOrg" element={<UpdateAccOrg />} />
