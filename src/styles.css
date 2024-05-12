@@ -997,8 +997,9 @@ footer {
     padding: 20px;
     background-color: #f9f9f9;
     flex-grow: 1;
-    flex-direction: column; /* Changed to column */
-    
+    flex-direction: column;
+    /* Changed to column */
+
 
 }
 
@@ -1009,9 +1010,10 @@ footer {
 }
 
 .chart-container {
-    max-width: 100%; 
+    max-width: 100%;
     flex: auto;
-    flex-grow: 1; /* Allow it to grow and fill available space */
+    flex-grow: 1;
+    /* Allow it to grow and fill available space */
 
 }
 
@@ -1346,96 +1348,97 @@ button.download {
 
 .request-tile button:hover {
     background-color: #218838;
-  }
-  
+}
 
 
-  /* ShoppingPage.css */
+
+/* ShoppingPage.css */
 .shopping-page {
     font-family: Arial, sans-serif;
     text-align: center;
-  }
-  
-  .header {
+}
+
+.header {
     background-color: #333;
     color: #fff;
     padding: 20px;
-  }
-  
-  .mainm {
+}
+
+.mainm {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
     padding: 20px;
-  }
-  
-  .productm {
+}
+
+.productm {
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 5px;
     width: 200px;
-  }
-  
-  .productm img {
+}
+
+.productm img {
     width: 100%;
     border-radius: 5px;
-  }
-  
-  .productm h2 {
+}
+
+.productm h2 {
     margin-top: 10px;
-  }
-  
-  .productm p {
+}
+
+.productm p {
     color: #666;
-  }
-  
-  .button3 {
+}
+
+.button3 {
     background-color: #333;
     color: #fff;
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px; 
+    margin-top: 10px;
     font-size: 14px;
     height: auto;
 
 
-  }
-  
-  .button3:hover {
-    background-color: #555;
-  }
+}
 
-  .delivery-section {
+.button3:hover {
+    background-color: #555;
+}
+
+.delivery-section {
     margin-top: 20px;
-  }
-  
-  .dropdown4 {
+}
+
+.dropdown4 {
     padding: 8px 12px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
-  
-  .dropdown4:focus {
+}
+
+.dropdown4:focus {
     outline: none;
     border-color: #333;
-  }
-  
-  /* Style for the selected option */
-  .dropdown4 option:checked {
+}
+
+/* Style for the selected option */
+.dropdown4 option:checked {
     background-color: #333;
     color: #fff;
-  }
-  
+}
 
-  .post-container {
+
+.post-container {
     background-color: #f2f2f2;
     width: 100%;
     max-width: 400px;
-    margin: 50px auto; /* Centering the container horizontally */
+    margin: 50px auto;
+    /* Centering the container horizontally */
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -1478,6 +1481,7 @@ button.download {
 .post-container button:hover {
     background-color: #333;
 }
+
 .posts {
     display: grid;
     grid-template-columns: 1fr;
@@ -1535,6 +1539,7 @@ button.download {
 .post-action.icon {
     margin-right: 10px;
 }
+
 .organization-home {
     display: flex;
     justify-content: center;
@@ -1576,7 +1581,39 @@ button.download {
 
 .requests-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust the minmax value as needed */
-    gap: 20px; /* Adjust the gap between items */
-  }
-  
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* Adjust the minmax value as needed */
+    gap: 20px;
+    /* Adjust the gap between items */
+}
+
+
+.order-tracking-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin-top: 15%;
+}
+
+.order-tracking-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+
+.order-status {
+    margin-top: 30px;
+}
+
+.order-status h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.order-status p {
+    font-size: 18px;
+    font-weight: bold;
+}
