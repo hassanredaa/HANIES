@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { orgs } from './data.js';
 import MyLocationMap from './Location.jsx';
 import { api } from './api.js';
+import ggImage from '../assets/gg.png';
+
 
 export default function ViewOrgs() {
     const [searchQuery, setSearchQuery] = useState('');
@@ -39,8 +41,10 @@ export default function ViewOrgs() {
     return (
         <div className="review-org-sub">
             <header>
-                <h1>View Organization List</h1>
-                <Link to="/admin">Back to Admin Dashboard</Link>
+                <img src={ggImage} alt="gg logo" style={{}} />
+
+                <h1 style={{ marginLeft: '75px' }}>View Organization List</h1>
+                <Link className='button-primary2' to="/admin">Admin Dashboard</Link>
             </header>
 
             <div className="search-container" style={{ marginTop: '100px' }}>

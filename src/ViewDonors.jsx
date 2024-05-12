@@ -1,12 +1,16 @@
 import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { doctec } from './data.js'
+import ggImage from '../assets/gg.png';
+
 
 export default function ViewDonors() {
     return (
         <div className="review-org-sub">
             <header>
-                <h1>View Donors List</h1>
+                <img src={ggImage} alt="gg logo" style={{}} />
+
+                <h1 style={{ marginLeft: '75px' }}>View Donors List</h1>
                 <Link className='button-primary2' to="/admin">Admin Dashboard</Link>
 
             </header>
