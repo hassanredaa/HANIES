@@ -41,7 +41,7 @@ export default function OrganizationHome() {
                         <img src={goodImage} alt="goodImage" />
                     </div>
                     <div className="profile">
-                        <img src={avImage} alt="avImage" className="avatar" />
+                        <img src={avImage} alt="img_avatar" className="avatar" />
                         <h1>Name</h1>
                         <p>Organization</p>
                     </div>
@@ -85,28 +85,31 @@ export default function OrganizationHome() {
                     <h2>Organization Dashboard</h2>
                     <h2>Recent Posts</h2>
                     <div className="post-container">
-                        {/* Render posts */}
-                        {posts.map(post => (
-                            <div className="post" style={{ marginTop: '20px' }} key={post.id} >
-                                <div className="post-header">
-                                    <img src={avImage} alt="User Avatar" className="post-avatar" />
-                                    <div>
-                                        <p className="post-username">{post.username}</p>
-                                        <p className="post-category">{post.category}</p>
+                        {posts.length === 0 ? (
+                            <p>No posts available</p>
+                        ) : (
+                            posts.map(post => (
+                                <div className="post" style={{ marginTop: '20px' }} key={post.id} >
+                                    <div className="post-header">
+                                        <img src={avImage} alt="User Avatar" className="post-avatar" />
+                                        <div>
+                                            <p className="post-username">{post.username}</p>
+                                            <p className="post-category">{post.category}</p>
+                                        </div>
+                                    </div>
+                                    <p className="post-content">{post.content}</p>
+                                    <img src={post.imageUrl} alt="Post Image" className="post-image" />
+                                    <div className="post-actions">
+                                        <Link to="/UpdatePost" className="button-primary2">
+                                            Update
+                                        </Link>
+                                        <Link className="button-primary2" onClick={() => handleDeletePost(post.id)}>
+                                            Delete
+                                        </Link>
                                     </div>
                                 </div>
-                                <p className="post-content">{post.content}</p>
-                                <img src={post.imageUrl} alt="Post Image" className="post-image" />
-                                <div className="post-actions">
-                                    <Link to="/UpdatePost" className="button-primary2">
-                                        Update
-                                     </Link>
-                                    <Link className="button-primary2" onClick={() => handleDeletePost(post.id)}>
-                                        Delete
-                                    </Link>
-                                </div>
-                            </div>
-                        ))}
+                            ))
+                        )}
                     </div>
                 </div>
             </div>
