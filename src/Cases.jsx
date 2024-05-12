@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import avImage from '../assets/img_avatar.png';
+import MyLocationMap from './Location.jsx'; // Adjust the path based on your file structure
+import { api } from './api.js';
 
 const MedicalCases = () => {
     // Sample medical cases data
@@ -48,8 +51,9 @@ const MedicalCases = () => {
     });
 
     return (
-        <div>
+        <div style={{ fontFamily: 'Arial, sans-serif', textAlign: 'center' }}>
             <h1>Medical Cases</h1>
+            <Link to='/doctorhome' className="button-primary2">home page</Link>
             <div className="filters">
                 <label htmlFor="medical-specialty-filter">Filter by Medical Specialty:</label>
                 <select id="medical-specialty-filter" value={selectedMedicalSpecialty} onChange={(e) => handleMedicalSpecialtyFilter(e.target.value)}>
@@ -88,23 +92,31 @@ const MedicalCases = () => {
                     {/* Add more options for other governorates as needed */}
                 </select>
             </div>
-            <div className="medical-cases-container">
+            <div className="posts" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap' }}>
                 {filteredCases.map(caseItem => (
-                    <div key={caseItem.id} className="product-tile">
-                        
-                        <div className="product-info">
-                            <h2 className="product-title">{caseItem.name}</h2>
-                            <p>Medical Specialty: {caseItem.medical_speciality}</p>
-                            <p>Organization: {caseItem.organization_name}</p>
-                            <p>Area: {caseItem.area}</p>
-                            <p>Governorate: {caseItem.governorate}</p>
-                            <Link to={`/case${caseItem.id}`} className="add-to-cart">More Details</Link>
+                    <div className="post" style={{ margin: '20px', padding: '20px', border: '1px solid #ccc', borderRadius: '10px', maxWidth: '400px' }} key={caseItem.id}>
+                        <div className="post-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+                            <div style={{ display: 'flex', alignItems: 'center' }}>
+                                <img src={avImage} alt="User Avatar" className="post-avatar" style={{ width: '50px', height: '50px', borderRadius: '50%', marginRight: '10px' }} />
+                                <div>
+                                    <p className="post-username">{caseItem.name}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="post-content">
+                            <p><strong>Medical Specialty:</strong> {caseItem.medical_speciality}</p>
+                            <p><strong>Organization Name:</strong> {caseItem.organization_name}</p>
+                            <p><strong>Area:</strong> {caseItem.area}</p>
+                            <p><strong>Governorate:</strong> {caseItem.governorate}</p>
+                        </div>
+                        <div className="post-actions">
+                            <Link to={`/case${caseItem.id}`} className="button-primary2">More Details</Link>
                         </div>
                     </div>
                 ))}
             </div>
         </div>
     );
-}
+};
 
 export default MedicalCases;

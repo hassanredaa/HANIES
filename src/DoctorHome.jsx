@@ -41,7 +41,6 @@ export default function DoctorHome() {
               
               
           <Link to="/Cases" className="sidebar-button" style={{ marginTop: '15px' }}>View Cases</Link>
-          <Link to="/FulfillMed" className="sidebar-button" style={{ marginTop: '15px' }}>Fulfill Cases</Link>
           <Link to="/UpdateAccDonor" className="sidebar-button" style={{ marginTop: '15px' }}>Update account</Link>
           <Link to="/" className="sidebar-button" style={{ marginTop: '15px' }}>Delete account</Link> 
           <Link to="/" className="sidebar-button" style={{ marginTop: '15px' }}>Log Out</Link>
