@@ -1572,3 +1572,11 @@ button.download {
     font-variation-settings:
         "wdth" 100;
 }
+
+
+.requests-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust the minmax value as needed */
+    gap: 20px; /* Adjust the gap between items */
+  }
+  

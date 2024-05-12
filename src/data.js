@@ -197,7 +197,7 @@ export const organizationRequests = {
     {
       id: 1,
       category:"clothes",
-      description: "Winter coats for children",
+      description: "Children's Coat",
       age: "Child",
       gender: "Male",
       season:"Winter",
@@ -205,7 +205,7 @@ export const organizationRequests = {
       material:"Fabric",
       quantity: 100,
       contact: "example@email.com",
-      source: "../assets/clothes.jpg",
+      source: "../assets/coat.jpg",
       donation: "/products/clothes" 
 
     },
@@ -220,7 +220,7 @@ export const organizationRequests = {
       material:"Cotton",
       quantity: 50,
       contact: "example@email.com",
-      source: "../assets/clothes.jpg",
+      source: "../assets/tt.jpg",
       donation: "/products/Clothes2"
     },
     // Add more clothing requests as needed
@@ -234,6 +234,7 @@ export const organizationRequests = {
       item_name:"foul medames",
       quantity: "100 cans",
       contact: "example@email.com",
+      source: "../assets/can.jpg",
       donation: "/products/CannedFood"
 
     },
@@ -245,6 +246,8 @@ export const organizationRequests = {
       item_name: "Banana",
       quantity: "50 kg",
       contact: "example@email.com",
+      source: "../assets/banana.jpg",
+
       donation: "/products/HomemadeFood"
 
     },
@@ -260,6 +263,8 @@ export const organizationRequests = {
       toy_category:"stuffed toys",
       quantity: 50,
       contact: "example@email.com",
+      source: "../assets/toy.jpg",
+
       donation: "/products/Toys1"
 
     },
@@ -272,6 +277,8 @@ export const organizationRequests = {
       toy_category:"board games",
       quantity: 30,
       contact: "example@email.com",
+      source: "../assets/lego.jpg",
+
       donation: "/products/Toys2"
 
     },
@@ -286,6 +293,8 @@ export const organizationRequests = {
       stationarytype: "notebooks",
       quantity: 200,
       contact: "example@email.com",
+      source: "../assets/nb.jpg",
+
       donation: "/products/NoteBooks"
     },
     {
@@ -300,6 +309,8 @@ export const organizationRequests = {
       summary:"magic",
       quantity: 500,
       contact: "example@email.com",
+      source: "../assets/hp.jpg",
+
       donation: "/products/Books"
 
 
@@ -316,6 +327,8 @@ export const organizationRequests = {
       medication_use: "pain relief",
       quantity: 200,
       contact: "example@email.com",
+      source: "../assets/p.jpeg",
+
       donation: "/products/Medical" 
 
     },
@@ -328,6 +341,8 @@ export const organizationRequests = {
       medication_use: "medical imaging procedure",
       quantity: 100,
       contact: "example@email.com",
+      source: "../assets/mri.jpg",
+
       donation: "/products/Device"
 
     },
@@ -339,6 +354,8 @@ export const organizationRequests = {
       equipment_type: "scalpel",
       quantity: 100,
       contact: "example@email.com",
+      source: "../assets/se.jpg",
+
       donation: "/products/Equipment"
 
     },
@@ -357,6 +374,7 @@ export const organizationRequests = {
        address: "4 el ghanam",
        quantity: 1,
       contact: "example@email.com",
+      source: "../assets/o.png",
       donation: "/products/Blood1"
 
     },
@@ -373,9 +391,10 @@ export const organizationRequests = {
        quantity: 1,
       
       contact: "example@email.com",
+      source: "../assets/a.png",
+
       donation: "/products/Blood2"
 
     },
-    // Add more blood donation requests as needed
   ]
 };

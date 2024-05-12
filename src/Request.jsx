@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import RequestTile from './RequestTile.jsx';
+import { Link } from 'react-router-dom';
+
 import { organizationRequests } from './data.js';
+import ggImage from '../assets/gg.png';
 
 const Request = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -124,6 +127,8 @@ const Request = () => {
     if (searchTerm !== '') {
       requestsToRender = requestsToRender.filter(request => request.category.toLowerCase().includes(searchTerm.toLowerCase()));
     }
+
+    
     
 
     return requestsToRender.map((request, index) => (
@@ -133,18 +138,22 @@ const Request = () => {
 
   return (
     <div >
-     
-      <div className="category-buttons">
-        <button onClick={() => handleFilter('all')}>All</button>
-        <button onClick={() => handleFilter('clothes')}>Clothes</button>
-        <button onClick={() => handleFilter('food')}>Food</button>
-        <button onClick={() => handleFilter('toys')}>Toys</button>
-        <button onClick={() => handleFilter('schoolSupplies')}>School Supplies</button>
-        <button onClick={() => handleFilter('medicalSupplies')}>Medical Supplies</button>
-        <button onClick={() => handleFilter('bloodDonations')}>Blood Donations</button>
+       <header style={{ padding: '10px' }}>
+                <img src={ggImage} alt="gg logo" style={{}} />
+                <h1 style={{ marginLeft: '75px' }}>Requests</h1>
+                <Link className='button-primary2' to="/donorHome">Donor Dashboard</Link>
+            </header>
+      <div style={{paddingTop:'150px'}} >
+        <button className='button-primary2' onClick={() => handleFilter('all')}>All</button>
+        <button className='button-primary2' onClick={() => handleFilter('clothes')}>Clothes</button>
+        <button className='button-primary2' onClick={() => handleFilter('food')}>Food</button>
+        <button className='button-primary2' onClick={() => handleFilter('toys')}>Toys</button>
+        <button className='button-primary2' onClick={() => handleFilter('schoolSupplies')}>School Supplies</button>
+        <button className='button-primary2' onClick={() => handleFilter('medicalSupplies')}>Medical Supplies</button>
+        <button className='button-primary2'onClick={() => handleFilter('bloodDonations')}>Blood Donations</button>
       </div>
       <div>         
-      <input type="text" placeholder="Search..." value={searchTerm} onChange={handleSearch} />
+      <input style={{marginTop:'20px'}} type="text" placeholder="Search..." value={searchTerm} onChange={handleSearch} />
       </div>
       
       {selectedCategory === 'clothes' && (
@@ -253,15 +262,18 @@ const Request = () => {
                     <option value="pain relief">Pain Relief</option>
                     <option value="antibiotics">Antibiotics</option>
                     <option value="cardiac">Cardiac</option>
-                    {/* Add more options as needed */}
                 </select>
             
         )}
         </div>
 
       )}
+      <div className="requests-container">
       {renderRequests()}
+
+      </div>
     </div>
+    
   );
 }
 
