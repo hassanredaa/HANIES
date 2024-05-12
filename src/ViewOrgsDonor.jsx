@@ -6,7 +6,7 @@ import { api } from './api.js';
 import ggImage from '../assets/gg.png';
 
 
-export default function ViewOrgs() {
+export default function ViewOrgsDonor() {
     const [searchQuery, setSearchQuery] = useState('');
     const [filterCriteria, setFilterCriteria] = useState({
         area: '',
@@ -44,7 +44,7 @@ export default function ViewOrgs() {
                 <img src={ggImage} alt="gg logo" style={{}} />
 
                 <h1 style={{ marginLeft: '75px' }}>View Organization List</h1>
-                <Link className='button-primary2' to="/admin">Admin Dashboard</Link>
+                <Link className='button-primary2' to="/DonorHome">Donor Dashboard</Link>
             </header>
 
             <div className="search-container" style={{ marginTop: '100px' }}>
