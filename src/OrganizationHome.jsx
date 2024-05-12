@@ -19,7 +19,7 @@ export default function OrganizationHome() {
         // Show alert after 5 seconds
         const alertTimeout = setTimeout(() => {
             window.alert("Alert, new Donor!");
-        }, 5000);
+        }, 10000);
 
         // Clear the timeout when component unmounts
         return () => clearTimeout(alertTimeout);

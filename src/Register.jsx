@@ -47,22 +47,7 @@ export default function Register() {
     const [DoctorFieldsVisible, setDoctorFieldsVisible] = useState(false);
     const [TeacherFieldsVisible, setTeacherFieldsVisible] = useState(false);
 
-    const handleUserArray = (event) => {
-        event.preventDefault(); // Prevent default form submission behavior
-        const formData = new FormData(event.target);
-        const newUser = {};
-
-        // Get form data
-        const name = event.target.first - name.value;
-        const password = event.target.password.value;
-        const email = event.target.email.value;
-
-        // Call the addUser function to add the user
-        addUser(name, last, gender, email, number, password, type, doc);
-
-        // Clear the form fields
-        event.target.reset();
-    };
+   
 
 
     const handleSubmit = (event) => {
@@ -96,7 +81,7 @@ export default function Register() {
                 <div className="register-container" style={{ opacity: '0.6' }}>
 
                     <h2>Register</h2>
-                    <form onSubmit={handleSubmit} onClick={handleUserArray}>
+                    <form onSubmit={handleSubmit} >
                         <div className="input-group">
                             <label htmlFor="first-name">First Name:</label>
                             <input type="text" id="first-name" name="first-name" required placeholder="Enter your first name" />
@@ -140,12 +125,7 @@ export default function Register() {
                             </select>
                         </div>
 
-                        {showDocumentUpload && (
-                            <div className="input-group">
-                                <label htmlFor="documents">Upload Documents:</label>
-                                <input type="file" id="documents" name="documents" accept=".pdf,.doc,.docx" />
-                            </div>
-                        )}
+                       
 
 
                         {organizationFieldsVisible && (
@@ -181,11 +161,13 @@ export default function Register() {
                                     <label htmlFor="gov">Governorate:</label>
                                     <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
                                 </div>
-
                                 <div className="input-group">
-                                    <label htmlFor="documents">Upload Organization Certificate:</label>
-                                    <input type="file" id="documents" name="documents" accept=".pdf,.doc,.docx" />
-                                </div>
+                                <label htmlFor="documents">Upload Documents:</label>
+                                <input type="file" id="documents" name="documents" accept=".pdf,.doc,.docx" />
+                            </div>
+
+                               
+                       
 
 
                             </>
@@ -212,6 +194,11 @@ export default function Register() {
                                     <label htmlFor="gov">Governorate:</label>
                                     <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
                                 </div>
+                                <div className="input-group">
+                                <label htmlFor="documents">Upload Documents:</label>
+                                <input type="file" id="documents" name="documents" accept=".pdf,.doc,.docx" />
+                            </div>
+                              
 
                             </>
 
@@ -237,6 +224,11 @@ export default function Register() {
                                     <label htmlFor="gov">Governorate:</label>
                                     <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
                                 </div>
+                                <div className="input-group">
+                                <label htmlFor="documents">Upload Documents:</label>
+                                <input type="file" id="documents" name="documents" accept=".pdf,.doc,.docx" />
+                            </div>
+                             
 
                             </>
 

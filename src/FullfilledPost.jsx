@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import avImage from '../assets/img_avatar.png';
 
-const FullfilledPost = () => {
+export default function FullfilledPost () {
   const [posts, setPosts] = useState([
     { id: 1, username: 'User1', category: 'Medical Supplies', content: 'I wanted to donate Medical Supplies.', imageUrl: 'https://via.placeholder.com/400x200', time: 'Recently', showDetails: false, donorDetails: {name: 'Hassan Reda', profession: 'Doctor', email: 'Hassan@example.com', mobile: '+20 101 125 3667' } },
     { id: 2, username: 'User2', category: 'Blood', content: 'I wanted to donate Blood.', imageUrl: 'https://via.placeholder.com/400x200', time: '10 minutes ago', showDetails: false, donorDetails: { name: 'Hany Khalil', profession: 'Doctor', email: 'Hany@example.com', mobile: '+20 101 123 4567' } },
@@ -34,6 +34,7 @@ const FullfilledPost = () => {
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', textAlign: 'center' }}>
       <h1>Fulfilled Posts</h1>
+      <Link to="/OrganizationHome" className="button-primary2">Home</Link> {/* Home Button */}
       <div className="posts" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap' }}>
         {posts.map(post => (
           <div className="post" style={{ margin: '20px', padding: '20px', border: '1px solid #ccc', borderRadius: '10px', maxWidth: '400px' }} key={post.id}>
@@ -71,5 +72,3 @@ const FullfilledPost = () => {
     </div>
   );
 };
-
-export default FullfilledPost;
