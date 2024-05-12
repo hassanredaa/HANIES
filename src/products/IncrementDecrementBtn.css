@@ -1,0 +1,11 @@
+.btn-group {
+    display: flex;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: border 0.3s ease; 
+  }
+  
+
+  
+  

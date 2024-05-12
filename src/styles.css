@@ -94,43 +94,50 @@ button:hover::before {
     /* Adjust opacity to not fully obscure text */
     transform: translate(-50%, -50%) scale(1.2);
 }
+
 .subject-checkboxes div {
     display: inline-block;
-    margin-right: 20px; /* Adjust as needed */
+    margin-right: 20px;
+    /* Adjust as needed */
 }
+
 .right-list {
     position: absolute;
     top: 0;
-    right: 0; /* Align to the right side */
-    width: 200px; /* adjust width as needed */
-    height: 100vh; /* fill the entire viewport height */
-  }
-  
-  .black-list {
+    right: 0;
+    /* Align to the right side */
+    width: 200px;
+    /* adjust width as needed */
+    height: 100vh;
+    /* fill the entire viewport height */
+}
+
+.black-list {
     display: none;
     position: absolute;
     top: 0;
     right: 0;
     background-color: black;
     padding: 10px;
-    height: 100%; /* fill the entire parent container's height */
-  }
-  
-  .right-list:hover .black-list {
+    height: 100%;
+    /* fill the entire parent container's height */
+}
+
+.right-list:hover .black-list {
     display: block;
-  }
-  
-  .right-list-trigger {
+}
+
+.right-list-trigger {
     background-color: transparent;
     padding: 10px;
     cursor: pointer;
-  }
-  
-  .right-list-trigger:hover + .black-list {
+}
+
+.right-list-trigger:hover+.black-list {
     display: block;
-  }
-  
-  
+}
+
+
 .button-primary {
     padding: 8px 16px;
     background: transparent;
@@ -718,6 +725,38 @@ footer {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
 }
 
+
+.button-primary2 {
+    padding: 8px 16px;
+    background: black;
+    color: white;
+    font-size: 14px;
+    font-weight: light;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: auto;
+    display: inline-block;
+    /* Ensure it behaves like a button */
+    margin-top: 20px;
+    text-align: center;
+    /* Center the text */
+    text-decoration: none;
+    /* Remove default link underlining */
+    border: none;
+    /* Remove borders */
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.button-primary2:hover {
+    background: rgba(169, 169, 169, 0.5);
+    /* Grey with some transparency */
+    color: black;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
 footer {
     margin-top: 20px;
 }
@@ -731,6 +770,7 @@ footer {
     display: flex;
     min-height: 100vh;
 }
+
 .sidebar {
     width: 250px;
     background-color: #333;
@@ -915,7 +955,8 @@ footer {
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
-    box-shadow: none; /* Remove the shadow */
+    box-shadow: none;
+    /* Remove the shadow */
     width: auto;
     display: inline-block;
     margin-top: 20px;
@@ -1061,3 +1102,115 @@ button.download {
         padding: 4px;
     }
 }
+
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    justify-items: center;
+}
+
+.product-tile {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 250px;
+    margin: 10px;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+}
+
+.product-info {
+    padding: 10px;
+}
+
+.product-title {
+    margin-top: 0;
+}
+
+.product-description {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.product-price {
+    font-weight: bold;
+    color: #007bff; /* or any other color you prefer */
+}
+
+.add-to-cart {
+    background-color: #007bff; /* or any other color you prefer */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3; /* Darker shade of the primary color */
+}
+
+.page-containerr {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .category-buttons {
+    margin-bottom: 20px;
+  }
+  
+  .category-buttons button {
+    margin-right: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .category-buttons button:hover {
+    background-color: #0056b3;
+  }
+  
+  .request-tile {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .request-tile h3 {
+    margin-top: 0;
+  }
+  
+  .request-tile p {
+    margin-bottom: 5px;
+  }
+  
+  .request-tile button {
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .request-tile button:hover {
+    background-color: #218838;
+  }
+  
