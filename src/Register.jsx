@@ -271,9 +271,9 @@ export default function Register() {
                 </div>
             </div>
 
-            <footer style={{ textAlign: 'center', padding: '20px 10px', backgroundColor: 'black', color: 'white' }}>
+            {/* <footer style={{ textAlign: 'center', padding: '20px 10px', backgroundColor: 'black', color: 'white' }}>
                 <p>Copyright © 2023 Good Giving</p>
-            </footer>
+            </footer> */}
         </div>
     );
 }
