@@ -4,12 +4,11 @@ import { submissionsDonData } from './data.js';
 import ggImage from '../assets/gg.png';
 
 function ReviewDonSub() {
-    const handleDownload = (data, filename) => {
-        const blob = new Blob([JSON.stringify(data)], { type: 'application/json' });
-        const url = URL.createObjectURL(blob);
+    const handleDownload = () => {
+        // Initiate download of DF.docx
         const link = document.createElement('a');
-        link.href = url;
-        link.setAttribute('download', filename);
+        link.href = DFDocx;
+        link.setAttribute('download', 'DF.docx');
         document.body.appendChild(link);
         link.click();
     };
@@ -41,14 +40,15 @@ function ReviewDonSub() {
                                     <div>
                                         <button className="view">View Data</button>
                                     </div>
-                                    <div>
-                                        <button
+                                    <div className="download">
+                                        {/* <button
                                             style={{ marginTop: '6px' }}
                                             className="download"
                                             onClick={() => handleDownload(submission, `${submission.name}.json`)}
                                         >
                                             Download Data
-                                        </button>
+                                        </button> */}
+                                        <a className="download" href='../assets/DF.docx' download="DF.docx"> Download </a>
                                     </div>
                                 </td>
                             </tr>
