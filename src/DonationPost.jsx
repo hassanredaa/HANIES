@@ -56,7 +56,7 @@ export default function DonationPost() {
                 </div>
                 <div className="input-group">
                     <label htmlFor="content">Post Content:</label>
-                    <textarea id="content" name="content" value={content} onChange={handleContentChange} rows="4" cols="50" placeholder="Write your post here..."></textarea>
+                    <textarea id="content" name="content" value={content} onChange={handleContentChange} rows="4" cols="40" placeholder="Write your post here..."></textarea>
                 </div>
                 <div className="input-group">
                     <label htmlFor="photo">Add Photo:</label>
