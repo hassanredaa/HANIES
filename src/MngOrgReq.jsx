@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { submissionsData } from './data.js';
+import ggImage from '../assets/gg.png';
+
 
 function MngOrgReq() {
     const [submissions, setSubmissions] = useState(submissionsData);
@@ -28,6 +30,7 @@ function MngOrgReq() {
     return (
         <div className="review-org-sub">
             <header>
+                <img src={ggImage} alt="gg logo" style={{}} />
                 <h1>Manage Organizations' Requests</h1>
                 <Link className='button-primary2' to="/admin">Admin Dashboard</Link>
             </header>

@@ -136,21 +136,34 @@ export var orgs = [
 
 export var organizations = [
   {
-    name: "Charity1",
+    name: "Baheya",
     password: "test123",
-    email: "charity1@goodgiving.com"
+    email: "baheya@goodgiving.com"
   },
   {
-    name: "Charity2",
-    password: "test123",
-    email: "charity2@goodgiving.com"
+    name: "Cairo Modern School",
+    password: "cms123",
+    email: "CMS@goodgiving.com"
+  },
+  {
+    name: "Cairo English School",
+    password: "ces123",
+    email: "CES@goodgiving.com"
+  },
+  {
+    name: "57357",
+    password: "ch123",
+    email: "CH@goodgiving.com"
   }
+
 ]
 
 export var submissionsData = [
-  { id: 1, name: 'Organization A', status: 'Pending' },
-  { id: 2, name: 'Organization B', status: 'Approved' },
-  { id: 3, name: 'Organization C', status: 'Rejected' },
+  { id: 1, name: 'Baheya', status: 'Pending' },
+  { id: 2, name: 'Cairo Modern School', status: 'Approved' },
+  { id: 3, name: 'Cairo English School', status: 'Rejected' },
+  { id: 1, name: '57357', status: 'Pending' },
+
 ];
 
 

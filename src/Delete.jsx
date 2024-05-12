@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { doctec, orgs } from './data'; // Assuming data.js is in the same directory
 import { Link } from 'react-router-dom';
+import ggImage from '../assets/gg.png';
 
 
 const Delete = () => {
@@ -22,7 +23,8 @@ const Delete = () => {
     return (
         <div className="review-org-sub">
             <header>
-                <h1 className='poetsen-one-regular' style={{ marginLeft: '600px' }}>Delete Account</h1>
+                <img src={ggImage} alt="gg logo" style={{}} />
+                <h1 className='poetsen-one-regular' style={{ marginLeft: '75px' }}>Delete Account</h1>
                 <Link className='button-primary2' to="/admin">Admin Dashboard</Link>
             </header>
 
@@ -60,7 +62,7 @@ const Delete = () => {
 
 
             <h1 className='noto-serif' style={{ marginTop: '150px', paddingRight: '1000px' }}>All Organizations</h1>
-            <div className="table-wrapper" style={{ paddingTop: '100px' }}>
+            <div className="table-wrapper" style={{}}>
                 <table className="fl-table">
                     <thead>
                         <tr>

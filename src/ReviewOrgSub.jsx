@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { submissionsData } from './data.js'
+import ggImage from '../assets/gg.png';
+
 
 function ReviewOrgSub() {
     return (
         <div className="review-org-sub">
-            <header>
-                <h1>Review Organization Submissions</h1>
-                <Link className='button-primary2' to="/admin">Back to Admin Dashboard</Link>
+            <header style={{ position: 'relative' }}>
+                <img src={ggImage} alt="gg logo" style={{}} />
+                <h1 style={{ marginLeft: '75px' }}>Review Organization Submissions</h1>
+                <Link className='button-primary2' to="/admin">Admin Dashboard</Link>
 
             </header>
-            <div className="table-wrapper" style={{ paddingTop: '100px' }}>
+            <div className="table-wrapper" style={{}}>
                 <table className="fl-table">
                     <thead>
                         <tr>

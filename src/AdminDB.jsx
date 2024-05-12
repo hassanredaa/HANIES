@@ -26,7 +26,7 @@ export default function AdminDB() {
         <div className="admin-dashboard">
             <div className="sidebar">
                 <div >
-                    <div style={{  marginRight: '300px' }}>
+                    <div style={{ marginRight: '300px' }}>
                         <img src={ggImage} />
                     </div>
                     {/* <div style={{ flex: '33.33%', padding: '5px', marginRight: '200px' }}>
@@ -39,7 +39,7 @@ export default function AdminDB() {
                 <h1 style={{ textAlign: 'center' }}>name</h1>
                 <p style={{ textAlign: 'center' }}>Admin</p>
 
-                <ul style={{marginTop: '-5px' }}>
+                <ul style={{ marginTop: '-5px' }}>
                     <li>
                         <Link className="sidebar-button" onClick={toggleReview}>
                             Review Submissions
@@ -88,8 +88,8 @@ export default function AdminDB() {
             <div className="contentt" style={{}}>
                 <div className="text-content">
                     <h1 style={{ textAlign: 'left' }}>Dashboard</h1>
-                    <img src={stats} style={{ height: '125px', paddingRight: '800px' , marginTop: '20px'}} />
-                    <div className="chart-container" style={{marginTop: '100px' }}>
+                    <img src={stats} style={{ height: '125px', paddingRight: '800px', marginTop: '20px' }} />
+                    <div className="chart-container" style={{ marginTop: '100px' }}>
                         <Line
                             data={{
                                 labels: ["Amira", "Hassan"],

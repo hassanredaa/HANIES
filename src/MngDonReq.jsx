@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { submissionsDonData } from './data.js';
+import ggImage from '../assets/gg.png';
+
 
 function MngDonReq() {
     const [submissions, setSubmissions] = useState(submissionsDonData);
@@ -28,7 +30,9 @@ function MngDonReq() {
     return (
         <div className="review-org-sub">
             <header>
-                <h1>Manage Donors' Requests</h1>
+                <img src={ggImage} alt="gg logo" style={{}} />
+
+                <h1 style={{ marginLeft: '75px' }}>Manage Donors' Requests</h1>
                 <Link className='button-primary2' to="/admin">Admin Dashboard</Link>
             </header>
 
