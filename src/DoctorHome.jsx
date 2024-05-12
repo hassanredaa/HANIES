@@ -9,8 +9,15 @@ import * as data from './data.js';
 import statsd from '../assets/statsd.png';
 import top from '../assets/top.png';
 
-export default function Teacherhome() {
-  
+export default function DoctorHome() {
+  // State to manage the toggles
+  const [viewOpen, setViewOpen] = useState(false);
+
+
+  // Toggle functions
+  const toggleView = () => setViewOpen(!viewOpen);
+
+
   return (
     <div className="Donor-dashboard">
 
@@ -27,19 +34,22 @@ export default function Teacherhome() {
             <img src={avImage} style={{ marginLeft: '5px', marginTop: '50px', borderRadius: '50%', width: '100px', height: '100px' }} />
           </div>
           <h1 style={{ textAlign: 'center', padding: '5px' }}>name</h1>
-          <p style={{ textAlign: 'center' }}>Teacher</p>
+          <p style={{ textAlign: 'center' }}>Doctor</p>
 
           
-          <Link to="/Posts" className="sidebar-button" style={{ marginTop: '15px' }}>View Posts</Link>
-    
-          
+            
+              
+              
+          <Link to="/Cases" className="sidebar-button" style={{ marginTop: '15px' }}>View Cases</Link>
+          <Link to="/FulfillMed" className="sidebar-button" style={{ marginTop: '15px' }}>Fulfill Cases</Link>
           <Link to="/UpdateAccDonor" className="sidebar-button" style={{ marginTop: '15px' }}>Update account</Link>
-            <Link to="/" className="sidebar-button" style={{ marginTop: '15px' }}>Delete account</Link> 
+          <Link to="/" className="sidebar-button" style={{ marginTop: '15px' }}>Delete account</Link> 
           <Link to="/" className="sidebar-button" style={{ marginTop: '15px' }}>Log Out</Link>
         </div>
+
         <div className="contentt" style={{}}>
                 <div className="text-content">
-                <h2 style={{ textAlign: 'left' }}>Teacher Dashboard</h2>
+                <h2 style={{ textAlign: 'left' }}>Doctor Dashboard</h2>
 
                     <div style={{display: 'flex'}}>
                     <img src={statsd} style={{ height: '125px', marginRight: '-450px' }} />
@@ -63,7 +73,6 @@ export default function Teacherhome() {
                 </div>
             </div>
 
-        
 
               
       </div>

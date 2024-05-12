@@ -23,9 +23,16 @@ import Toys1 from "./products/Toys1";
 import Toys2 from './products/Toys2';
 import NoteBooks from './products/NoteBooks';
 import Books from './products/Books.jsx';
-import Medical from'./products/Medical.jsx';
+import Medical from './products/Medical.jsx';
 
-import ProductPage from './products/Product1.jsx';
+import MaleClothing from './products/MaleClothing.jsx';
+import DoctorHome from './DoctorHome.jsx';
+import Cases from './Cases.jsx';
+import Case1 from './Case1.jsx';
+import Case2 from './Case2.jsx';
+import Case3 from './Case3.jsx';
+import Case4 from './Case4.jsx';
+import FulfillMed from './FulfillMed.jsx';
 import Teacherhome from './Teacherhome.jsx';
 import Posts from './Posts.jsx';
 import DonationPost from './DonationPost.jsx';
@@ -40,7 +47,9 @@ import ViewOrgsDonor from './ViewOrgsDonor.jsx';
 import Device from './products/Device.jsx';
 import Equipment from './products/Equipment.jsx';
 import Blood1 from './products/Blood1.jsx';
+import Blood2 from './products/Blood2.jsx';
 import SchedOrg from './SchedOrg.jsx';
+
 import ViewDonors from './ViewDonors.jsx'
 import ViewOrgs from './ViewOrgs.jsx'
 
@@ -78,7 +87,8 @@ function App() {
         <Route path="/products/Device" element={<Device />} />
         <Route path="/products/Equipment" element={<Equipment />} />
         <Route path="/products/Blood1" element={<Blood1 />} />
-        {/*<Route path="/products/FastFood" element={<FastFood />} />
+        <Route path="/products/Blood2" element={<Blood2 />} />
+        {/*<oute path="/products/FastFood" element={<FastFood />} />
         <Route path="/products/Homemade" element={<HomeMade />} />
         <Route path="/products/Toys" element={<Toys1 />} />
         <Route path="/products/Toys" element={<Toys2 />} />
@@ -89,13 +99,31 @@ function App() {
         <Route path="/products/Bandages" element={<Bandages />} />
         <Route path="/products/Wipes" element={<Wipes />} />
         <Route path="/products/Blood2" element={<Blood2 />} /> */}
-        
 
 
-        <Route path="/SchedOrg" element={<SchedOrg />} />
-        <Route path="/views/donors" element={<ViewDonors />} />
-        <Route path="/views/organizations" element={<ViewOrgs />} />
-        <Route path="/product" element={<ProductPage />} />
+
+        <Route path="/products/MaleClothing" element={<MaleClothing />} />
+        <Route path="/DoctorHome" element={<DoctorHome />} />
+        <Route path="/Cases" element={<Cases />} />
+        <Route path="/Case1" element={<Case1 />} />
+        <Route path="/Case2" element={<Case2 />} />
+        <Route path="/Case3" element={<Case3 />} />
+        <Route path="/Case4" element={<Case4 />} />
+        <Route path="/FulfillMed" element={<FulfillMed />} />
+
+        {/* <Route path="/products/FemaleClothing" element={<FemaleClothing />} />
+        <Route path="/products/FastFood" element={<FastFood />} />
+        <Route path="/products/Homemade" element={<HomeMade />} />
+        <Route path="/products/Toys" element={<Toys1 />} />
+        <Route path="/products/Toys" element={<Toys2 />} />
+        <Route path="/products/NoteBooks" element={<NoteBooks />} />
+        <Route path="/products/Pencils" element={<Pencils />} />
+        <Route path="/products/Pens" element={<Pens />} />
+        <Route path="/products/Markers" element={<Markers />} />
+        <Route path="/products/Bandages" element={<Bandages />} />
+        <Route path="/products/Wipes" element={<Wipes />} />
+        <Route path="/products/Blood2" element={<Blood2 />} /> */}
+
         <Route path="/Teacherhome" element={<Teacherhome />} />
         <Route path="/Posts" element={<Posts />} />
         <Route path="/ViewOrgsDonor" element={<ViewOrgsDonor />} />

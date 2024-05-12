@@ -32,7 +32,7 @@ export default function DoctorPage() {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log("Form submitted");
-         window.location.href = '/DonorHome';
+         window.location.href = '/DoctorHome';
     };
 
     return (
