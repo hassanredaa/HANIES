@@ -51,6 +51,7 @@ function App() {
         <Route path="/views/donors" element={<ViewDonors />} />
         <Route path="/views/organizations" element={<ViewOrgs />} />
         <Route path="/product" element={<ProductPage />} />
+
       </Routes>
     </BrowserRouter>
   );

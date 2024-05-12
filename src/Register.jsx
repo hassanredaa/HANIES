@@ -4,6 +4,7 @@ import MyLocationMap from './Location.jsx'; // Adjust the path based on your fil
 import { api } from './api.js';
 import { DataContext } from './data.jsx';
 import bgImage from '../assets/bg3.jpg';
+import gg from '../assets/ggw.png'
 
 
 
@@ -83,6 +84,8 @@ export default function Register() {
     return (
         <div className="app-container" style={{ backgroundImage: `url(${bgImage})` }}>
             <div style={{ textAlign: 'right', marginBottom: '20px' }}>
+            <img src={gg} style={{paddingRight: '1000px'}}></img>
+
                 <Link to="/" className="button-primary2">Home</Link>
                 {/* Link to the about us section */}
                 <Link to="/#about" className="button-primary2">About Us</Link>
@@ -105,14 +108,11 @@ export default function Register() {
 
                         <div className="input-group">
                             <label>Gender:</label>
-                            <div>
-                                <label htmlFor="male">Male</label>
-                                <input type="radio" id="male" name="gender" value="male" />
-                            </div>
-                            <div>
-                                <label htmlFor="female">Female</label>
-                                <input type="radio" id="female" name="gender" value="female" />
-                            </div>
+                            <select id="gender" name="gender">
+                                <option value="">Select your Gender</option>
+                                <option value="donor">Male</option>
+                                <option value="teacher">Female</option>
+                            </select>
                         </div>
 
                         <div className="input-group">

@@ -1,5 +1,6 @@
 import React , {useContext} from 'react';
 import { Link } from 'react-router-dom';
+import gg from '../assets/gg.png';
 
 
 export default function Login() {
@@ -8,7 +9,14 @@ export default function Login() {
     return (
         
         <div className="app-container"> {/* Single outermost container */}
-
+            <div style={{ textAlign: 'right' }}>
+               <img src={gg} style={{paddingRight: '1000px'}}></img>
+                <Link to="/" className="button-primary2">Home</Link>
+                {/* Link to the about us section */}
+                <Link to="/#about" className="button-primary2">About Us</Link>
+                {/* Link to the contact us section */}
+                <Link to="/#contact" className="button-primary2">Contact Us</Link>
+            </div>
             <div className="login-container">
                 <form action="/submit-your-login-form" method="POST">
 
@@ -30,7 +38,7 @@ export default function Login() {
 
             </div>
 
-            <footer>
+            <footer style={{ textAlign: 'center', padding: '20px 10px', backgroundColor: 'black', color: 'white' }}>
                 <p>Copyright © 2023 Good Giving</p>
             </footer>
         </div>
