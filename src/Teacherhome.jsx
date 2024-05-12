@@ -9,16 +9,8 @@ import * as data from './data.js';
 import statsd from '../assets/statsd.png';
 import top from '../assets/top.png';
 
-
-export default function DonorHome() {
-  // State to manage the toggles
-  const [viewOpen, setViewOpen] = useState(false);
-
-
-  // Toggle functions
-  const toggleView = () => setViewOpen(!viewOpen);
-
-
+export default function Teacherhome() {
+  
   return (
     <div className="Donor-dashboard">
 
@@ -35,32 +27,19 @@ export default function DonorHome() {
             <img src={avImage} style={{ marginLeft: '5px', marginTop: '50px', borderRadius: '50%', width: '100px', height: '100px' }} />
           </div>
           <h1 style={{ textAlign: 'center', padding: '5px' }}>name</h1>
-          <p style={{ textAlign: 'center' }}>Donor</p>
+          <p style={{ textAlign: 'center' }}>Teacher</p>
 
-          <ul style={{ marginTop: '-5px' }}>
-            <li>
-              <Link className="sidebar-button" onClick={toggleView} >
-                            View
-                        </Link>
-              {viewOpen && (
-                <ul>
-                  <li><Link to="/Requests">View Requests</Link></li>
-                  <li><Link to="/ViewOrgsDonor">View Organizations List</Link></li>
-                 
-                </ul>
-              )}
-            </li>
-            <Link to="/Pastorders" className="sidebar-button" style={{ marginTop: '15px' }}>Past orders</Link>
-            <Link to="/UpdateAccDonor" className="sidebar-button" style={{ marginTop: '15px' }}>Update account</Link>
-            <Link to="/" className="sidebar-button" style={{ marginTop: '15px' }}>Delete account</Link>
-          </ul>
-
+          
+          <Link to="/Posts" className="sidebar-button" style={{ marginTop: '15px' }}>View Posts</Link>
+    
+          
+          <Link to="/UpdateAccDonor" className="sidebar-button" style={{ marginTop: '15px' }}>Update account</Link>
+            <Link to="/" className="sidebar-button" style={{ marginTop: '15px' }}>Delete account</Link> 
           <Link to="/" className="sidebar-button" style={{ marginTop: '15px' }}>Log Out</Link>
         </div>
-
         <div className="contentt" style={{}}>
                 <div className="text-content">
-                <h2 style={{ textAlign: 'left' }}>Donor Dashboard</h2>
+                <h2 style={{ textAlign: 'left' }}>Teacher Dashboard</h2>
 
                     <div style={{display: 'flex'}}>
                     <img src={statsd} style={{ height: '125px', marginRight: '-450px' }} />

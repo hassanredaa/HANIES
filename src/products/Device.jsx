@@ -3,12 +3,11 @@ import { Link } from 'react-router-dom';
 import { organizationRequests } from '../data.js';
 import clothes from '../../assets/clothes.jpg';
 import IncrementDecrementBtn from './IncrementDecrementBtn.jsx';
-//import { api } from '.././api.js';
 
 // Adjust the path if needed
 //import IncrementDecrementBtn from './IncrementDecrementBtn.jsx';
 
-export default function Blood1() {
+export default function Device() {
     const [showDeliverySection, setShowDeliverySection] = useState(false);
     const deliveryOptionsRef = useRef(null);
     const [selectedTransportationOption, setSelectedTransportationOption] = useState('');
@@ -34,22 +33,16 @@ export default function Blood1() {
     return (
       <div className="shopping-page">
         <header className="header">
-          <h1>Blood Donation</h1>
+          <h1>Medical Supplies</h1>
         </header>
         <main className="mainm">
           <div className="productm">
             <h2>Product 1</h2>
             <img src={clothes} alt="clothes" />
-            <p>Blood Donation O</p>
-            <p>Patient Name: {organizationRequests.bloodDonations[0].name_of_patient}</p>
-            <p>Blood Type: {organizationRequests.bloodDonations[0].type}</p>
-            <p>Hospital Name: {organizationRequests.bloodDonations[0].hospital } </p>
-            <p>Area: {organizationRequests.bloodDonations[0].area } </p>
-            <p>Governorate: {organizationRequests.bloodDonations[0].governorate } </p>
-            <p>Address: {organizationRequests.bloodDonations[0].address } </p>
-            {/* <div><MyLocationMap apiKey={api} />
-                        </div> */}
-
+            <p>MRI Scanner</p>
+            <p>Type: {organizationRequests.medicalSupplies[1].type}</p>
+            <p>Use: {organizationRequests.medicalSupplies[1].medication_use } </p>
+            <p>Quantity: {organizationRequests.schoolSupplies[1].quantity } </p>
             <IncrementDecrementBtn minValue={1} maxValue={organizationRequests.clothes[0].quantity} />
             <button className='button3' onClick={handleDonateClick}>Donate</button>
           </div>

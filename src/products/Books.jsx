@@ -3,12 +3,11 @@ import { Link } from 'react-router-dom';
 import { organizationRequests } from '../data.js';
 import clothes from '../../assets/clothes.jpg';
 import IncrementDecrementBtn from './IncrementDecrementBtn.jsx';
-//import { api } from '.././api.js';
 
 // Adjust the path if needed
 //import IncrementDecrementBtn from './IncrementDecrementBtn.jsx';
 
-export default function Blood1() {
+export default function Books() {
     const [showDeliverySection, setShowDeliverySection] = useState(false);
     const deliveryOptionsRef = useRef(null);
     const [selectedTransportationOption, setSelectedTransportationOption] = useState('');
@@ -34,22 +33,18 @@ export default function Blood1() {
     return (
       <div className="shopping-page">
         <header className="header">
-          <h1>Blood Donation</h1>
+          <h1>School Supplies</h1>
         </header>
         <main className="mainm">
           <div className="productm">
             <h2>Product 1</h2>
             <img src={clothes} alt="clothes" />
-            <p>Blood Donation O</p>
-            <p>Patient Name: {organizationRequests.bloodDonations[0].name_of_patient}</p>
-            <p>Blood Type: {organizationRequests.bloodDonations[0].type}</p>
-            <p>Hospital Name: {organizationRequests.bloodDonations[0].hospital } </p>
-            <p>Area: {organizationRequests.bloodDonations[0].area } </p>
-            <p>Governorate: {organizationRequests.bloodDonations[0].governorate } </p>
-            <p>Address: {organizationRequests.bloodDonations[0].address } </p>
-            {/* <div><MyLocationMap apiKey={api} />
-                        </div> */}
-
+            <p>Books</p>
+            <p>Name: {organizationRequests.schoolSupplies[1].bookname}</p>
+            <p>Author: {organizationRequests.schoolSupplies[1].author } </p>
+            <p>Language: {organizationRequests.schoolSupplies[1].language } </p>
+            <p>Editions: {organizationRequests.schoolSupplies[1].edition } </p>
+            <p>Summary: {organizationRequests.schoolSupplies[1].summary } </p>
             <IncrementDecrementBtn minValue={1} maxValue={organizationRequests.clothes[0].quantity} />
             <button className='button3' onClick={handleDonateClick}>Donate</button>
           </div>

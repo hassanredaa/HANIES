@@ -47,22 +47,7 @@ export default function Register() {
     const [DoctorFieldsVisible, setDoctorFieldsVisible] = useState(false);
     const [TeacherFieldsVisible, setTeacherFieldsVisible] = useState(false);
 
-    const handleUserArray = (event) => {
-        event.preventDefault(); // Prevent default form submission behavior
-        const formData = new FormData(event.target);
-        const newUser = {};
-
-        // Get form data
-        const name = event.target.first - name.value;
-        const password = event.target.password.value;
-        const email = event.target.email.value;
-
-        // Call the addUser function to add the user
-        addUser(name, last, gender, email, number, password, type, doc);
-
-        // Clear the form fields
-        event.target.reset();
-    };
+   
 
 
     const handleSubmit = (event) => {
@@ -83,9 +68,8 @@ export default function Register() {
 
     return (
         <div className="app-container" style={{ backgroundImage: `url(${bgImage})` }}>
-            <div style={{ textAlign: 'right', marginBottom: '20px' }}>
-            <img src={gg} style={{paddingRight: '1000px'}}></img>
-
+            <div style={{ textAlign: 'right' }}>
+               <img src={gg} style={{paddingRight: '1000px'}}></img>
                 <Link to="/" className="button-primary2">Home</Link>
                 {/* Link to the about us section */}
                 <Link to="/#about" className="button-primary2">About Us</Link>
@@ -93,10 +77,10 @@ export default function Register() {
                 <Link to="/#contact" className="button-primary2">Contact Us</Link>
             </div>
             <div className="content-area">
-                <div className="register-container" style={{ opacity: '0.6' }}>
+                <div className="register-container">
 
                     <h2>Register</h2>
-                    <form onSubmit={handleSubmit} onClick={handleUserArray}>
+                    <form onSubmit={handleSubmit} >
                         <div className="input-group">
                             <label htmlFor="first-name">First Name:</label>
                             <input type="text" id="first-name" name="first-name" required placeholder="Enter your first name" />
@@ -140,12 +124,7 @@ export default function Register() {
                             </select>
                         </div>
 
-                        {showDocumentUpload && (
-                            <div className="input-group">
-                                <label htmlFor="documents">Upload Documents:</label>
-                                <input type="file" id="documents" name="documents" accept=".pdf,.doc,.docx" />
-                            </div>
-                        )}
+                       
 
 
                         {organizationFieldsVisible && (
@@ -181,11 +160,13 @@ export default function Register() {
                                     <label htmlFor="gov">Governorate:</label>
                                     <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
                                 </div>
-
                                 <div className="input-group">
-                                    <label htmlFor="documents">Upload Organization Certificate:</label>
-                                    <input type="file" id="documents" name="documents" accept=".pdf,.doc,.docx" />
-                                </div>
+                                <label htmlFor="documents">Upload Documents:</label>
+                                <input type="file" id="documents" name="documents" accept=".pdf,.doc,.docx" />
+                            </div>
+
+                               
+                       
 
 
                             </>
@@ -212,6 +193,11 @@ export default function Register() {
                                     <label htmlFor="gov">Governorate:</label>
                                     <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
                                 </div>
+                                <div className="input-group">
+                                <label htmlFor="documents">Upload Documents:</label>
+                                <input type="file" id="documents" name="documents" accept=".pdf,.doc,.docx" />
+                            </div>
+                              
 
                             </>
 
@@ -237,6 +223,11 @@ export default function Register() {
                                     <label htmlFor="gov">Governorate:</label>
                                     <input type="gov" id="gov" name="gov" required placeholder="Enter your governorate" />
                                 </div>
+                                <div className="input-group">
+                                <label htmlFor="documents">Upload Documents:</label>
+                                <input type="file" id="documents" name="documents" accept=".pdf,.doc,.docx" />
+                            </div>
+                             
 
                             </>
 
