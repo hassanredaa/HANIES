@@ -7,6 +7,7 @@ import goodImage from '../assets/good.png';
 import avImage from '../assets/img_avatar.png';
 import * as data from './data.js';
 import stats from '../assets/stats.png'
+import top from '../assets/top.png'
 
 
 export default function AdminDB() {
@@ -87,15 +88,21 @@ export default function AdminDB() {
 
             <div className="contentt" style={{}}>
                 <div className="text-content">
-                    <h1 style={{ textAlign: 'left' }}>Dashboard</h1>
-                    <img src={stats} style={{ height: '125px', paddingRight: '800px', marginTop: '20px' }} />
-                    <div className="chart-container" style={{ marginTop: '100px' }}>
-                        <Line
+                <h1 style={{ textAlign: 'left' }}>Dashboard</h1>
+
+                    <div style={{display: 'flex'}}>
+                    <img src={stats} style={{ height: '125px', marginRight: '-450px' }} />
+                    <img src={top} style={{ height: '200px', paddingLeft: '800px',}} />
+
+                    </div>
+
+                    <div className="chart-container" style={{ width: '100%' }}>
+                        <Line style={{width: '800px', marginLeft: '150px' }}
                             data={{
-                                labels: ["Amira", "Hassan"],
+                                labels: ["Hassan","Amira", "Nada","Welo","Lolo","Khello"],
                                 datasets: [{
                                     label: "takyeem",
-                                    data: [10, 30],
+                                    data: [10, 10,40,50,20,40],
                                 }]
                             }}
                         />

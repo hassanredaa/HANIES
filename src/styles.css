@@ -997,18 +997,24 @@ footer {
     padding: 20px;
     background-color: #f9f9f9;
     flex-grow: 1;
+    flex-direction: column; /* Changed to column */
+    
+
 }
 
 .text-content {
     flex: 1;
     margin-right: 20px;
+
 }
 
 .chart-container {
-    width: 40%;
-    max-width: 600px;
+    max-width: 100%; 
     flex: auto;
+    flex-grow: 1; /* Allow it to grow and fill available space */
+
 }
+
 
 .review-org-sub header {
     display: flex;
