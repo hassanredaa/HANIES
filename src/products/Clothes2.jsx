@@ -1,7 +1,7 @@
 import React,{useRef, useState} from 'react';
 import { Link } from 'react-router-dom';
 import { organizationRequests } from '../data.js';
-import clothes from '../../assets/clothes.jpg';
+import tshirt from '../../assets/tshirt.jpg';
 import IncrementDecrementBtn from './IncrementDecrementBtn.jsx';
 
 // Adjust the path if needed
@@ -38,7 +38,7 @@ export default function Clothes2() {
         <main className="mainm">
           <div className="productm">
             <h2>Product 1</h2>
-            <img src={clothes} alt="clothes" />
+            <img src={tshirt} alt="clothes" />
             <p>T-shirt</p>
             <p>Age: {organizationRequests.clothes[1].age}</p>
             <p>Gender: {organizationRequests.clothes[1].gender}</p>

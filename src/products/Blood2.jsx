@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { organizationRequests } from '../data.js';
 import clothes from '../../assets/clothes.jpg';
 import IncrementDecrementBtn from './IncrementDecrementBtn.jsx';
+import MyLocationMap from '../Location.jsx'; // Adjust the path based on your file structure
+import { api } from '../api.js';
 //import { api } from '.././api.js';
 
 // Adjust the path if needed
@@ -47,6 +49,7 @@ export default function Blood2() {
             <p>Area: {organizationRequests.bloodDonations[0].area } </p>
             <p>Governorate: {organizationRequests.bloodDonations[0].governorate } </p>
             <p>Address: {organizationRequests.bloodDonations[0].address } </p>
+            <p>location : <MyLocationMap apiKey={api}/> </p>
             {/* <div><MyLocationMap apiKey={api} />
                         </div> */}
 
