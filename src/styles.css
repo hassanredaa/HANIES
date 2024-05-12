@@ -1346,6 +1346,133 @@ button.download {
 
 .request-tile button:hover {
     background-color: #218838;
+  }
+  
+  .post-container {
+    background-color: #f2f2f2;
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto; /* Centering the container horizontally */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.post-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.post-container .input-group {
+    margin-bottom: 20px;
+}
+
+.post-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.post-container input[type="file"],
+.post-container select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.post-container button {
+    width: 100%;
+    padding: 12px 24px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex right;
+}
+
+.post-container button:hover {
+    background-color: #333;
+}
+.posts {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.post {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-username {
+    font-weight: bold;
+}
+
+.post-content {
+    margin-bottom: 10px;
+}
+
+.post-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-action {
+    color: #666666;
+    cursor: pointer;
+}
+
+.post-action:hover {
+    color: #333333;
+}
+
+.post-action.icon {
+    margin-right: 10px;
+}
+.organization-home {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.dashboard-posts-container {
+    display: flex;
+}
+
+.dashboard {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.posts {
+    flex: 1;
+}
+
+.posts h2 {
+    margin-top: 0;
 }
 
 .poetsen-one-regular {

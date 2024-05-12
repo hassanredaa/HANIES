@@ -7,7 +7,6 @@ import ChangePassword from './ChangePassword.jsx';
 import Home from './Home.jsx';
 import AdminDB from './AdminDB.jsx';
 import OrganizationHome from './OrganizationHome.jsx';
-import AboutOrg from './AboutOrg.jsx';
 import ReviewOrgSub from './ReviewOrgSub';
 import ReviewDonSub from './ReviewDonSub';
 import MngOrgReq from './MngOrgReq.jsx';
@@ -21,6 +20,15 @@ import ViewDonors from './ViewDonors.jsx';
 import ViewOrgs from './ViewOrgs.jsx';
 import Request from './Request.jsx';
 import ProductPage from './products/Product1.jsx';
+import Teacherhome from './Teacherhome.jsx';
+import Posts from './Posts.jsx';
+import DonationPost from './DonationPost.jsx';
+import UpdatePost from './UpdatePost.jsx';
+import UpdateAccOrg from './UpdateAccOrg.jsx';
+import UpdateAccDonor from './UpdateAccDonor.jsx';
+import Notifications from './Notifications.jsx';
+import FullfilledPost from './FullfilledPost.jsx';
+import Logout from './Logout.jsx';
 import Delete from './Delete.jsx';
 
 
@@ -39,7 +47,6 @@ function App() {
         <Route path="/changepassword" element={<ChangePassword />} />
         <Route path="/admin" element={<AdminDB />} />
         <Route path="/OrganizationHome" element={<OrganizationHome />} />
-        <Route path="/AboutOrg" element={<AboutOrg />} />
         <Route path="/submissions/organizations" element={<ReviewOrgSub />} />
         <Route path="/submissions/donors" element={<ReviewDonSub />} />
         <Route path="/requests/organizations" element={<MngOrgReq />} />
@@ -52,6 +59,16 @@ function App() {
         <Route path="/views/donors" element={<ViewDonors />} />
         <Route path="/views/organizations" element={<ViewOrgs />} />
         <Route path="/product" element={<ProductPage />} />
+        <Route path="/Teacherhome" element={<Teacherhome />} />
+        <Route path="/Posts" element={<Posts />} />
+
+        <Route path="/DonationPost" element={<DonationPost />} />
+        <Route path="/UpdatePost" element={<UpdatePost />} />
+        <Route path="/UpdateAccOrg" element={<UpdateAccOrg />} />
+        <Route path="/UpdateAccDonor" element={<UpdateAccDonor />} />
+        <Route path="/Notifications" element={<Notifications />} />
+        <Route path="/FullfilledPost" element={<FullfilledPost />} />
+        <Route path="/Logout" element={<Logout />} />
         <Route path="/delete" element={<Delete />} />
       </Routes>
     </BrowserRouter>

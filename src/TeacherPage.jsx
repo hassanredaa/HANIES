@@ -20,16 +20,8 @@ export default function TeacherPage() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (proBonoClasses < 1) {
-            alert("Pro-bono classes must be greater than or equal to 1");
-            return; // Prevent further execution if validation fails
-        }
-        if (proBonoStudents < 1) {
-            alert("Pro-bono students must be greater than or equal to 1");
-            return; // Prevent further execution if validation fails
-        }
         console.log("Form submitted");
-        window.location.href = '/DonorHome';
+        window.location.href = '/Teacherhome';
     };
 
     return (
@@ -49,11 +41,11 @@ export default function TeacherPage() {
                 </div>
                 <div className="input-group">
                     <label htmlFor="proBonoClasses">Pro-bono Classes:</label>
-                    <input type="number" id="proBonoClasses" name="proBonoClasses" value={proBonoClasses} onChange={handleProBonoClassesChange} required placeholder="Enter number of pro-bono classes" />
+                    <input type="number" id="proBonoClasses" name="proBonoClasses" value={proBonoClasses} onChange={handleProBonoClassesChange} required placeholder="Enter number of pro-bono classes" min="1" />
                 </div>
                 <div className="input-group">
                     <label htmlFor="proBonoStudents">Pro-bono Students:</label>
-                    <input type="number" id="proBonoStudents" name="proBonoStudents" value={proBonoStudents} onChange={handleProBonoStudentsChange} required placeholder="Enter number of pro-bono students" />
+                    <input type="number" id="proBonoStudents" name="proBonoStudents" value={proBonoStudents} onChange={handleProBonoStudentsChange} required placeholder="Enter number of pro-bono students" min="1" />
                 </div>
                 <button type="submit">Submit</button>
             </form>
