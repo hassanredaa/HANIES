@@ -418,6 +418,9 @@ export default function Requests() {
                     </tbody>
                 </table>
             </div>
+            <footer style={{ textAlign: 'center', padding: '20px 10px', backgroundColor: 'black', color: 'white' }}>
+                <p>Copyright © 2023 Good Giving</p>
+            </footer>
         </div>
     );
 }
