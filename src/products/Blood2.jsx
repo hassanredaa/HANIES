@@ -1,7 +1,7 @@
 import React,{useRef, useState} from 'react';
 import { Link } from 'react-router-dom';
 import { organizationRequests } from '../data.js';
-import a from '../../assets/a.jpg';
+import a from '../../assets/a.png';
 import IncrementDecrementBtn from './IncrementDecrementBtn.jsx';
 import MyLocationMap from '../Location.jsx'; // Adjust the path based on your file structure
 import { api } from '../api.js';
