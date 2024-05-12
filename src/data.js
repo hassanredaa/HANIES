@@ -172,19 +172,21 @@ export const organizationRequests = {
     clothes: [
       {
         id: 1,
-        description: "Winter coats for children",
+        description: "Male Clothes",
         size: "Various sizes",
         quantity: 100,
         contact: "example@email.com",
-        source: "../assets/clothes.jpg"
+        source: "../assets/clothes.jpg",
+        donation: "products/MaleClothing"
       },
       {
         id: 2,
-        description: "Men's shirts",
+        description: "Female's Clothes",
         size: "Medium",
         quantity: 50,
         contact: "example@email.com",
-        source: "../assets/clothes.jpg"
+        source: "../assets/clothes.jpg",
+        donation: "products/FemaleClothing"
 
       },
       // Add more clothing requests as needed
@@ -192,17 +194,21 @@ export const organizationRequests = {
     food: [
       {
         id: 1,
-        description: "Canned goods",
+        description: "Fast Food",
         type: "Vegetables",
         quantity: "100 cans",
-        contact: "example@email.com"
+        contact: "example@email.com",
+        source: "../assets/food.jpg",
+        donation: "products/FastFood"
       },
       {
         id: 2,
-        description: "Rice",
+        description: "Homemade Food",
         type: "Basmati",
         quantity: "50 kg",
-        contact: "example@email.com"
+        contact: "example@email.com",
+        source: "../assets/food.jpg",
+        donation: "products/Homemade"
       },
       // Add more food requests as needed
     ],
@@ -212,14 +218,18 @@ export const organizationRequests = {
         description: "Stuffed animals",
         ageRange: "3-5 years",
         quantity: 50,
-        contact: "example@email.com"
+        contact: "example@email.com",
+        source: "../assets/toys.jpg",
+        donation: "products/Toys1"
       },
       {
         id: 2,
         description: "LEGO sets",
         ageRange: "6-10 years",
         quantity: 30,
-        contact: "example@email.com"
+        contact: "example@email.com",
+        source: "../assets/toys.jpg",
+        donation: "products/Toys2"
       },
       // Add more toy requests as needed
     ],
@@ -229,14 +239,18 @@ export const organizationRequests = {
         description: "Notebooks",
         type: "Spiral bound",
         quantity: 200,
-        contact: "example@email.com"
+        contact: "example@email.com",
+        source: "../assets/school supplies.jpg",
+        donation: "products/NoteBooks"
       },
       {
         id: 2,
         description: "Pencils",
         type: "HB",
         quantity: 500,
-        contact: "example@email.com"
+        contact: "example@email.com",
+        source: "../assets/school supplies.jpg",
+        donation: "products/Pencils"
       },
       // Add more school supplies requests as needed
     ],
@@ -246,14 +260,18 @@ export const organizationRequests = {
         description: "Pens",
         type: "Ballpoint",
         quantity: 100,
-        contact: "example@email.com"
+        contact: "example@email.com",
+        source: "../assets/statoinaries.jpg",
+        donation: "products/Pens"
       },
       {
         id: 2,
         description: "Markers",
         type: "Permanent",
         quantity: 50,
-        contact: "example@email.com"
+        contact: "example@email.com",
+        source: "../assets/statoinaries.jpg",
+        donation: "products/Markers"
       },
       // Add more stationary requests as needed
     ],
@@ -263,31 +281,41 @@ export const organizationRequests = {
         description: "Bandages",
         type: "Adhesive",
         quantity: 200,
-        contact: "example@email.com"
+        contact: "example@email.com",
+        source: "../assets/bandaid.png",
+        donation: "products/Bandages" 
       },
       {
         id: 2,
         description: "Antiseptic wipes",
         type: "Alcohol-based",
         quantity: 100,
-        contact: "example@email.com"
+        contact: "example@email.com",
+        source: "../assets/bandaid.png",
+        donation: "products/Wipes"
       },
       // Add more medical supplies requests as needed
     ],
     bloodDonations: [
       {
         id: 1,
+        description: "O+",
         bloodType: "O+",
         quantity: "5 pints",
         urgency: "Immediate",
-        contact: "example@email.com"
+        contact: "example@email.com",
+        source: "../assets/blood.jpg",
+        donation: "products/Blood1"
       },
       {
         id: 2,
+        description: "A-",
         bloodType: "A-",
         quantity: "3 pints",
         urgency: "Urgent",
-        contact: "example@email.com"
+        contact: "example@email.com",
+        source: "../assets/blood.jpg",
+        donation: "products/Blood2"
       },
       // Add more blood donation requests as needed
     ]
