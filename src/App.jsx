@@ -32,7 +32,6 @@ import Case1 from './Case1.jsx';
 import Case2 from './Case2.jsx';
 import Case3 from './Case3.jsx';
 import Case4 from './Case4.jsx';
-import FulfillMed from './FulfillMed.jsx';
 import Teacherhome from './Teacherhome.jsx';
 import Posts from './Posts.jsx';
 import DonationPost from './DonationPost.jsx';
@@ -121,7 +120,6 @@ function App() {
         <Route path="/Case2" element={<Case2 />} />
         <Route path="/Case3" element={<Case3 />} />
         <Route path="/Case4" element={<Case4 />} />
-        <Route path="/FulfillMed" element={<FulfillMed />} />
 
         {/* <Route path="/products/FemaleClothing" element={<FemaleClothing />} />
         <Route path="/products/FastFood" element={<FastFood />} />

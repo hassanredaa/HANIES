@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import avImage from '../assets/img_avatar.png';
 import MyLocationMap from './Location.jsx'; // Adjust the path based on your file structure
 import { api } from './api.js';
+import ggImage from '../assets/gg.png';
+
 
 const Posts = () => {
   const [posts, setPosts] = useState([
@@ -72,6 +74,12 @@ const Posts = () => {
 
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', textAlign: 'center' }}>
+      <header style={{ padding: '10px' }}>
+        <img src={ggImage} alt="gg logo" style={{}} />
+
+        {/* <h1 style={{ marginLeft: '75px' }}>Review Donor Submissions</h1> */}
+        <Link className='button-primary2' to="/donorhome">Donor Dashboard</Link>
+      </header>
       <h1>Posts</h1>
       <div>
         <label htmlFor="subjectFilter">Filter by Subject:</label>
