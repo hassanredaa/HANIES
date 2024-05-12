@@ -7,7 +7,7 @@ import IncrementDecrementBtn from './IncrementDecrementBtn.jsx';
 // Adjust the path if needed
 //import IncrementDecrementBtn from './IncrementDecrementBtn.jsx';
 
-export default function Medical() {
+export default function Device() {
     const [showDeliverySection, setShowDeliverySection] = useState(false);
     const deliveryOptionsRef = useRef(null);
     const [selectedTransportationOption, setSelectedTransportationOption] = useState('');
@@ -39,10 +39,10 @@ export default function Medical() {
           <div className="productm">
             <h2>Product 1</h2>
             <img src={clothes} alt="clothes" />
-            <p>Panadol</p>
-            <p>Type: {organizationRequests.medicalSupplies[0].type}</p>
-            <p>Use: {organizationRequests.medicalSupplies[0].medication_use } </p>
-            <p>Quantity: {organizationRequests.schoolSupplies[0].quantity } </p>
+            <p>MRI Scanner</p>
+            <p>Type: {organizationRequests.medicalSupplies[1].type}</p>
+            <p>Use: {organizationRequests.medicalSupplies[1].medication_use } </p>
+            <p>Quantity: {organizationRequests.schoolSupplies[1].quantity } </p>
             <IncrementDecrementBtn minValue={1} maxValue={organizationRequests.clothes[0].quantity} />
             <button className='button3' onClick={handleDonateClick}>Donate</button>
           </div>

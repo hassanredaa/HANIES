@@ -37,7 +37,9 @@ import FullfilledPost from './FullfilledPost.jsx';
 import Logout from './Logout.jsx';
 import Delete from './Delete.jsx';
 import ViewOrgsDonor from './ViewOrgsDonor.jsx';
-
+import Device from './products/Device.jsx';
+import Equipment from './products/Equipment.jsx';
+import Blood1 from './products/Blood1.jsx';
 
 
 
@@ -71,6 +73,9 @@ function App() {
         <Route path="/products/NoteBooks" element={<NoteBooks />} />
         <Route path="/products/Books" element={<Books />} />
         <Route path="/products/Medical" element={<Medical />} />
+        <Route path="/products/Device" element={<Device />} />
+        <Route path="/products/Equipment" element={<Equipment />} />
+        <Route path="/products/Blood1" element={<Blood1 />} />
         {/*<Route path="/products/FastFood" element={<FastFood />} />
         <Route path="/products/Homemade" element={<HomeMade />} />
         <Route path="/products/Toys" element={<Toys1 />} />
