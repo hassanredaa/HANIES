@@ -40,7 +40,9 @@ import ViewOrgsDonor from './ViewOrgsDonor.jsx';
 import Device from './products/Device.jsx';
 import Equipment from './products/Equipment.jsx';
 import Blood1 from './products/Blood1.jsx';
-
+import SchedOrg from './SchedOrg.jsx';
+import ViewDonors from './ViewDonors.jsx'
+import ViewOrgs from './ViewOrgs.jsx'
 
 
 
