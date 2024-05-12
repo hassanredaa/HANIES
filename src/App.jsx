@@ -23,7 +23,7 @@ import Toys1 from "./products/Toys1";
 import Toys2 from './products/Toys2';
 import NoteBooks from './products/NoteBooks';
 import Books from './products/Books.jsx';
-import Medical from'./products/Medical.jsx';
+import Medical from './products/Medical.jsx';
 
 import MaleClothing from './products/MaleClothing.jsx';
 import DoctorHome from './DoctorHome.jsx';
@@ -99,7 +99,7 @@ function App() {
         <Route path="/products/Bandages" element={<Bandages />} />
         <Route path="/products/Wipes" element={<Wipes />} />
         <Route path="/products/Blood2" element={<Blood2 />} /> */}
-        
+
 
 
         <Route path="/products/MaleClothing" element={<MaleClothing />} />
@@ -110,7 +110,7 @@ function App() {
         <Route path="/Case3" element={<Case3 />} />
         <Route path="/Case4" element={<Case4 />} />
         <Route path="/FulfillMed" element={<FulfillMed />} />
-        
+
         {/* <Route path="/products/FemaleClothing" element={<FemaleClothing />} />
         <Route path="/products/FastFood" element={<FastFood />} />
         <Route path="/products/Homemade" element={<HomeMade />} />
@@ -123,7 +123,7 @@ function App() {
         <Route path="/products/Bandages" element={<Bandages />} />
         <Route path="/products/Wipes" element={<Wipes />} />
         <Route path="/products/Blood2" element={<Blood2 />} /> */}
-        
+
         <Route path="/Teacherhome" element={<Teacherhome />} />
         <Route path="/Posts" element={<Posts />} />
         <Route path="/ViewOrgsDonor" element={<ViewOrgsDonor />} />
