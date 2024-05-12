@@ -196,28 +196,28 @@ export const organizationRequests = {
   clothes: [
     {
       id: 1,
-      category:"clothes",
+      category: "clothes",
       description: "Winter coats for children",
       age: "Child",
       gender: "Male",
-      season:"Winter",
-      type:"Coat",
-      material:"Fabric",
+      season: "Winter",
+      type: "Coat",
+      material: "Fabric",
       quantity: 100,
       contact: "example@email.com",
       source: "../assets/clothes.jpg",
-      donation: "/products/clothes" 
+      donation: "/products/clothes"
 
     },
     {
       id: 2,
-      category:"clothes",
+      category: "clothes",
       description: "Women's shirts",
       age: "Adult",
       gender: "Female",
-      season:"Summer",
-      type:"Shirt",
-      material:"Cotton",
+      season: "Summer",
+      type: "Shirt",
+      material: "Cotton",
       quantity: 50,
       contact: "example@email.com",
       source: "../assets/clothes.jpg",
@@ -228,10 +228,10 @@ export const organizationRequests = {
   food: [
     {
       id: 1,
-      category:"food",
+      category: "food",
       description: "Canned foods",
       type: "canned foods",
-      item_name:"foul medames",
+      item_name: "foul medames",
       quantity: "100 cans",
       contact: "example@email.com",
       donation: "/products/CannedFood"
@@ -239,7 +239,7 @@ export const organizationRequests = {
     },
     {
       id: 2,
-      category:"food",
+      category: "food",
       description: "Banana",
       type: "fruits and vegetables",
       item_name: "Banana",
@@ -253,11 +253,11 @@ export const organizationRequests = {
   toys: [
     {
       id: 1,
-      category:"toys",
+      category: "toys",
       description: "Stuffed animals",
       age: "Child",
       gender: "Unisex",
-      toy_category:"stuffed toys",
+      toy_category: "stuffed toys",
       quantity: 50,
       contact: "example@email.com",
       donation: "/products/Toys1"
@@ -265,11 +265,11 @@ export const organizationRequests = {
     },
     {
       id: 2,
-      category:"toys",
+      category: "toys",
       description: "LEGO sets",
       age: "Teen",
       gender: "Unisex",
-      toy_category:"board games",
+      toy_category: "board games",
       quantity: 30,
       contact: "example@email.com",
       donation: "/products/Toys2"
@@ -280,7 +280,7 @@ export const organizationRequests = {
   schoolSupplies: [
     {
       id: 1,
-      category:"schoolSupplies",
+      category: "schoolSupplies",
       description: "Notebooks",
       type: "Stationary",
       stationarytype: "notebooks",
@@ -290,14 +290,14 @@ export const organizationRequests = {
     },
     {
       id: 2,
-      category:"schoolSupplies",
+      category: "schoolSupplies",
       description: "Harry Potter",
       type: "Books",
-      bookname:"harry potter",
-      author:"jk rowling",
-      language:"english",
-      edition:"2nd",
-      summary:"magic",
+      bookname: "harry potter",
+      author: "jk rowling",
+      language: "english",
+      edition: "2nd",
+      summary: "magic",
       quantity: 500,
       contact: "example@email.com",
       donation: "/products/Books"
@@ -306,39 +306,40 @@ export const organizationRequests = {
     },
     // Add more school supplies requests as needed
   ],
- 
+
   medicalSupplies: [
     {
       id: 1,
-      category:"medicalSupplies",
+      category: "medicalSupplies",
       description: "Panadol",
-      type:"medication" ,
+      type: "medication",
       medication_use: "pain relief",
       quantity: 200,
       contact: "example@email.com",
-      donation: "products/Bandages" 
+      donation: "/products/Medical"
 
     },
     {
       id: 2,
-      category:"medicalSupplies",
+      category: "medicalSupplies",
       description: "MRI Scanner",
-      type:"devices" ,
+      type: "devices",
       device_type: "MRI",
+      medication_use: "medical imaging procedure",
       quantity: 100,
       contact: "example@email.com",
-      donation: "products/Wipes"
+      donation: "/products/Device"
 
     },
     {
       id: 3,
-      category:"medicalSupplies",
+      category: "medicalSupplies",
       description: "Scalpel",
-      type:"equipment" ,
+      type: "equipment",
       equipment_type: "scalpel",
       quantity: 100,
       contact: "example@email.com",
-      donation: "products/Markers"
+      donation: "/products/Equipment"
 
     },
     // Add more medical supplies requests as needed
@@ -346,212 +347,33 @@ export const organizationRequests = {
   bloodDonations: [
     {
       id: 1,
-      category:"bloodDonations",
-      name_of_patient:"hanan el dreiny",
-      type:"O",
-       hospital:"el hayat",
-       governorate:"cairo",
-       area:"heliopolis", 
-       address: "4 el ghanam",
-       quantity: 1,
+      category: "bloodDonations",
+      description: "Blood Type O",
+      name_of_patient: "hanan el dreiny",
+      type: "O",
+      hospital: "el hayat",
+      governorate: "cairo",
+      area: "heliopolis",
+      address: "4 el ghanam",
+      quantity: 1,
       contact: "example@email.com",
-      donation: "products/Blood1"
+      donation: "/products/Blood1"
 
     },
     {
       id: 2,
-      category:"bloodDonations",
-      name_of_patient:"Youssef Khalil",
+      category: "bloodDonations",
+      description: "Blood Type A-",
+      name_of_patient: "Youssef Khalil",
       type: "A-",
-      hospital:"el hayat",
-       governorate:"cairo",
-       area:"heliopolis", 
-       address: "4 el ghanam",
-       quantity: 1,
-      
-      contact: "example@email.com",
-      donation: "products/Blood2"
+      hospital: "el hayat",
+      governorate: "cairo",
+      area: "heliopolis",
+      address: "4 el ghanam",
+      quantity: 1,
 
-export const organizationRequests = {
-  clothes: [
-    {
-      id: 1,
-      category:"clothes",
-      description: "Winter coats for children",
-      age: "Child",
-      gender: "Male",
-      season:"Winter",
-      type:"Coat",
-      material:"Fabric",
-      quantity: 100,
       contact: "example@email.com",
-      source: "../assets/clothes.jpg",
-      donation: "/products/clothes" 
-
-    },
-    {
-      id: 2,
-      category:"clothes",
-      description: "Women's shirts",
-      age: "Adult",
-      gender: "Female",
-      season:"Summer",
-      type:"Shirt",
-      material:"Cotton",
-      quantity: 50,
-      contact: "example@email.com",
-      source: "../assets/clothes.jpg",
-      donation: "/products/Clothes2"
-    },
-    // Add more clothing requests as needed
-  ],
-  food: [
-    {
-      id: 1,
-      category:"food",
-      description: "Canned foods",
-      type: "canned foods",
-      item_name:"foul medames",
-      quantity: "100 cans",
-      contact: "example@email.com",
-      donation: "/products/CannedFood"
-
-    },
-    {
-      id: 2,
-      category:"food",
-      description: "Banana",
-      type: "fruits and vegetables",
-      item_name: "Banana",
-      quantity: "50 kg",
-      contact: "example@email.com",
-      donation: "/products/HomemadeFood"
-
-    },
-    // Add more food requests as needed
-  ],
-  toys: [
-    {
-      id: 1,
-      category:"toys",
-      description: "Stuffed animals",
-      age: "Child",
-      gender: "Unisex",
-      toy_category:"stuffed toys",
-      quantity: 50,
-      contact: "example@email.com",
-      donation: "/products/Toys1"
-
-    },
-    {
-      id: 2,
-      category:"toys",
-      description: "LEGO sets",
-      age: "Teen",
-      gender: "Unisex",
-      toy_category:"board games",
-      quantity: 30,
-      contact: "example@email.com",
-      donation: "/products/Toys2"
-
-    },
-    // Add more toy requests as needed
-  ],
-  schoolSupplies: [
-    {
-      id: 1,
-      category:"schoolSupplies",
-      description: "Notebooks",
-      type: "Stationary",
-      stationarytype: "notebooks",
-      quantity: 200,
-      contact: "example@email.com",
-      donation: "/products/NoteBooks"
-    },
-    {
-      id: 2,
-      category:"schoolSupplies",
-      description: "Harry Potter",
-      type: "Books",
-      bookname:"harry potter",
-      author:"jk rowling",
-      language:"english",
-      edition:"2nd",
-      summary:"magic",
-      quantity: 500,
-      contact: "example@email.com",
-      donation: "/products/Books"
-
-
-    },
-    // Add more school supplies requests as needed
-  ],
- 
-  medicalSupplies: [
-    {
-      id: 1,
-      category:"medicalSupplies",
-      description: "Panadol",
-      type:"medication" ,
-      medication_use: "pain relief",
-      quantity: 200,
-      contact: "example@email.com",
-      donation: "/products/Medical" 
-
-    },
-    {
-      id: 2,
-      category:"medicalSupplies",
-      description: "MRI Scanner",
-      type:"devices" ,
-      device_type: "MRI",
-      quantity: 100,
-      contact: "example@email.com",
-      donation: "products/Wipes"
-
-    },
-    {
-      id: 3,
-      category:"medicalSupplies",
-      description: "Scalpel",
-      type:"equipment" ,
-      equipment_type: "scalpel",
-      quantity: 100,
-      contact: "example@email.com",
-      donation: "products/Markers"
-
-    },
-    // Add more medical supplies requests as needed
-  ],
-  bloodDonations: [
-    {
-      id: 1,
-      category:"bloodDonations",
-      name_of_patient:"hanan el dreiny",
-      type:"O",
-       hospital:"el hayat",
-       governorate:"cairo",
-       area:"heliopolis", 
-       address: "4 el ghanam",
-       quantity: 1,
-      contact: "example@email.com",
-      donation: "products/Blood1"
-
-    },
-    {
-      id: 2,
-      category:"bloodDonations",
-      name_of_patient:"Youssef Khalil",
-      type: "A-",
-      hospital:"el hayat",
-       governorate:"cairo",
-       area:"heliopolis", 
-       address: "4 el ghanam",
-       quantity: 1,
-      
-      contact: "example@email.com",
-      donation: "products/Blood2"
-
+      donation: "/products/Blood2"
 
     },
     // Add more blood donation requests as needed
