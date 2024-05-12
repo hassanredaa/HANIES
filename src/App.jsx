@@ -25,7 +25,9 @@ import Toys2 from './products/Toys2';
 import NoteBooks from './products/NoteBooks';
 import Books from './products/Books.jsx';
 import Medical from'./products/Medical.jsx';
-
+import Device from './products/Device.jsx';
+import Equipment from './products/Equipment.jsx';
+import Blood1 from './products/Blood1.jsx';
 
 
 
@@ -60,6 +62,9 @@ function App() {
         <Route path="/products/NoteBooks" element={<NoteBooks />} />
         <Route path="/products/Books" element={<Books />} />
         <Route path="/products/Medical" element={<Medical />} />
+        <Route path="/products/Device" element={<Device />} />
+        <Route path="/products/Equipment" element={<Equipment />} />
+        <Route path="/products/Blood1" element={<Blood1 />} />
         {/*<Route path="/products/FastFood" element={<FastFood />} />
         <Route path="/products/Homemade" element={<HomeMade />} />
         <Route path="/products/Toys" element={<Toys1 />} />
