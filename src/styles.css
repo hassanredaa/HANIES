@@ -240,6 +240,7 @@ footer {
     .register-container {
         width: 95%;
         margin: 20px auto;
+        opacity: 0.6;
     }
 }
 
@@ -278,13 +279,22 @@ footer {
 
 .register-container,
 .login-container {
-    background-color: #f2f2f2;
+    background-color: rgba(242, 242, 242, 0.6);
+    /* Adjust the opacity here */
     width: 100%;
     max-width: 400px;
     margin: 50px auto;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+}
+
+.register-container h2,
+.login-container h2,
+.register-container p,
+.login-container p {
+    opacity: 1;
+    /* Keep text clear */
 }
 
 .change-password-container {
@@ -779,7 +789,7 @@ footer {
 
 .sidebar {
     width: 250px;
-    background-color: #f2eae0;
+    background-color: #333;
     color: white;
     padding: 20px;
     display: flex;
@@ -838,7 +848,7 @@ footer {
 }
 
 .sidebar a {
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -1038,24 +1048,130 @@ footer {
     margin-bottom: 20px;
 }
 
-table {
-    width: 100%;
+.table-wrapper {
+    margin: 10px 70px 70px;
+    box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+}
+
+.fl-table {
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
     border-collapse: collapse;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
 }
 
-th,
-td {
-    text-align: left;
+.fl-table td,
+.fl-table th {
+    text-align: center;
     padding: 8px;
-    border-bottom: 1px solid #e0e0e0;
 }
 
-th {
-    background-color: #007BFF;
-    color: white;
-    font-weight: bold;
+.fl-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 12px;
+}
+
+.fl-table thead th {
+    color: #ffffff;
+    background: #4FC3A1;
+    font-size: 15px;
+}
+
+
+.fl-table thead th:nth-child(odd) {
+    color: #ffffff;
+    background: #324960;
+}
+
+.fl-table tr:nth-child(even) {
+    background: #F8F8F8;
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+    .fl-table {
+        display: block;
+        width: 100%;
+    }
+
+    .table-wrapper:before {
+        content: "Scroll horizontally >";
+        display: block;
+        text-align: right;
+        font-size: 80px;
+        color: white;
+        padding: 0 0 10px;
+    }
+
+    .fl-table thead,
+    .fl-table tbody,
+    .fl-table thead th {
+        display: block;
+    }
+
+    .fl-table thead th:last-child {
+        border-bottom: none;
+    }
+
+    .fl-table thead {
+        float: left;
+    }
+
+    .fl-table tbody {
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+    }
+
+    .fl-table td,
+    .fl-table th {
+        padding: 20px .625em .625em .625em;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 120px;
+        font-size: 20px;
+        text-overflow: ellipsis;
+    }
+
+    .fl-table thead th {
+        text-align: left;
+        border-bottom: 1px solid #f7f7f9;
+    }
+
+    .fl-table tbody tr {
+        display: table-cell;
+    }
+
+    .fl-table tbody tr:nth-child(odd) {
+        background: none;
+    }
+
+    .fl-table tr:nth-child(even) {
+        background: transparent;
+    }
+
+    .fl-table tr td:nth-child(odd) {
+        background: #F8F8F8;
+        border-right: 1px solid #E6E4E4;
+    }
+
+    .fl-table tr td:nth-child(even) {
+        border-right: 1px solid #E6E4E4;
+    }
+
+    .fl-table tbody td {
+        display: block;
+        text-align: center;
+    }
 }
 
 tr:hover {
@@ -1094,11 +1210,13 @@ button.delete {
 }
 
 button.view {
-    background-color: #d425ab;
+    background-color: #324960;
+    color: white;
 }
 
 button.download {
-    background-color: #f58abe;
+    background-color: #4FC3A1;
+    color: white;
 }
 
 @media (max-width: 768px) {
@@ -1147,11 +1265,13 @@ button.download {
 
 .product-price {
     font-weight: bold;
-    color: #007bff; /* or any other color you prefer */
+    color: #007bff;
+    /* or any other color you prefer */
 }
 
 .add-to-cart {
-    background-color: #007bff; /* or any other color you prefer */
+    background-color: #007bff;
+    /* or any other color you prefer */
     color: white;
     border: none;
     padding: 5px 10px;
@@ -1161,20 +1281,21 @@ button.download {
 }
 
 .add-to-cart:hover {
-    background-color: #0056b3; /* Darker shade of the primary color */
+    background-color: #0056b3;
+    /* Darker shade of the primary color */
 }
 
 .page-containerr {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-  }
-  
-  .category-buttons {
+}
+
+.category-buttons {
     margin-bottom: 20px;
-  }
-  
-  .category-buttons button {
+}
+
+.category-buttons button {
     margin-right: 10px;
     padding: 8px 12px;
     font-size: 14px;
@@ -1184,28 +1305,28 @@ button.download {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
-  
-  .category-buttons button:hover {
+}
+
+.category-buttons button:hover {
     background-color: #0056b3;
-  }
-  
-  .request-tile {
+}
+
+.request-tile {
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 10px;
     margin-bottom: 10px;
-  }
-  
-  .request-tile h3 {
+}
+
+.request-tile h3 {
     margin-top: 0;
-  }
-  
-  .request-tile p {
+}
+
+.request-tile p {
     margin-bottom: 5px;
-  }
-  
-  .request-tile button {
+}
+
+.request-tile button {
     padding: 8px 12px;
     font-size: 14px;
     background-color: #28a745;
