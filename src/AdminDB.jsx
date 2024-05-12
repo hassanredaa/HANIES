@@ -7,11 +7,12 @@ import goodImage from '../assets/good.png';
 import avImage from '../assets/img_avatar.png';
 import * as data from './data.js';
 import stats from '../assets/stats.png'
+import top from '../assets/top.png'
 
 
 export default function AdminDB() {
 
-    
+
     // State to manage the toggles
     const [viewOpen, setViewOpen] = useState(false);
     const [manageOpen, setManageOpen] = useState(false);
@@ -25,25 +26,25 @@ export default function AdminDB() {
     return (
         <div className="admin-dashboard">
             <div className="sidebar">
-                <div style={{ display: 'flex' }}>
-                    <div style={{ flex: '33.33%', padding: '5px', marginLeft: '20px' }}>
+                <div >
+                    <div style={{ marginRight: '300px' }}>
                         <img src={ggImage} />
                     </div>
-                    <div style={{ flex: '33.33%', padding: '5px', marginRight: '200px' }}>
+                    {/* <div style={{ flex: '33.33%', padding: '5px', marginRight: '200px' }}>
                         <img src={goodImage} />
-                    </div>
+                    </div> */}
                 </div>
                 <div>
-                    <img src={avImage} style={{ marginLeft: '5px', marginTop: '50px', borderRadius: '50%', width: '100px', height: '100px' }} />
+                    <img src={avImage} style={{ marginLeft: '5px', borderRadius: '50%', width: '100px', height: '100px' }} />
                 </div>
-                <h1 style={{ textAlign: 'center', padding: '5px' }}>name</h1>
+                <h1 style={{ textAlign: 'center' }}>name</h1>
                 <p style={{ textAlign: 'center' }}>Admin</p>
 
-                <ul style={{ paddingTop: '20px' }}>
+                <ul style={{ marginTop: '-5px' }}>
                     <li>
-                        <button className="sidebar-button" onClick={toggleReview}>
+                        <Link className="sidebar-button" onClick={toggleReview}>
                             Review Submissions
-                        </button>
+                        </Link>
 
                         {reviewOpen && (
                             <ul>
@@ -53,9 +54,9 @@ export default function AdminDB() {
                         )}
                     </li>
                     <li>
-                        <button className="sidebar-button" onClick={toggleManage} >
+                        <Link className="sidebar-button" onClick={toggleManage} >
                             Manage Requests
-                        </button>
+                        </Link>
                         {manageOpen && (
                             <ul>
                                 <li><Link to="/requests/organizations">Manage Organization Requests</Link></li>
@@ -64,9 +65,9 @@ export default function AdminDB() {
                         )}
                     </li>
                     <li>
-                        <button className="sidebar-button" onClick={toggleView} >
+                        <Link className="sidebar-button" onClick={toggleView} >
                             View
-                        </button>
+                        </Link>
                         {viewOpen && (
                             <ul>
                                 <li><Link to="/views/organizations">View Organizations List</Link></li>
@@ -76,25 +77,36 @@ export default function AdminDB() {
                             </ul>
                         )}
                     </li>
+                    <li>
+                        <Link to="/delete" className="sidebar-button"  >
+                            Delete Account
+                        </Link>
+                    </li>
                 </ul>
-                <Link to="/" style={{ marginTop: '170px' }}>Log Out</Link>
+                <Link to="/" style={{ marginTop: '15px' }}>Log Out</Link>
             </div>
 
-            <div className="contentt">
+            <div className="contentt" style={{}}>
                 <div className="text-content">
-                    <h1 style={{ textAlign: 'left' }}>Dashboard</h1>
-                    <img src={stats} style={{height: '500px'}} />
-                    <div className="chart-container">
-                    <Line
-                        data={{
-                            labels: ["Amira", "Hassan"],
-                            datasets: [{
-                                label: "takyeem",
-                                data: [10, 30],
-                            }]
-                        }}
-                    />
-                </div>
+                <h1 style={{ textAlign: 'left' }}>Dashboard</h1>
+
+                    <div style={{display: 'flex'}}>
+                    <img src={stats} style={{ height: '125px', marginRight: '-450px' }} />
+                    <img src={top} style={{ height: '200px', paddingLeft: '800px',}} />
+
+                    </div>
+
+                    <div className="chart-container" style={{ width: '100%' }}>
+                        <Line style={{width: '800px', marginLeft: '150px' }}
+                            data={{
+                                labels: ["Hassan","Amira", "Nada","Welo","Lolo","Khello"],
+                                datasets: [{
+                                    label: "takyeem",
+                                    data: [10, 10,40,50,20,40],
+                                }]
+                            }}
+                        />
+                    </div>
 
                     {/* <p>Select an option from the sidebar to get started.</p> */}
                 </div>
