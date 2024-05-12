@@ -15,10 +15,16 @@ import MngDonReq from './MngDonReq.jsx';
 import DoctorPage from './DoctorPage.jsx';
 import TeacherPage from './TeacherPage.jsx';
 import DonorHome from './DonorHome.jsx';
-import Requests from './Requests.jsx';
-import MaleClothing from './products/MaleClothing.jsx';
-
-
+import Request from './Request.jsx';
+import Clothesss from './products/Clothesss.jsx';
+import Clothes2 from './products/clothes2.jsx';
+import CannedFood from './products/CannedFood.jsx';
+import HomemadeFood from './products/HomemadeFood.jsx';
+import Toys1 from "./products/Toys1";
+import Toys2 from './products/Toys2';
+import NoteBooks from './products/NoteBooks';
+import Books from './products/Books.jsx';
+import Medical from'./products/Medical.jsx';
 
 
 
@@ -44,10 +50,17 @@ function App() {
         <Route path="/DonorHome" element={<DonorHome />} />
         <Route path="/DoctorPage" element={<DoctorPage />} />
         <Route path="/TeacherPage" element={<TeacherPage />} />
-        <Route path="/Requests" element={<Requests />} />
-        <Route path="/products/MaleClothing" element={<MaleClothing />} />
-        {/* <Route path="/products/FemaleClothing" element={<FemaleClothing />} />
-        <Route path="/products/FastFood" element={<FastFood />} />
+        <Route path="/Requests" element={<Request />} />
+        <Route path="/products/clothes" element={<Clothesss />} />
+        <Route path="/products/clothes2" element={<Clothes2 />} />
+        <Route path="/products/CannedFood" element={<CannedFood />} />
+        <Route path="/products/HomemadeFood" element={<HomemadeFood />} />
+        <Route path="/products/Toys1" element={<Toys1 />} />
+        <Route path="/products/Toys2" element={<Toys2 />} />
+        <Route path="/products/NoteBooks" element={<NoteBooks />} />
+        <Route path="/products/Books" element={<Books />} />
+        <Route path="/products/Medical" element={<Medical />} />
+        {/*<Route path="/products/FastFood" element={<FastFood />} />
         <Route path="/products/Homemade" element={<HomeMade />} />
         <Route path="/products/Toys" element={<Toys1 />} />
         <Route path="/products/Toys" element={<Toys2 />} />

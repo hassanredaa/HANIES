@@ -169,155 +169,186 @@ export const donations = [
 ];
 
 export const organizationRequests = {
-    clothes: [
-      {
-        id: 1,
-        description: "Male Clothes",
-        size: "Various sizes",
-        quantity: 100,
-        contact: "example@email.com",
-        source: "../assets/clothes.jpg",
-        donation: "products/MaleClothing"
-      },
-      {
-        id: 2,
-        description: "Female's Clothes",
-        size: "Medium",
-        quantity: 50,
-        contact: "example@email.com",
-        source: "../assets/clothes.jpg",
-        donation: "products/FemaleClothing"
+  clothes: [
+    {
+      id: 1,
+      category:"clothes",
+      description: "Winter coats for children",
+      age: "Child",
+      gender: "Male",
+      season:"Winter",
+      type:"Coat",
+      material:"Fabric",
+      quantity: 100,
+      contact: "example@email.com",
+      source: "../assets/clothes.jpg",
+      donation: "/products/clothes" 
 
-      },
-      // Add more clothing requests as needed
-    ],
-    food: [
-      {
-        id: 1,
-        description: "Fast Food",
-        type: "Vegetables",
-        quantity: "100 cans",
-        contact: "example@email.com",
-        source: "../assets/food.jpg",
-        donation: "products/FastFood"
-      },
-      {
-        id: 2,
-        description: "Homemade Food",
-        type: "Basmati",
-        quantity: "50 kg",
-        contact: "example@email.com",
-        source: "../assets/food.jpg",
-        donation: "products/Homemade"
-      },
-      // Add more food requests as needed
-    ],
-    toys: [
-      {
-        id: 1,
-        description: "Stuffed animals",
-        ageRange: "3-5 years",
-        quantity: 50,
-        contact: "example@email.com",
-        source: "../assets/toys.jpg",
-        donation: "products/Toys1"
-      },
-      {
-        id: 2,
-        description: "LEGO sets",
-        ageRange: "6-10 years",
-        quantity: 30,
-        contact: "example@email.com",
-        source: "../assets/toys.jpg",
-        donation: "products/Toys2"
-      },
-      // Add more toy requests as needed
-    ],
-    schoolSupplies: [
-      {
-        id: 1,
-        description: "Notebooks",
-        type: "Spiral bound",
-        quantity: 200,
-        contact: "example@email.com",
-        source: "../assets/school supplies.jpg",
-        donation: "products/NoteBooks"
-      },
-      {
-        id: 2,
-        description: "Pencils",
-        type: "HB",
-        quantity: 500,
-        contact: "example@email.com",
-        source: "../assets/school supplies.jpg",
-        donation: "products/Pencils"
-      },
-      // Add more school supplies requests as needed
-    ],
-    stationary: [
-      {
-        id: 1,
-        description: "Pens",
-        type: "Ballpoint",
-        quantity: 100,
-        contact: "example@email.com",
-        source: "../assets/statoinaries.jpg",
-        donation: "products/Pens"
-      },
-      {
-        id: 2,
-        description: "Markers",
-        type: "Permanent",
-        quantity: 50,
-        contact: "example@email.com",
-        source: "../assets/statoinaries.jpg",
-        donation: "products/Markers"
-      },
-      // Add more stationary requests as needed
-    ],
-    medicalSupplies: [
-      {
-        id: 1,
-        description: "Bandages",
-        type: "Adhesive",
-        quantity: 200,
-        contact: "example@email.com",
-        source: "../assets/bandaid.png",
-        donation: "products/Bandages" 
-      },
-      {
-        id: 2,
-        description: "Antiseptic wipes",
-        type: "Alcohol-based",
-        quantity: 100,
-        contact: "example@email.com",
-        source: "../assets/bandaid.png",
-        donation: "products/Wipes"
-      },
-      // Add more medical supplies requests as needed
-    ],
-    bloodDonations: [
-      {
-        id: 1,
-        description: "O+",
-        bloodType: "O+",
-        quantity: "5 pints",
-        urgency: "Immediate",
-        contact: "example@email.com",
-        source: "../assets/blood.jpg",
-        donation: "products/Blood1"
-      },
-      {
-        id: 2,
-        description: "A-",
-        bloodType: "A-",
-        quantity: "3 pints",
-        urgency: "Urgent",
-        contact: "example@email.com",
-        source: "../assets/blood.jpg",
-        donation: "products/Blood2"
-      },
-      // Add more blood donation requests as needed
-    ]
-  };
-  
+    },
+    {
+      id: 2,
+      category:"clothes",
+      description: "Women's shirts",
+      age: "Adult",
+      gender: "Female",
+      season:"Summer",
+      type:"Shirt",
+      material:"Cotton",
+      quantity: 50,
+      contact: "example@email.com",
+      source: "../assets/clothes.jpg",
+      donation: "/products/Clothes2"
+    },
+    // Add more clothing requests as needed
+  ],
+  food: [
+    {
+      id: 1,
+      category:"food",
+      description: "Canned foods",
+      type: "canned foods",
+      item_name:"foul medames",
+      quantity: "100 cans",
+      contact: "example@email.com",
+      donation: "/products/CannedFood"
+
+    },
+    {
+      id: 2,
+      category:"food",
+      description: "Banana",
+      type: "fruits and vegetables",
+      item_name: "Banana",
+      quantity: "50 kg",
+      contact: "example@email.com",
+      donation: "/products/HomemadeFood"
+
+    },
+    // Add more food requests as needed
+  ],
+  toys: [
+    {
+      id: 1,
+      category:"toys",
+      description: "Stuffed animals",
+      age: "Child",
+      gender: "Unisex",
+      toy_category:"stuffed toys",
+      quantity: 50,
+      contact: "example@email.com",
+      donation: "/products/Toys1"
+
+    },
+    {
+      id: 2,
+      category:"toys",
+      description: "LEGO sets",
+      age: "Teen",
+      gender: "Unisex",
+      toy_category:"board games",
+      quantity: 30,
+      contact: "example@email.com",
+      donation: "/products/Toys2"
+
+    },
+    // Add more toy requests as needed
+  ],
+  schoolSupplies: [
+    {
+      id: 1,
+      category:"schoolSupplies",
+      description: "Notebooks",
+      type: "Stationary",
+      stationarytype: "notebooks",
+      quantity: 200,
+      contact: "example@email.com",
+      donation: "/products/NoteBooks"
+    },
+    {
+      id: 2,
+      category:"schoolSupplies",
+      description: "Harry Potter",
+      type: "Books",
+      bookname:"harry potter",
+      author:"jk rowling",
+      language:"english",
+      edition:"2nd",
+      summary:"magic",
+      quantity: 500,
+      contact: "example@email.com",
+      donation: "/products/Books"
+
+
+    },
+    // Add more school supplies requests as needed
+  ],
+ 
+  medicalSupplies: [
+    {
+      id: 1,
+      category:"medicalSupplies",
+      description: "Panadol",
+      type:"medication" ,
+      medication_use: "pain relief",
+      quantity: 200,
+      contact: "example@email.com",
+      donation: "/products/Medical" 
+
+    },
+    {
+      id: 2,
+      category:"medicalSupplies",
+      description: "MRI Scanner",
+      type:"devices" ,
+      device_type: "MRI",
+      quantity: 100,
+      contact: "example@email.com",
+      donation: "products/Wipes"
+
+    },
+    {
+      id: 3,
+      category:"medicalSupplies",
+      description: "Scalpel",
+      type:"equipment" ,
+      equipment_type: "scalpel",
+      quantity: 100,
+      contact: "example@email.com",
+      donation: "products/Markers"
+
+    },
+    // Add more medical supplies requests as needed
+  ],
+  bloodDonations: [
+    {
+      id: 1,
+      category:"bloodDonations",
+      name_of_patient:"hanan el dreiny",
+      type:"O",
+       hospital:"el hayat",
+       governorate:"cairo",
+       area:"heliopolis", 
+       address: "4 el ghanam",
+       quantity: 1,
+      contact: "example@email.com",
+      donation: "products/Blood1"
+
+    },
+    {
+      id: 2,
+      category:"bloodDonations",
+      name_of_patient:"Youssef Khalil",
+      type: "A-",
+      hospital:"el hayat",
+       governorate:"cairo",
+       area:"heliopolis", 
+       address: "4 el ghanam",
+       quantity: 1,
+      
+      contact: "example@email.com",
+      donation: "products/Blood2"
+
+    },
+    // Add more blood donation requests as needed
+  ]
+};

@@ -7,7 +7,7 @@ import IncrementDecrementBtn from './IncrementDecrementBtn.jsx';
 // Adjust the path if needed
 //import IncrementDecrementBtn from './IncrementDecrementBtn.jsx';
 
-export default function NoteBooks() {
+export default function Clothes2() {
     const [showDeliverySection, setShowDeliverySection] = useState(false);
     const deliveryOptionsRef = useRef(null);
     const [selectedTransportationOption, setSelectedTransportationOption] = useState('');
@@ -33,16 +33,19 @@ export default function NoteBooks() {
     return (
       <div className="shopping-page">
         <header className="header">
-          <h1>Stationaries</h1>
+          <h1>Female Clothes</h1>
         </header>
         <main className="mainm">
           <div className="productm">
             <h2>Product 1</h2>
             <img src={clothes} alt="clothes" />
-            <p>Notebooks</p>
-            <p>Type: {organizationRequests.schoolSupplies[0].type}</p>
-            <p>Quantity: {organizationRequests.schoolSupplies[0].quantity } </p>
-            <IncrementDecrementBtn minValue={1} maxValue={organizationRequests.clothes[0].quantity} />
+            <p>T-shirt</p>
+            <p>Age: {organizationRequests.clothes[1].age}</p>
+            <p>Gender: {organizationRequests.clothes[1].gender}</p>
+            <p>Season: {organizationRequests.clothes[1].season}</p>
+            <p>Material: {organizationRequests.clothes[1].material}</p>
+            <p>Quantity Needed: {organizationRequests.clothes[1].quantity}</p>
+            <IncrementDecrementBtn minValue={1} maxValue={organizationRequests.clothes[1].quantity} />
             <button className='button3' onClick={handleDonateClick}>Donate</button>
           </div>
         </main>

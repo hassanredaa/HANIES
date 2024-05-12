@@ -18,12 +18,12 @@ const IncrementDecrementBtn = ({ minValue = 0, maxValue = 100 }) => {
 
   return (
     <div className="btn-group">
-      <button className="button-primary" onClick={handleIncrementCounter}>
-        <span class="material-symbols-outlined">add</span>
+      <button className="button-primary" onClick={handleDecrementCounter}>
+        <span class="material-symbols-outlined">-</span>
       </button>
       <p>{count}</p>
-      <button className="button-primary" onClick={handleDecrementCounter}>
-        <span class="material-symbols-outlined">remove</span>
+      <button className="button-primary" onClick={handleIncrementCounter}>
+        <span class="material-symbols-outlined">+</span>
       </button>
     </div>
   );
