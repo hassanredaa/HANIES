@@ -1,13 +1,13 @@
 import React,{useRef, useState} from 'react';
 import { Link } from 'react-router-dom';
 import { organizationRequests } from '../data.js';
-import clothes from '../../assets/clothes.jpg';
+import lego from '../../assets/lego.jpg';
 import IncrementDecrementBtn from './IncrementDecrementBtn.jsx';
 
 // Adjust the path if needed
 //import IncrementDecrementBtn from './IncrementDecrementBtn.jsx';
 
-export default function Toys2() {
+export default function NoteBooks() {
     const [showDeliverySection, setShowDeliverySection] = useState(false);
     const deliveryOptionsRef = useRef(null);
     const [selectedTransportationOption, setSelectedTransportationOption] = useState('');
@@ -33,13 +33,13 @@ export default function Toys2() {
     return (
       <div className="shopping-page">
         <header className="header">
-          <h1>Toys</h1>
+          <h1>Stationaries</h1>
         </header>
         <main className="mainm">
           <div className="productm">
             <h2>Product 1</h2>
-            <img src={clothes} alt="clothes" />
-            <p>LEGO Sets</p>
+            <img src={lego} alt="lego" />
+            <p>NoteBooks</p>
             <p>Age: {organizationRequests.toys[1].age}</p>
             <p>Gender: {organizationRequests.toys[1].gender}</p>
             <p>Category: {organizationRequests.toys[1].toy_category}</p>

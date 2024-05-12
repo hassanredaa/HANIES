@@ -1,7 +1,7 @@
 import React,{useRef, useState} from 'react';
 import { Link } from 'react-router-dom';
 import { organizationRequests } from '../data.js';
-import clothes from '../../assets/clothes.jpg';
+import nb from '../../assets/nb.jpg';
 import IncrementDecrementBtn from './IncrementDecrementBtn.jsx';
 
 // Adjust the path if needed
@@ -38,7 +38,7 @@ export default function NoteBooks() {
         <main className="mainm">
           <div className="productm">
             <h2>Product 1</h2>
-            <img src={clothes} alt="clothes" />
+            <img src={nb} alt="nb" />
             <p>Notebooks</p>
             <p>Type: {organizationRequests.schoolSupplies[0].type}</p>
             <p>Quantity: {organizationRequests.schoolSupplies[0].quantity } </p>

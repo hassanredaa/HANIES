@@ -1,7 +1,7 @@
 import React,{useRef, useState} from 'react';
 import { Link } from 'react-router-dom';
 import { organizationRequests } from '../data.js';
-import clothes from '../../assets/clothes.jpg';
+import o from '../../assets/o.jpg';
 import IncrementDecrementBtn from './IncrementDecrementBtn.jsx';
 import MyLocationMap from '../Location.jsx'; // Adjust the path based on your file structure
 import { api } from '../api.js';
@@ -40,7 +40,7 @@ export default function Blood1() {
         <main className="mainm">
           <div className="productm">
             <h2>Product 1</h2>
-            <img src={clothes} alt="clothes" />
+            <img src={o} alt="o" />
             <p>Blood Donation O</p>
             <p>Patient Name: {organizationRequests.bloodDonations[0].name_of_patient}</p>
             <p>Blood Type: {organizationRequests.bloodDonations[0].type}</p>

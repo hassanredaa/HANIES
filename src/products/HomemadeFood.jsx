@@ -1,7 +1,7 @@
 import React,{useRef, useState} from 'react';
 import { Link } from 'react-router-dom';
 import { organizationRequests } from '../data.js';
-import clothes from '../../assets/clothes.jpg';
+import banana from '../../assets/banana.jpg';
 import IncrementDecrementBtn from './IncrementDecrementBtn.jsx';
 
 // Adjust the path if needed
@@ -38,7 +38,7 @@ export default function HomemadeFood() {
         <main className="mainm">
           <div className="productm">
             <h2>Product 1</h2>
-            <img src={clothes} alt="clothes" />
+            <img src={banana} alt="banana" />
             <p>Food</p>
             <p>Name: {organizationRequests.food[1].item_name}</p>
             <p>Quantity: {organizationRequests.food[1].quantity } KG </p>
