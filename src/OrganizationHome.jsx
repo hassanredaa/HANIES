@@ -35,7 +35,7 @@ export default function OrganizationHome() {
         <div>
             <div className="organization-home">
                 {/* Sidebar Section */}
-                <div className="sidebar">
+                <div className="sidebar" >
                     <div className="logo-container">
                         <img src={ggImage} alt="ggImage" />
                         <img src={goodImage} alt="goodImage" />
@@ -80,7 +80,7 @@ export default function OrganizationHome() {
                 </div>
 
                 {/* Posts Section */}
-                <div className="posts">
+                <div className="posts" >
                     <h2>Organization Dashboard</h2>
                     <h2>Recent Posts</h2>
                     <div className="post-container">
