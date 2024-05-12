@@ -53,6 +53,8 @@ import SchedOrg from './SchedOrg.jsx';
 
 import ViewDonors from './ViewDonors.jsx'
 import ViewOrgs from './ViewOrgs.jsx'
+import ReqTec from './ReqTec.jsx'
+import ReqDoc from './ReqDoc.jsx'
 
 
 
@@ -63,6 +65,9 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route index element={<Home />} />
+        <Route path="/Reqtec" element={<ReqTec />} />
+        <Route path="/Reqdoc" element={<ReqDoc />} />
+
         <Route path="/register" element={<Register />} />
         <Route path='/login' element={<Login />} />
         <Route path="/changepassword" element={<ChangePassword />} />

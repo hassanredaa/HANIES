@@ -29,7 +29,8 @@ export default function Teacherhome() {
           <h1 style={{ textAlign: 'center', padding: '5px' }}>name</h1>
           <p style={{ textAlign: 'center' }}>Teacher</p>
 
-          
+          <Link to="/Reqtec" className="sidebar-button" style={{ marginTop: '15px' }}>Requests</Link>
+
           <Link to="/Posts" className="sidebar-button" style={{ marginTop: '15px' }}>View Posts</Link>
     
           
