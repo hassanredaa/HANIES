@@ -78,7 +78,7 @@ const Posts = () => {
         <img src={ggImage} alt="gg logo" style={{}} />
 
         {/* <h1 style={{ marginLeft: '75px' }}>Review Donor Submissions</h1> */}
-        <Link className='button-primary2' to="/donorhome">Donor Dashboard</Link>
+        <Link className='button-primary2' to="/teacherhome">Teacher Dashboard</Link>
       </header>
       <h1>Posts</h1>
       <div>
