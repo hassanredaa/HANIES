@@ -65,6 +65,11 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route index element={<Home />} />
+
+        <Route path="/schedorg" element={<SchedOrg />} />
+        <Route path="/views/donors" element={<ViewDonors />} />
+        <Route path="/views/organizations" element={<ViewOrgs />} />
+
         <Route path="/Reqtec" element={<ReqTec />} />
         <Route path="/Reqdoc" element={<ReqDoc />} />
 
