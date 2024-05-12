@@ -34,7 +34,7 @@ export default function DoctorPage() {
             return; // Prevent further execution if validation fails
         }
         console.log("Form submitted");
-         window.location.href = '/DonorHome';
+         window.location.href = '/DoctorHome';
     };
 
     return (

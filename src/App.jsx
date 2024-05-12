@@ -15,12 +15,15 @@ import MngDonReq from './MngDonReq.jsx';
 import DoctorPage from './DoctorPage.jsx';
 import TeacherPage from './TeacherPage.jsx';
 import DonorHome from './DonorHome.jsx';
-import Requests from './Requests.jsx';
-import SchedOrg from './SchedOrg.jsx';
-import ViewDonors from './ViewDonors.jsx';
-import ViewOrgs from './ViewOrgs.jsx';
 import Request from './Request.jsx';
-import ProductPage from './products/Product1.jsx';
+import MaleClothing from './products/MaleClothing.jsx';
+import DoctorHome from './DoctorHome.jsx';
+import Cases from './Cases.jsx';
+import Case1 from './Case1.jsx';
+import Case2 from './Case2.jsx';
+import Case3 from './Case3.jsx';
+import Case4 from './Case4.jsx';
+import FulfillMed from './FulfillMed.jsx';
 
 
 
@@ -47,10 +50,28 @@ function App() {
         <Route path="/DoctorPage" element={<DoctorPage />} />
         <Route path="/TeacherPage" element={<TeacherPage />} />
         <Route path="/Requests" element={<Request />} />
-        <Route path="/SchedOrg" element={<SchedOrg />} />
-        <Route path="/views/donors" element={<ViewDonors />} />
-        <Route path="/views/organizations" element={<ViewOrgs />} />
-        <Route path="/product" element={<ProductPage />} />
+        <Route path="/products/MaleClothing" element={<MaleClothing />} />
+        <Route path="/DoctorHome" element={<DoctorHome />} />
+        <Route path="/Cases" element={<Cases />} />
+        <Route path="/Case1" element={<Case1 />} />
+        <Route path="/Case2" element={<Case2 />} />
+        <Route path="/Case3" element={<Case3 />} />
+        <Route path="/Case4" element={<Case4 />} />
+        <Route path="/FulfillMed" element={<FulfillMed />} />
+        
+        {/* <Route path="/products/FemaleClothing" element={<FemaleClothing />} />
+        <Route path="/products/FastFood" element={<FastFood />} />
+        <Route path="/products/Homemade" element={<HomeMade />} />
+        <Route path="/products/Toys" element={<Toys1 />} />
+        <Route path="/products/Toys" element={<Toys2 />} />
+        <Route path="/products/NoteBooks" element={<NoteBooks />} />
+        <Route path="/products/Pencils" element={<Pencils />} />
+        <Route path="/products/Pens" element={<Pens />} />
+        <Route path="/products/Markers" element={<Markers />} />
+        <Route path="/products/Bandages" element={<Bandages />} />
+        <Route path="/products/Wipes" element={<Wipes />} />
+        <Route path="/products/Blood2" element={<Blood2 />} /> */}
+        
 
       </Routes>
     </BrowserRouter>
