@@ -57,6 +57,8 @@ export default function Register() {
             window.location.href = '/DoctorPage';
         } else if (selectedRole == 'teacher') {
             window.location.href = '/TeacherPage';
+        }else if (selectedRole == 'organization') {
+            window.location.href = '/OrganizationHome';
         } else {
             window.location.href = '/DonorHome';
         }

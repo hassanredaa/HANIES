@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import avImage from '../assets/img_avatar.png';
 import MyLocationMap from './Location.jsx'; // Adjust the path based on your file structure
 import { api } from './api.js';
+import ggImage from '../assets/gg.png';
+
 
 const MedicalCases = () => {
     // Sample medical cases data
@@ -52,8 +54,11 @@ const MedicalCases = () => {
 
     return (
         <div style={{ fontFamily: 'Arial, sans-serif', textAlign: 'center' }}>
-            <h1>Medical Cases</h1>
-            <Link to='/doctorhome' className="button-primary2">home page</Link>
+            <header style={{ padding: '10px' }}>
+                <img src={ggImage} alt="gg logo" style={{}} />
+                <Link className='button-primary2' to="/doctorhome">Doctor Dashboard</Link>
+            </header>
+            <h1 style={{paddingTop:'30px'}}>Medical Cases</h1>
             <div className="filters">
                 <label htmlFor="medical-specialty-filter">Filter by Medical Specialty:</label>
                 <select id="medical-specialty-filter" value={selectedMedicalSpecialty} onChange={(e) => handleMedicalSpecialtyFilter(e.target.value)}>
