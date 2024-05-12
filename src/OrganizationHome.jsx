@@ -42,8 +42,7 @@ export default function OrganizationHome() {
                     </div>
                     <div className="profile">
                         <img src={avImage} alt="img_avatar" className="avatar" />
-                        <h1>Name</h1>
-                        <p>Organization</p>
+                        <h1>Masr El Kheir</h1>
                     </div>
                     <ul className="navigation">
                         <li>
@@ -75,7 +74,7 @@ export default function OrganizationHome() {
                             </Link>
                         </li>
                     </ul>
-                    <Link to="/logout" className="logout">
+                    <Link to="/" className="logout">
                         Log Out
                     </Link>
                 </div>
@@ -113,9 +112,7 @@ export default function OrganizationHome() {
                     </div>
                 </div>
             </div>
-            <footer style={{ textAlign: 'center', padding: '20px 10px', backgroundColor: 'black', color: 'white' }}>
-                <p>Copyright © 2023 Good Giving</p>
-            </footer>
+            
         </div>
     );
 }
